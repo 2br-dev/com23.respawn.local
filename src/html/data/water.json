@@ -1,0 +1,190 @@
+[
+	{
+		"header": "Домбай Ульген",
+		"image": "/img/bottles/dombay.png",
+		"type": "triple-price",
+		"price1": "240₽",
+		"price2": "230₽",
+		"price3": "220₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Мирабель в одноразовой таре",
+		"image": "/img/bottles/mirabelle.png",
+		"type": "triple-price",
+		"price1": "230₽",
+		"price2": "220₽",
+		"price3": "210₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Mountain Kids",
+		"image": "/img/bottles/mountain_kids.png",
+		"type": "triple-price",
+		"price1": "320₽",
+		"price2": "300₽",
+		"price3": "290₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Горячий Ключ Минеральный",
+		"image": "/img/bottles/hot_key_mineral.png",
+		"type": "triple-price",
+		"price1": "260₽",
+		"price2": "240₽",
+		"price3": "210₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Горный воздух",
+		"image": "/img/bottles/mountain_air.png",
+		"type": "triple-price",
+		"price1": "320₽",
+		"price2": "310₽",
+		"price3": "300₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Почемучка",
+		"image": "/img/bottles/pochemuchka.png",
+		"type": "triple-price",
+		"price1": "240₽",
+		"price2": "210₽",
+		"price3": "190₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Долина Джентау",
+		"image": "/img/bottles/jentau.png",
+		"type": "triple-price",
+		"price1": "260₽",
+		"price2": "230₽",
+		"price3": "210₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Горячий ключ",
+		"image": "/img/bottles/hot_key.png",
+		"type": "triple-price",
+		"price1": "220₽",
+		"price2": "190₽",
+		"price3": "180₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Серебряная",
+		"image": "/img/bottles/silver.png",
+		"type": "triple-price",
+		"price1": "195₽",
+		"price2": "175₽",
+		"price3": "165₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Мирабель",
+		"image": "/img/bottles/mirabelle.png",
+		"type": "triple-price",
+		"price1": "190₽",
+		"price2": "170₽",
+		"price3": "160₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Архыз",
+		"image": "/img/bottles/arhyz.png",
+		"type": "triple-price",
+		"price1": "330₽",
+		"price2": "310₽",
+		"price3": "300₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Эльбрусинка детская",
+		"image": "/img/bottles/elbrusinka.png",
+		"type": "triple-price",
+		"price1": "300₽",
+		"price2": "280₽",
+		"price3": "260₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Горная вершина",
+		"image": "/img/bottles/mountain_peak.png",
+		"type": "triple-price",
+		"price1": "250₽",
+		"price2": "230₽",
+		"price3": "220₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Домбай",
+		"image": "/img/bottles/dombay.png",
+		"type": "triple-price",
+		"price1": "240₽",
+		"price2": "230₽",
+		"price3": "220₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Пилигрим",
+		"image": "/img/bottles/piligrim.png",
+		"type": "triple-price",
+		"price1": "290₽",
+		"price2": "270₽",
+		"price3": "260₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Кубай",
+		"image": "/img/bottles/kubai.png",
+		"type": "triple-price",
+		"price1": "250₽",
+		"price2": "240₽",
+		"price3": "230₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Горный воздух в одноразовой таре",
+		"image": "/img/bottles/mountain_air_one.png",
+		"type": "triple-price",
+		"price1": "420₽",
+		"price2": "420₽",
+		"price3": "400₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Долина Джентау в одноразовой таре",
+		"image": "/img/bottles/jentau_one.png",
+		"type": "triple-price",
+		"price1": "340₽",
+		"price2": "320₽",
+		"price3": "300₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	},
+	{
+		"header": "Бутыль ПК 19 л",
+		"type": "single-price",
+		"image": "/img/bottles/empty_bottle.png",
+		"price": "400₽",
+		"class": "col l4 m6 s12 no-padding",
+		"link":"/product-water.html"
+	}
+]

@@ -1,0 +1,25 @@
+<div class="address-entry" data-lon="@@lon" data-lat="@@lat" data-zoom="@@zoom">
+	<div class="img-wrapper">
+		<img alt="" class="lazy responsive-img" data-src="@@img">
+	</div>
+	<div class="info">
+		<div class="address">@@address</div>
+		@@if(context.description){
+			<div class="description">@@description</div>
+		}
+		<div class="timing">
+			<div class="timing-prefix">Время работы</div>
+			@@if(context.timing){
+				@@for(let i=0; i<timing.length; i++){
+					<div class="timing-entry">
+						<div class="key">` +timing[i].name+ `</div>
+						<div class="value">` +timing[i].value+ `</div>
+					</div>
+				}
+			}
+		</div>
+		<div class="link-wrapper">
+			<a href="@@link" target="_blank" rel="">Смотреть на карте</a>
+		</div>
+	</div>
+</div>

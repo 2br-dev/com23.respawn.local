@@ -1,0 +1,92 @@
+main#service section {
+  position: relative;
+  overflow: hidden; }
+
+main#service #hero {
+  overflow: hidden;
+  background-color: #3C84F3;
+  margin-top: 0;
+  color: #fff; }
+  main#service #hero .image-row .col .img-wrapper {
+    position: relative;
+    z-index: 1; }
+    main#service #hero .image-row .col .img-wrapper:before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      aspect-ratio: 3 / 1;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url(../../img/service-top.svg);
+      z-index: -1;
+      background-size: 100% auto; }
+  main#service #hero .image-row .col img {
+    display: block; }
+  main#service #hero .hero-header {
+    font-weight: 500;
+    text-transform: uppercase; }
+  main#service #hero blockquote {
+    border-color: #fff; }
+  main#service #hero .text-container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    line-height: 1.4em;
+    z-index: 3; }
+    @media (max-width: 1200px) {
+      main#service #hero .text-container {
+        position: relative;
+        top: unset;
+        transform: none;
+        padding: 2vmax 0;
+        box-sizing: border-box;
+        position: relative; }
+        main#service #hero .text-container:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(to right, transparent, #fff, #fff, transparent);
+          position: absolute;
+          top: 0;
+          left: 0; } }
+
+main#service #post-guarantee {
+  background-color: #3C84F3;
+  color: #fff; }
+  main#service #post-guarantee a {
+    color: #fff;
+    border-color: #fff; }
+  main#service #post-guarantee .text-container {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3; }
+    @media (max-width: 1200px) {
+      main#service #post-guarantee .text-container {
+        position: relative;
+        top: unset;
+        transform: none;
+        padding: 2vmax 0; } }
+  main#service #post-guarantee .image-row .img-wrapper {
+    position: relative;
+    z-index: 1; }
+    main#service #post-guarantee .image-row .img-wrapper:before {
+      content: '';
+      display: block;
+      height: 100%;
+      aspect-ratio: 3 / 1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: 100% auto;
+      background-image: url(../../img/service-bottom.svg);
+      z-index: -1; }
+
+main#service #garantee1 blockquote {
+  color: #FF2741; }

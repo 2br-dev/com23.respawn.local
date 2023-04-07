@@ -1,0 +1,58 @@
+#howto{
+
+	& .howto-image{
+		aspect-ratio: 3 / .97;
+		background-size: contain;
+		background-position: top center;
+		background-repeat: no-repeat;
+		margin-bottom: -8vmax;
+	}
+	
+	& .howto-content{
+		
+		& .container{
+			
+			& h2{
+				text-align: center;
+				margin: 2vmax 0;
+			}
+			
+			& .howto-block{
+				
+				text-align: center;
+				
+				& .icon{
+					color: $secondary;
+					font-size: calc(4rem + .2vmax);
+					line-height: 1.2em;
+				}
+				
+				& h3{
+					color: $secondary;
+				}
+				
+				& .links{
+					
+					& a{
+						
+						&:not(:last-of-type){
+							margin-right: 10px;
+						}
+
+						&:hover{
+							text-decoration: underline;
+						}
+						
+						& i{
+							margin-right: 6px;
+						}
+					}
+				}
+			}
+			
+			& .separator{
+				margin: 2vmax 0;
+			}
+		}
+	}
+}

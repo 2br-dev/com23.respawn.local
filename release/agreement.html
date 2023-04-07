@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользовательское соглашение</title>
+    <link rel="stylesheet" href="/css/master.css">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favico/favicon-16x16.png">
+    <link rel="manifest" href="/img/favico/site.webmanifest">
+    <link rel="mask-icon" href="/img/favico/safari-pinned-tab.svg" color="#ff2741">
+    <link rel="shortcut icon" href="/img/favico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff2741">
+    <meta name="msapplication-config" content="/img/favico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="/index.html" class="logo"></a>
+                <ul class="desktop-phones">
+                    <li><span><i class="mdi mdi-map-marker"></i>Краснодар</span></li>
+                    <li><a target="_blank" href="tel://+79862044444">204-44-44</a></li>
+                    <li><a target="_blank" href="tel://+79883334443">8(988) 333-444-3</a></li>
+                    <li><a target="_blank" href="https://wa.me/79862044444"><i class="mdi mdi-whatsapp"></i></a></li>
+                    <li><a target="_blank" href="https://t.me/+79862044444"><i class="mdi mdi-telegram"></i></a></li>
+                    <li><a href="" class="bttn"><i class="mdi mdi-autorenew"></i>Повторить заказ</a></li>
+                </ul>
+                <ul class="mobile-right">
+                    <li><a href="/checkout.html"><i class="mdi mdi-cart"></i></a></li>
+                    <li><a href="#mobile-navi" class="sidenav-trigger"><i class="mdi mdi-menu"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="top-level">
+                        <li class="catalog-bttn">
+                            <a href="javascript:void(0)">
+                                <i class="mdi mdi-text-search"></i>
+                                Каталог
+                            </a>
+                            <ul class="z-depth-1">
+                                <li><a href="catalog-water.html">Питьевая вода</a></li>
+                                <li><a href="catalog-coolers.html">Кулеры для воды</a></li>
+                                <li><a href="catalog-coolers.html">Помпы для воды</a></li>
+                                <li><a href="catalog-coolers.html">Сопутствующие товары</a></li>
+                            </ul>
+                        <li><a href="/actions.html">Акции</a></li>
+                        <li><a href="/payment.html">Доставка и оплата</a></li>
+                        <li><a href="/shops.html">Магазины</a></li>
+                        <li><a href="/service.html">Сервисный центр</a></li>
+                        </li>
+                        <div class="separator"></div>
+                        <ul class="user-section top-level">
+                            <li>
+                                <a href="">1/1200₽<i class="mdi mdi-cart"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a href="/checkout.html">Оформить заказ</a></li>
+                                    <li><a href="javascript:void(0);">Очистить корзину</a></li>
+                                </ul>
+                            </li>
+                            <!-- Гость -->
+                            <li id="guest" class="">
+                                <a href="">Профиль<i class="mdi mdi-account"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a class="modal-trigger" href="#login">Авторизация</a></li>
+                                    <li><a class="modal-trigger" href="#register">Регистрация</a></li>
+                                </ul>
+                            </li>
+                            <!-- Зарегистрированный пользователь -->
+                            <li id="registered" class="hidden">
+                                <a href="">MasterKadaj<i class="mdi mdi-account"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a href="/profile.html#orders">Мои заказы</a></li>
+                                    <li><a href="/profile.html">Мой профиль</a></li>
+                                    <li><a href="/support.html">Поддержка</a></li>
+                                    <li>
+                                        <div class="divider"></div>
+                                    </li>
+                                    <li><a href="/">Выход</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-navi">
+        <!-- Гость -->
+        <li class="user-view hidden">
+            <div class="user">
+                <div class="name-wrapper">
+                    <i class="mdi mdi-shield-lock"></i>
+                    <span class="name">Аккаунт</span>
+                </div>
+                <div class="actions">
+                    <a href=""><i class="mdi mdi-login-variant"></i><span>Войти</span></a>
+                    <a href=""><i class="mdi mdi-file-document-edit-outline"></i><span>Создать</span></a>
+                </div>
+            </div>
+        </li>
+        <!-- Авторизованный пользователь -->
+        <li class="user-view">
+            <div class="user">
+                <div class="name-wrapper">
+                    <i class="mdi mdi-account-circle"></i>
+                    <span class="name">Профиль</span>
+                </div>
+                <div class="actions">
+                    <a href=""><i class="mdi mdi-cog"></i><span>Настройки</span></a>
+                    <a href=""><i class="mdi mdi-logout-variant"></i><span>Выход</span></a>
+                </div>
+            </div>
+        </li>
+        <li class="location"><i class="mdi mdi-map-marker"></i><span>Краснодар</span></li>
+        <li><a href="/">Главная</a></li>
+        <li>
+            <a href="/catalog.html">Каталог</a>
+            <ul>
+                <li><a href="/catalog_water.html">Питьевая бутилированная вода</a></li>
+                <li><a href="/catalog_cooler.html">Кулеры для воды</a></li>
+                <li><a href="/catalog_cooler.html">Помпы для воды</a></li>
+                <li><a href="/catalog_cooler.html">Сопутствующая продукция</a></li>
+            </ul>
+        </li>
+        <li><a href="/actions.html">Акции</a></li>
+        <li><a href="/payment.html">Оплата и доставка</a></li>
+        <li><a href="/shops.html">Магазины</a></li>
+        <li><a href="/service.html">Сервисный центр</a></li>
+    </ul>
+    <ul class="fab">
+        <li>
+            <a href="javascript:void(0);" class="z-depth-2"><i class="mdi mdi-phone"></i></a>
+            <ul>
+                <li><a target="_blank" class="z-depth-1 phone" href="tel://+79862044444"><i class="mdi mdi-phone"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 cellphone" href="tel://+79883334443"><i class="mdi mdi-cellphone-iphone"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 whatsapp" href="https://wa.me/79862044444"><i class="mdi mdi-whatsapp"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 telegram" href="https://t.me/+79862044444"><i class="mdi mdi-telegram"></i></a></li>
+            </ul>
+        </li>
+    </ul>
+    <form class="modal" id="login">
+        <div class="modal-content">
+            <div class="row flex vcenter">
+                <div class="col xs9 s9 t9">
+                    <h3 class="no-margin">Вход</h3>
+                </div>
+                <div class="col xs3 s3 t3 right-align">
+                    <a href="#!" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a>
+                </div>
+                <div class="col s12">
+                    <div class="input-field">
+                        <input type="text" placeholder="Логин">
+                        <label for="">Логин</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="input-field">
+                        <input type="text" placeholder="Пароль">
+                        <label for="">Пароль</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#register" class="bttn-flat left modal-trigger modal-close waves-effect">Регистрация</a>
+            <a href="/profile.html" class="bttn-flat modal-close">Войти</a>
+        </div>
+    </form>
+    <form action="" class="modal" id="register">
+        <div class="modal-content">
+            <div class="row flex vcenter">
+                <div class="col xs9 s9 t9">
+                    <h3>Регистрация</h3>
+                </div>
+                <div class="col xs3 s3 t3 right-align"><a href="" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a></div>
+                <div class="col s12">
+                    <input type="radio" value="physical" name="account-type" checked id="type1" class="styled">
+                    <label for="type1">Физическое лицо</label>
+                    <input type="radio" value="law" name="account-type" id="type2" class="styled">
+                    <label for="type2">Юридическое лицо</label>
+                </div>
+            </div>
+            <div class="row" data-mode="physical" id="fieldset">
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Организация">
+                        <label for="">Организация</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Фамилия">
+                        <label for="">Фамилия</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Имя">
+                        <label for="">Имя</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Отчество">
+                        <label for="">Отчество</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Телефон">
+                        <label for="">Телефон</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="ИНН">
+                        <label for="">ИНН</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="ОГРН/ОГРИП">
+                        <label for="">ОГРН/ОГРИП</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="email" class="styled" placeholder="E-mail">
+                        <label for="">E-mail</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="password" class="styled" placeholder="Пароль">
+                        <label for="">Пароль</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="password" class="styled" placeholder="Подтверждение">
+                        <label for="">Подтверждение</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#login" class="bttn-flat waves-effect modal-trigger modal-close left">Войти</a>
+            <a href="/profile.html" class="bttn-flat modal-close">Отправить</a>
+        </div>
+    </form>
+    <main id="agreement" class="mountains">
+        <section class="lawer">
+            <div class="container">
+                <div class="white-block">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1>Пользовательское соглашение</h1>
+                            <div class="date">г. Крас­но­дар «22» де­каб­ря 2016 г.</div>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">1. </span>Общие положения</h2>
+                                </li>
+                                <li><span class="num">1.1.</span> Нас­то­ящее Поль­зо­ватель­ское сог­ла­шение (да­лее – Сог­ла­шение) от­но­сит­ся к сай­ту Ин­тернет-ма­гази­на «Еди­ная служ­ба дос­тавки пить­евой во­ды», рас­по­ложен­но­му по ад­ре­су com23.ru/ак­ва.рус</li>
+                                <li><span class="num">1.2.</span> Сайт Ин­тернет-ма­гази­на «Еди­ная служ­ба дос­тавки пить­евой во­ды» (да­лее – Сайт) яв­ля­ет­ся собс­твен­ностью Об­щес­тва с ог­ра­ничен­ной от­ветс­твен­ностью «Ак­ва­тория».</li>
+                                <li><span class="num">1.3.</span> Нас­то­ящее Сог­ла­шение ре­гули­ру­ет от­но­шения меж­ду Ад­ми­нис­тра­ци­ей сай­та Ин­тернет-ма­гази­на «Еди­ная служ­ба дос­тавки пить­евой во­ды» com23.ru (да­лее – Ад­ми­нис­тра­ция сай­та) и Поль­зо­вате­лем дан­но­го Сай­та.</li>
+                                <li><span class="num">1.4.</span> Ад­ми­нис­тра­ция сай­та ос­тавля­ет за со­бой пра­во в лю­бое вре­мя из­ме­нять, до­бав­лять или уда­лять пун­кты нас­то­яще­го Сог­ла­шения без уве­дом­ле­ния Поль­зо­вате­ля.</li>
+                                <li><span class="num">1.5.</span> Про­дол­же­ние ис­поль­зо­вания Сай­та Поль­зо­вате­лем оз­на­ча­ет при­нятие Сог­ла­шения и из­ме­нений, вне­сен­ных в нас­то­ящее Сог­ла­шение.</li>
+                                <li><span class="num">1.6.</span> Поль­зо­ватель не­сет пер­со­наль­ную от­ветс­твен­ность за про­вер­ку нас­то­яще­го Сог­ла­шения на на­личие из­ме­нений в нем.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">2. </span>ОП­РЕ­ДЕЛЕ­НИЯ ТЕР­МИ­НОВ</h2>
+                                </li>
+                                <li><span class="num">2.1. </span>Пе­речис­ленные ни­же тер­ми­ны име­ют для це­лей нас­то­яще­го Сог­ла­шения сле­ду­ющее зна­чение:</li>
+                                <li><span class="num">2.1.1 </span>«Еди­ная служ­ба дос­тавки пить­евой во­ды» – Ин­тернет-ма­газин, рас­по­ложен­ный на до­мен­ном име­ни com23.ru/ак­ва.рус , осу­щест­вля­ющий свою де­ятель­ность пос­редс­твом Ин­тернет-ре­сур­са и со­путс­тву­ющих ему сер­ви­сов.</li>
+                                <li><span class="num">2.1.2. </span>Ин­тернет-ма­газин – сайт, со­дер­жа­щий ин­форма­цию о То­варах, Про­дав­це, поз­во­ля­ющий осу­щес­твить вы­бор, за­каз и (или) при­об­ре­тение То­вара.</li>
+                                <li><span class="num">2.1.3. </span>Ад­ми­нис­тра­ция сай­та Ин­тернет-ма­гази­на – упол­но­мочен­ные сот­рудни­ки на уп­равле­ния Сай­том, дей­ству­ющие от име­ни О­ОО “Ак­ва­тория”.</li>
+                                <li><span class="num">2.1.4. </span>Поль­зо­ватель сай­та Ин­тернет-ма­гази­на (да­лее ‑ Поль­зо­ватель) – ли­цо, име­ющее дос­туп к Сай­ту, пос­редс­твом се­ти Ин­тернет и ис­поль­зу­ющее Сайт.</li>
+                                <li><span class="num">2.1.5. </span>Со­дер­жа­ние сай­та Ин­тернет-ма­гази­на (да­лее – Со­дер­жа­ние) - ох­ра­ня­емые ре­зуль­та­ты ин­теллек­ту­аль­ной де­ятель­нос­ти, вклю­чая тек­сты ли­тера­тур­ных про­из­ве­дений, их наз­ва­ния, пре­дис­ло­вия, ан­но­тации, статьи, ил­люс­тра­ции, об­ложки, му­зыкаль­ные про­из­ве­дения с тек­стом или без тек­ста, гра­фичес­кие, тек­сто­вые, фо­тог­ра­фичес­кие, про­из­водные, сос­тавные и иные про­из­ве­дения, поль­зо­ватель­ские ин­терфей­сы, ви­зу­аль­ные ин­терфей­сы, наз­ва­ния то­вар­ных зна­ков, ло­готи­пы, прог­раммы для ЭВМ, ба­зы дан­ных, а так­же ди­зайн, струк­ту­ра, вы­бор, ко­ор­ди­нация, внеш­ний вид, об­щий стиль и рас­по­ложе­ние дан­но­го Со­дер­жа­ния, вхо­дяще­го в сос­тав Сай­та и дру­гие объ­ек­ты ин­теллек­ту­аль­ной собс­твен­ности все вмес­те и/или по от­дель­нос­ти, со­дер­жа­щи­еся на сай­те Ин­тернет-ма­гази­на.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">3. </span>ПРЕД­МЕТ СОГ­ЛА­ШЕНИЯ</h2>
+                                </li>
+                                <li><span class="num">3.1. </span>Пред­ме­том нас­то­яще­го Сог­ла­шения яв­ля­ет­ся пре­дос­тавле­ние Поль­зо­вате­лю Ин­тернет-ма­гази­на дос­ту­па к со­дер­жа­щим­ся на Сай­те То­варам и ока­зыва­емым ус­лу­гам.</li>
+                                <li><span class="num">3.1.1. </span>
+                                    <div>
+                                        Ин­тернет-ма­газин пре­дос­тавля­ет Поль­зо­вате­лю сле­ду­ющие ви­ды ус­луг (сер­ви­сов):
+                                        <ul class="browser-default">
+                                            <li>доступ к средствам поиска и навигации Интернет-магазина;</li>
+                                            <li>доступ к информации о Товаре и к информации о приобретении Товара на платной основе;</li>
+                                            <li>иные виды услуг (сервисов), реализуемые на страницах Интернет-магазина.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><span class="num">3.1.2. </span>Под дей­ствие нас­то­яще­го Сог­ла­шения по­пада­ют все су­щес­тву­ющие (ре­аль­но фун­кци­они­ру­ющие) на дан­ный мо­мент ус­лу­ги (сер­ви­сы) Ин­тернет-ма­гази­на, а так­же лю­бые их пос­ле­ду­ющие мо­дифи­кации и по­яв­ля­ющи­еся в даль­ней­шем до­пол­ни­тель­ные ус­лу­ги (сер­ви­сы) Ин­тернет-ма­гази­на.</li>
+                                <li><span class="num">3.2. </span>Дос­туп к Ин­тернет-ма­гази­ну пре­дос­тавля­ет­ся на бес­плат­ной ос­но­ве ос­но­ве(воз­можна оп­ла­та ус­луг дос­ту­па к се­ти Ин­тернет, взи­ма­емая с Поль­зо­вате­ля пос­тавщи­ком ус­луг дос­ту­па (Ин­тернет-про­вай­де­ром).</li>
+                                <li><span class="num">3.3. </span>Ис­поль­зо­вание ма­тери­алов и сер­ви­сов Сай­та ре­гули­ру­ет­ся нор­ма­ми дей­ству­юще­го за­коно­датель­ства Рос­сий­ской Фе­дера­ции</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">4. </span>ПРА­ВА И ОБЯ­ЗАН­НОСТИ СТО­РОН</h2>
+                                </li>
+                                <li><span class="num">4.1. </span>Ад­ми­нис­тра­ция сай­та впра­ве:</li>
+                                <li><span class="num">4.1.1. </span>Из­ме­нять пра­вила поль­зо­вания Сай­том, а так­же из­ме­нять со­дер­жа­ние дан­но­го Сай­та. Из­ме­нения всту­па­ют в си­лу с мо­мен­та пуб­ли­кации но­вой ре­дак­ции Сог­ла­шения на Сай­те.</li>
+                                <li><span class="num">4.1.2. </span>Ог­ра­ничить дос­туп к Сай­ту в слу­чае на­руше­ния Поль­зо­вате­лем ус­ло­вий нас­то­яще­го Сог­ла­шения.</li>
+                                <li><span class="num">4.2. </span>Поль­зо­ватель впра­ве:</li>
+                                <li><span class="num">4.2.1. </span>По­лучить дос­туп к ис­поль­зо­ванию Сай­та.</li>
+                                <li><span class="num">4.2.2. </span>Поль­зо­вать­ся все­ми име­ющи­мися на Сай­те ус­лу­гами, а так­же при­об­ре­тать лю­бые То­вары, пред­ла­га­емые на Сай­те при на­личии их на скла­де у Про­дав­ца (Ин­тернет-ма­гази­на).</li>
+                                <li><span class="num">4.2.3. </span>За­давать лю­бые воп­ро­сы, от­но­сящи­еся к ус­лу­гам Ин­тернет-ма­гази­на по тел. (861)204-44-44.</li>
+                                <li><span class="num">4.2.4. </span>Поль­зо­вать­ся Сай­том ис­клю­читель­но в це­лях и по­ряд­ке, пре­дус­мотрен­ных Сог­ла­шени­ем и не зап­ре­щен­ных за­коно­датель­ством Рос­сий­ской Фе­дера­ции.</li>
+                                <li><span class="num">4.3. </span>Поль­зо­ватель Сай­та обя­зу­ет­ся:</li>
+                                <li><span class="num">4.3.1. </span>Пре­дос­тавлять по зап­ро­су Ад­ми­нис­тра­ции сай­та до­пол­ни­тель­ную ин­форма­цию, ко­торая име­ет не­пос­редс­твен­ное от­но­шение к пре­дос­тавля­емым ус­лу­гам дан­но­го Сай­та.</li>
+                                <li><span class="num">4.3.2. </span>Соб­лю­дать иму­щес­твен­ные и не­иму­щес­твен­ные пра­ва ав­то­ров и иных пра­во­об­ла­дате­лей при ис­поль­зо­вании Сай­та.</li>
+                                <li><span class="num">4.3.3. </span>Не пред­при­нимать дей­ствий, ко­торые мо­гут рас­смат­ри­вать­ся как на­руша­ющие нор­маль­ную ра­боту Сай­та.</li>
+                                <li><span class="num">4.3.4. </span>Не рас­простра­нять с ис­поль­зо­вани­ем Сай­та лю­бую кон­фи­ден­ци­аль­ную и ох­ра­ня­емую за­коно­датель­ством Рос­сий­ской Фе­дера­ции ин­форма­цию о фи­зичес­ких ли­бо юри­дичес­ких ли­цах.</li>
+                                <li><span class="num">4.3.5. </span>Из­бе­гать лю­бых дей­ствий, в ре­зуль­та­те ко­торых мо­жет быть на­руше­на кон­фи­ден­ци­аль­ность ох­ра­ня­емой за­коно­датель­ством Рос­сий­ской Фе­дера­ции ин­форма­ции.</li>
+                                <li><span class="num">4.3.6. </span>Не ис­поль­зо­вать Сайт для рас­простра­нения ин­форма­ции рек­ламно­го ха­рак­те­ра, ина­че как с сог­ла­сия Ад­ми­нис­тра­ции сай­та.</li>
+                                <li><span class="num">4.4. </span>Поль­зо­вате­лю зап­ре­ща­ет­ся:</li>
+                                <li><span class="num">4.4.1. </span>Ис­поль­зо­вать лю­бые ус­трой­ства, прог­раммы, про­цеду­ры, ал­го­рит­мы и ме­тоды, ав­то­мати­чес­кие ус­трой­ства или эк­ви­вален­тные руч­ные про­цес­сы для дос­ту­па, при­об­ре­тения, ко­пиро­вания или от­сле­жива­ния со­дер­жа­ния Сай­та дан­но­го Ин­тернет-ма­гази­на;</li>
+                                <li><span class="num">4.4.2. </span>На­рушать над­ле­жащее фун­кци­они­рова­ние Сай­та;</li>
+                                <li><span class="num">4.4.3. </span>Лю­бым спо­собом об­хо­дить на­вига­ци­он­ную струк­ту­ру Сай­та для по­луче­ния или по­пыт­ки по­луче­ния лю­бой ин­форма­ции, до­кумен­тов или ма­тери­алов лю­быми средс­тва­ми, ко­торые спе­ци­аль­но не пред­став­ле­ны сер­ви­сами дан­но­го Сай­та;</li>
+                                <li><span class="num">4.4.4. </span>Не­сан­кци­они­рован­ный дос­туп к фун­кци­ям Сай­та, лю­бым дру­гим сис­те­мам или се­тям, от­но­сящим­ся к дан­но­му Сай­ту, а так­же к лю­бым ус­лу­гам, пред­ла­га­емым на Сай­те;</li>
+                                <li><span class="num">4.4.4. </span>На­рушать сис­те­му бе­зопас­ности или а­утен­ти­фика­ции на Сай­те или в лю­бой се­ти, от­но­сящей­ся к Сай­ту.</li>
+                                <li><span class="num">4.4.5. </span>Вы­пол­нять об­ратный по­иск, от­сле­живать или пы­тать­ся от­сле­живать лю­бую ин­форма­цию о лю­бом дру­гом Поль­зо­вате­ле Сай­та.</li>
+                                <li><span class="num">4.4.6. </span>Ис­поль­зо­вать Сайт и его Со­дер­жа­ние в лю­бых це­лях, зап­ре­щен­ных за­коно­датель­ством Рос­сий­ской Фе­дера­ции, а так­же подс­тре­кать к лю­бой не­закон­ной де­ятель­нос­ти или дру­гой де­ятель­нос­ти, на­руша­ющей пра­ва ин­тернет-ма­гази­на или дру­гих лиц.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">5. </span>ИС­ПОЛЬ­ЗО­ВАНИЕ САЙ­ТА ИН­ТЕРНЕТ-МА­ГАЗИ­НА</h2>
+                                </li>
+                                <li><span class="num">5.1. </span>Сайт и Со­дер­жа­ние, вхо­дящее в сос­тав Сай­та, при­над­ле­жит и уп­равля­ет­ся Ад­ми­нис­тра­ци­ей сай­та.</li>
+                                <li><span class="num">5.2. </span>Со­дер­жа­ние Сай­та не мо­жет быть ско­пиро­вано, опуб­ли­кова­но, вос­про­из­ве­дено, пе­реда­но или рас­простра­нено лю­бым спо­собом, а так­же раз­ме­щено в гло­баль­ной се­ти «Ин­тернет» без пред­ва­ритель­но­го пись­мен­но­го сог­ла­сия Ад­ми­нис­тра­ции сай­та.</li>
+                                <li><span class="num">5.3. </span>Со­дер­жа­ние Сай­та за­щище­но ав­тор­ским пра­вом, за­коно­датель­ством о то­вар­ных зна­ках, а так­же дру­гими пра­вами, свя­зан­ны­ми с ин­теллек­ту­аль­ной собс­твен­ностью, и за­коно­датель­ством о не­доб­ро­совес­тной кон­ку­рен­ции.</li>
+                                <li><span class="num">5.4. </span>При­об­ре­тение То­вара, пред­ла­га­емо­го на Сай­те, мо­жет пот­ре­бовать соз­да­ния учёт­ной за­писи Поль­зо­вате­ля.</li>
+                                <li><span class="num">5.5. </span>Поль­зо­ватель не­сет пер­со­наль­ную от­ветс­твен­ность за сох­ра­нение кон­фи­ден­ци­аль­нос­ти ин­форма­ции учёт­ной за­писи, вклю­чая па­роль, а так­же за всю без ис­клю­чения де­ятель­ность, ко­торая ве­дёт­ся от име­ни Поль­зо­вате­ля учёт­ной за­писи.</li>
+                                <li><span class="num">5.6. </span>Поль­зо­ватель дол­жен не­замед­ли­тель­но уве­домить Ад­ми­нис­тра­цию сай­та о не­сан­кци­они­рован­ном ис­поль­зо­вании его учёт­ной за­писи или па­роля или лю­бом дру­гом на­руше­нии сис­те­мы бе­зопас­ности.</li>
+                                <li><span class="num">5.7. </span>Ад­ми­нис­тра­ция сай­та об­ла­да­ет пра­вом в од­носто­рон­нем по­ряд­ке ан­ну­лиро­вать учет­ную за­пись Поль­зо­вате­ля, ес­ли она не ис­поль­зо­валась бо­лее 12 ка­лен­дарных ме­сяцев под­ряд без уве­дом­ле­ния Поль­зо­вате­ля.</li>
+                                <li><span class="num">5.8. </span>Ин­форма­ция, раз­ме­ща­емая на Сай­те не дол­жна ис­толко­вывать­ся как из­ме­нение нас­то­яще­го Сог­ла­шения.</li>
+                                <li><span class="num">5.9. </span>Ад­ми­нис­тра­ция сай­та име­ет пра­во в лю­бое вре­мя без уве­дом­ле­ния Поль­зо­вате­ля вно­сить из­ме­нения в пе­речень То­варов и ус­луг, пред­ла­га­емых на Сай­те, и (или) в це­ны, при­мени­мые к та­ким То­варам по их ре­али­зации и (или) ока­зыва­емым ус­лу­гам Ин­тернет-ма­гази­ном.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">6. </span>ОТ­ВЕТС­ТВЕН­НОСТЬ</h2>
+                                </li>
+                                <li><span class="num">6.1. </span>Лю­бые убыт­ки, ко­торые Поль­зо­ватель мо­жет по­нес­ти в слу­чае умыш­ленно­го или не­ос­то­рож­но­го на­руше­ния лю­бого по­ложе­ния нас­то­яще­го Сог­ла­шения, а так­же вследс­твие не­сан­кци­они­рован­но­го дос­ту­па к ком­му­ника­ци­ям дру­гого Поль­зо­вате­ля, Ад­ми­нис­тра­ци­ей сай­та не воз­ме­ща­ют­ся.</li>
+                                <li><span class="num">6.2. </span>Ад­ми­нис­тра­ция сай­та не не­сет от­ветс­твен­ности за:</li>
+                                <li><span class="num">6.2.1. </span>За­дер­жки или сбои в про­цес­се со­вер­ше­ния опе­рации, воз­никшие вследс­твие неп­ре­одо­лимой си­лы, а так­же лю­бого слу­чая не­пола­док в те­леком­му­ника­ци­он­ных, компь­ютер­ных, элек­три­чес­ких и иных смеж­ных сис­те­мах.</li>
+                                <li><span class="num">6.2.2. </span>Дей­ствия сис­тем пе­рево­дов, бан­ков, пла­теж­ных сис­тем и за­дер­жки свя­зан­ные с их ра­ботой.</li>
+                                <li><span class="num">6.2.3. </span>Над­ле­жащее фун­кци­они­рова­ние Сай­та, в слу­чае, ес­ли Поль­зо­ватель не име­ет не­об­хо­димых тех­ни­чес­ких средств для его ис­поль­зо­вания, а так­же не не­сет ни­каких обя­затель­ств по обес­пе­чению поль­зо­вате­лей та­кими средс­тва­ми.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">7. </span>НА­РУШЕ­НИЕ УС­ЛО­ВИЙ ПОЛЬ­ЗО­ВАТЕЛЬ­СКО­ГО СОГ­ЛА­ШЕНИЯ</h2>
+                                </li>
+                                <li><span class="num">7.1. </span>Ад­ми­нис­тра­ция сай­та впра­ве рас­крыть лю­бую соб­ранную о Поль­зо­вате­ле дан­но­го Сай­та ин­форма­цию, ес­ли рас­кры­тие не­об­хо­димо в свя­зи с рас­сле­дова­ни­ем или жа­лобой в от­но­шении неп­ра­вомер­но­го ис­поль­зо­вания Сай­та ли­бо для ус­та­нов­ле­ния (иден­ти­фика­ции) Поль­зо­вате­ля, ко­торый мо­жет на­рушать или вме­шивать­ся в пра­ва Ад­ми­нис­тра­ции сай­та или в пра­ва дру­гих Поль­зо­вате­лей Сай­та.</li>
+                                <li><span class="num">7.2. </span>Ад­ми­нис­тра­ция сай­та име­ет пра­во рас­крыть лю­бую ин­форма­цию о Поль­зо­вате­ле, ко­торую пос­чи­та­ет не­об­хо­димой для вы­пол­не­ния по­ложе­ний дей­ству­юще­го за­коно­датель­ства или су­деб­ных ре­шений, обес­пе­чения вы­пол­не­ния ус­ло­вий нас­то­яще­го Сог­ла­шения, за­щиты прав или бе­зопас­ности наз­ва­ние ор­га­низа­ции, Поль­зо­вате­лей.</li>
+                                <li><span class="num">7.3. </span>Ад­ми­нис­тра­ция сай­та име­ет пра­во рас­крыть ин­форма­цию о Поль­зо­вате­ле, ес­ли дей­ству­ющее за­коно­датель­ство Рос­сий­ской Фе­дера­ции тре­бу­ет или раз­ре­ша­ет та­кое рас­кры­тие.</li>
+                                <li><span class="num">7.4. </span>Ад­ми­нис­тра­ция сай­та впра­ве без пред­ва­ритель­но­го уве­дом­ле­ния Поль­зо­вате­ля прек­ра­тить и (или) заб­ло­киро­вать дос­туп к Сай­ту, ес­ли Поль­зо­ватель на­рушил нас­то­ящее Сог­ла­шение или со­дер­жа­щи­еся в иных до­кумен­тах ус­ло­вия поль­зо­вания Сай­том, а так­же в слу­чае прек­ра­щения дей­ствия Сай­та ли­бо по при­чине тех­ни­чес­кой не­полад­ки или проб­ле­мы.</li>
+                                <li><span class="num">7.5. </span>Ад­ми­нис­тра­ция сай­та не не­сет от­ветс­твен­ности пе­ред Поль­зо­вате­лем или треть­ими ли­цами за прек­ра­щение дос­ту­па к Сай­ту в слу­чае на­руше­ния Поль­зо­вате­лем лю­бого по­ложе­ния нас­то­яще­го Сог­ла­шения или ино­го до­кумен­та, со­дер­жа­щего ус­ло­вия поль­зо­вания Сай­том.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">8. </span>РАЗ­РЕ­ШЕНИЕ СПО­РОВ</h2>
+                                </li>
+                                <li><span class="num">8.1. </span>В слу­чае воз­никно­вения лю­бых раз­ногла­сий или спо­ров меж­ду Сто­рона­ми нас­то­яще­го Сог­ла­шения обя­затель­ным ус­ло­ви­ем до об­ра­щения в суд яв­ля­ет­ся предъ­яв­ле­ние пре­тен­зии (пись­мен­но­го пред­ло­жения о доб­ро­воль­ном уре­гули­рова­нии спо­ра).</li>
+                                <li><span class="num">8.2. </span>По­луча­тель пре­тен­зии в те­чение 30 ка­лен­дарных дней со дня ее по­луче­ния, пись­мен­но уве­дом­ля­ет за­яви­теля пре­тен­зии о ре­зуль­та­тах рас­смот­ре­ния пре­тен­зии.</li>
+                                <li><span class="num">8.3. </span>При не­воз­можнос­ти раз­ре­шить спор в доб­ро­воль­ном по­ряд­ке лю­бая из Сто­рон впра­ве об­ра­тить­ся в суд за за­щитой сво­их прав, ко­торые пре­дос­тавле­ны им дей­ству­ющим за­коно­датель­ством Рос­сий­ской Фе­дера­ции.</li>
+                                <li><span class="num">8.4. </span>Лю­бой иск в от­но­шении ус­ло­вий ис­поль­зо­вания Сай­та дол­жен быть предъ­яв­лен в те­чение 30 дней пос­ле воз­никно­вения ос­но­ваний для ис­ка, за ис­клю­чени­ем за­щиты ав­тор­ских прав на ох­ра­ня­емые в со­от­ветс­твии с за­коно­датель­ством ма­тери­алы Сай­та. При на­руше­нии ус­ло­вий дан­но­го пун­кта лю­бой иск или ос­но­вания для ис­ка по­гаша­ют­ся ис­ко­вой дав­ностью.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2 class="pseudo-h3"><span class="num">9. </span>ДО­ПОЛ­НИ­ТЕЛЬ­НЫЕ УС­ЛО­ВИЯ</h2>
+                                </li>
+                                <li><span class="num">9.1. </span>Ад­ми­нис­тра­ция сай­та не при­нима­ет встреч­ные пред­ло­жения от Поль­зо­вате­ля от­но­ситель­но из­ме­нений нас­то­яще­го Поль­зо­ватель­ско­го сог­ла­шения.</li>
+                                <li><span class="num">9.2. </span>От­зы­вы Поль­зо­вате­ля, раз­ме­щен­ные на Сай­те, не яв­ля­ют­ся кон­фи­ден­ци­аль­ной ин­форма­ци­ей и мо­гут быть ис­поль­зо­ваны Ад­ми­нис­тра­ци­ей сай­та без ог­ра­ниче­ний.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row flex">
+                <div class="col l2 m4 s6 xs12">
+                    <div class="footer-header">Разделы сайта</div>
+                    <ul>
+                        <li><a href="/index.html">Главная</a></li>
+                        <li><a href="/catalog_water.html">Каталог</a></li>
+                        <li><a href="/actions.html">Акции</a></li>
+                        <li><a href="/payment.html">Доставка и оплата</a></li>
+                        <li><a href="/shops.html">Магазины</a></li>
+                        <li><a href="/service.html">Сервисный центр</a></li>
+                        <li><a href="/vacances.html">Вакансии</a></li>
+                        <li><a href="/contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 m4 s6 xs12">
+                    <div class="footer-header">Покупателям</div>
+                    <ul>
+                        <li><a href="/agreement.html">Пользовательское соглашение</a></li>
+                        <li><a href="/policy.html">Политика конфиденциальности</a></li>
+                        <li><a href="/collect.html">Согласие на сбор данных</a></li>
+                        <li><a href="/about.html">О компании</a></li>
+                        <li><a href="/details.html">Реквизиты</a></li>
+                        <li><a href="/news.html">Новости компании</a></li>
+                        <li><a href="/checkout.html">Корзина</a></li>
+                        <li><a href="/account.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+                <div class="col l2 m4 s6 xs12">
+                    <div class="footer-header">Каталог</div>
+                    <ul>
+                        <li><a href="/catalog_water.html">Вода</a></li>
+                        <li><a href="/catalog_coolers.html">Кулеры</a></li>
+                        <li><a href="/catalog_coolers.html">Помпы</a></li>
+                        <li><a href="/catalog_coolers.html">Сопутствующие товары</a></li>
+                    </ul>
+                </div>
+                <div class="col xl3 l3 m8 s12">
+                    <div class="footer-header">График доставки</div>
+                    <div class="row">
+                        <div class="col xl5 l12 m5 s5 xs12">
+                            <ul>
+                                <li><u>Будние</u></li>
+                                <li>с 9:00 до 15:00</li>
+                                <li>с 12:00 до 17:00</li>
+                                <li>с 18:00 до 22:00</li>
+                            </ul>
+                        </div>
+                        <div class="col xl7 l12 m7 s7 xs12">
+                            <ul>
+                                <li><u>Выходные и праздничные</u></li>
+                                <li>с 11:00 до 16:00</li>
+                                <li>с 18:00 до 22:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l2 m4 s12 align-right-m-up">
+                    <div class="footer-header">Контакты</div>
+                    <ul>
+                        <li><a href="">204-44-44</a></li>
+                        <li><a href="">8 (988) 333-444-3</a></li>
+                        <li><a href="">E-mail: 700601@mail.ru</a></li>
+                    </ul>
+                    <ul class="social">
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/akvatoriya23"><span class="mdi mdi-telegram"></span></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://vk.com/voda_krasnodar"><span class="mdi mdi-vk"></span></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCxvG3uJHGne0AH2PFu17PjA"><span class="mdi mdi-youtube"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row no-margin">
+                <div class="col m6 s12 align-left-m-up align-center-m-down">© Аква.рус, все права защищены</div>
+                <div class="col m6 s12 align-right-m-up align-center-m-down">Дизайн, разработка – <a href=""><strong>2BR</strong></a></div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/master.js"></script>
+</body>
+
+</html>

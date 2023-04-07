@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@200..900&display=swap');
+
+body{
+	font-family: 'Roboto';
+	font-size: $font-size;
+	line-height: 1.4em;
+	font-weight: 300;
+
+	color: $text;
+
+	& a{
+		color: $primary;
+	}
+	
+	& h1{
+		font-size: calc(1.8rem + .2vmax);
+		line-height: 1.2em;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	& h2{
+		@extend h1;
+		font-size: calc(1.6rem + .17vmax);
+		font-weight: 600;
+	}
+
+	& h3{
+		@extend h2;
+		font-size: calc(1.4rem + .12vmax);
+	}
+
+	& h4{
+		@extend h3;
+		font-size: calc(1.2rem + .08vmax);
+	}
+
+	& .pseudo-h1{
+		font-size: calc(1.8rem + .2vmax) !important;
+		line-height: 1.2em;
+	}
+	
+	& .pseudo-h2{
+		font-size: calc(1.6rem + .17vmax) !important;
+		line-height: 1.2em;
+	}
+
+	& .pseudo-h3{
+		font-size: calc(1.4rem + .12vmax) !important;
+		line-height: 1.2em;
+	}
+
+	& .pseudo-h4{
+		font-size: calc(1.2rem + .08vmax) !important;
+		line-height: 1.2em;
+	}
+
+}

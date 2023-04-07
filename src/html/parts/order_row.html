@@ -1,0 +1,41 @@
+<tr class="order-row">
+	<td data-name="Номер">@@number</td>
+	<td data-name="Сумма">@@summ</td>
+	<td data-name="Статус">@@status</td>
+	<td data-name="Способ оплаты">@@payment</td>
+	<td data-name="Действия" class="actions">
+		<a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+		<a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+		<a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+		<a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+		<a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+	</td>
+</tr>
+<tr class="order-details">
+	<td colspan="5">
+		<div class="table-wrapper">
+			<table>
+				<thead>
+					<tr>
+						<th>Наименование продукции</th>
+						<th>Количество</th>
+						<th>Цена за единицу</th>
+						<th>Итоговая цена</th>
+					</tr>
+				</thead>
+				<tbody>
+					@@if(context.orderContent){
+						@@for(let z=0;z<orderContent.length;z++){
+							<tr>
+								<td><a href="/product.html">` +orderContent[z].name+ `</a></td>
+								<td data-name="Кол-во">` +orderContent[z].count+ `</td>
+								<td data-name="Цена за единицу">` +orderContent[z].price+ `</td>
+								<td data-name="Общая цена">` +orderContent[z].price_total+ `</td>
+							</tr>
+						}
+					}
+				</tbody>
+			</table>
+		</div>
+	</td>
+</tr>

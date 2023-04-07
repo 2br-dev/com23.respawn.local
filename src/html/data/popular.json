@@ -1,0 +1,114 @@
+[
+	{
+		"header": "Горный воздух",
+		"image": "/img/bottles/mountain_air.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"class": "swiper-slide",
+		"price1": "320₽",
+		"price2": "310₽",
+		"price3": "300₽",
+		"labes":[
+			{
+				"class": "new",
+				"header": "новинка"
+			}
+		]
+	},
+	{
+		"header": "Почемучка",
+		"image": "/img/bottles/pochemuchka.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"class": "swiper-slide",
+		"price1": "240₽",
+		"price2": "210₽",
+		"price3": "190₽",
+		"labes":[
+			{
+				"class": "new",
+				"header": "новинка"
+			},
+			{
+				"class": "children",
+				"header": "детская"
+			}
+		]
+	},
+	{
+		"header": "Долина Джентау",
+		"image": "/img/bottles/jentau.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"class": "swiper-slide",
+		"price1": "260₽",
+		"price2": "230₽",
+		"price3": "210₽"
+	},
+	{
+		"header": "Горячий ключ",
+		"image": "/img/bottles/hot_key.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"class": "swiper-slide",
+		"price1": "220₽",
+		"price2": "190₽",
+		"price3": "180₽"
+	},
+	{
+		"header": "Мирабель",
+		"image": "/img/bottles/mirabelle.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"class": "swiper-slide",
+		"price1": "190₽",
+		"price2": "170₽",
+		"price3": "160₽",
+		"labes":[
+			{
+				"class": "hit",
+				"header": "хит продаж"
+			}
+		]
+	},
+	{
+		"header": "Эльбрусинка детская",
+		"image": "/img/bottles/elbrusinka.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"class": "swiper-slide",
+		"price1": "300₽",
+		"price2": "280₽",
+		"price3": "260₽",
+		"labes":[
+			{
+				"class": "new",
+				"header": "новинка"
+			},
+			{
+				"class": "children",
+				"header": "детская"
+			}
+		]
+	},
+	{
+		"header": "Горная вершина",
+		"image": "/img/bottles/mountain_peak.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"class": "swiper-slide",
+		"price1": "250₽",
+		"price2": "230₽",
+		"price3": "220₽"
+	},
+	{
+		"header": "Кубай",
+		"image": "/img/bottles/kubai.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"class": "swiper-slide",
+		"price1": "250₽",
+		"price2": "240₽",
+		"price3": "230₽"
+	}
+]

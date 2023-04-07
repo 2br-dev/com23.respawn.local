@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазины</title>
+    <link rel="stylesheet" href="/css/master.css">
+
+    <link rel="stylesheet" href="/css/pages/shops.css">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favico/favicon-16x16.png">
+    <link rel="manifest" href="/img/favico/site.webmanifest">
+    <link rel="mask-icon" href="/img/favico/safari-pinned-tab.svg" color="#ff2741">
+    <link rel="shortcut icon" href="/img/favico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff2741">
+    <meta name="msapplication-config" content="/img/favico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="/index.html" class="logo"></a>
+                <ul class="desktop-phones">
+                    <li><span><i class="mdi mdi-map-marker"></i>Краснодар</span></li>
+                    <li><a target="_blank" href="tel://+79862044444">204-44-44</a></li>
+                    <li><a target="_blank" href="tel://+79883334443">8(988) 333-444-3</a></li>
+                    <li><a target="_blank" href="https://wa.me/79862044444"><i class="mdi mdi-whatsapp"></i></a></li>
+                    <li><a target="_blank" href="https://t.me/+79862044444"><i class="mdi mdi-telegram"></i></a></li>
+                    <li><a href="" class="bttn"><i class="mdi mdi-autorenew"></i>Повторить заказ</a></li>
+                </ul>
+                <ul class="mobile-right">
+                    <li><a href="/checkout.html"><i class="mdi mdi-cart"></i></a></li>
+                    <li><a href="#mobile-navi" class="sidenav-trigger"><i class="mdi mdi-menu"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="top-level">
+                        <li class="catalog-bttn">
+                            <a href="javascript:void(0)">
+                                <i class="mdi mdi-text-search"></i>
+                                Каталог
+                            </a>
+                            <ul class="z-depth-1">
+                                <li><a href="catalog-water.html">Питьевая вода</a></li>
+                                <li><a href="catalog-coolers.html">Кулеры для воды</a></li>
+                                <li><a href="catalog-coolers.html">Помпы для воды</a></li>
+                                <li><a href="catalog-coolers.html">Сопутствующие товары</a></li>
+                            </ul>
+                        <li><a href="/actions.html">Акции</a></li>
+                        <li><a href="/payment.html">Доставка и оплата</a></li>
+                        <li><a href="/shops.html">Магазины</a></li>
+                        <li><a href="/service.html">Сервисный центр</a></li>
+                        </li>
+                        <div class="separator"></div>
+                        <ul class="user-section top-level">
+                            <li>
+                                <a href="">1/1200₽<i class="mdi mdi-cart"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a href="/checkout.html">Оформить заказ</a></li>
+                                    <li><a href="javascript:void(0);">Очистить корзину</a></li>
+                                </ul>
+                            </li>
+                            <!-- Гость -->
+                            <li id="guest" class="">
+                                <a href="">Профиль<i class="mdi mdi-account"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a class="modal-trigger" href="#login">Авторизация</a></li>
+                                    <li><a class="modal-trigger" href="#register">Регистрация</a></li>
+                                </ul>
+                            </li>
+                            <!-- Зарегистрированный пользователь -->
+                            <li id="registered" class="hidden">
+                                <a href="">MasterKadaj<i class="mdi mdi-account"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a href="/profile.html#orders">Мои заказы</a></li>
+                                    <li><a href="/profile.html">Мой профиль</a></li>
+                                    <li><a href="/support.html">Поддержка</a></li>
+                                    <li>
+                                        <div class="divider"></div>
+                                    </li>
+                                    <li><a href="/">Выход</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-navi">
+        <!-- Гость -->
+        <li class="user-view hidden">
+            <div class="user">
+                <div class="name-wrapper">
+                    <i class="mdi mdi-shield-lock"></i>
+                    <span class="name">Аккаунт</span>
+                </div>
+                <div class="actions">
+                    <a href=""><i class="mdi mdi-login-variant"></i><span>Войти</span></a>
+                    <a href=""><i class="mdi mdi-file-document-edit-outline"></i><span>Создать</span></a>
+                </div>
+            </div>
+        </li>
+        <!-- Авторизованный пользователь -->
+        <li class="user-view">
+            <div class="user">
+                <div class="name-wrapper">
+                    <i class="mdi mdi-account-circle"></i>
+                    <span class="name">Профиль</span>
+                </div>
+                <div class="actions">
+                    <a href=""><i class="mdi mdi-cog"></i><span>Настройки</span></a>
+                    <a href=""><i class="mdi mdi-logout-variant"></i><span>Выход</span></a>
+                </div>
+            </div>
+        </li>
+        <li class="location"><i class="mdi mdi-map-marker"></i><span>Краснодар</span></li>
+        <li><a href="/">Главная</a></li>
+        <li>
+            <a href="/catalog.html">Каталог</a>
+            <ul>
+                <li><a href="/catalog_water.html">Питьевая бутилированная вода</a></li>
+                <li><a href="/catalog_cooler.html">Кулеры для воды</a></li>
+                <li><a href="/catalog_cooler.html">Помпы для воды</a></li>
+                <li><a href="/catalog_cooler.html">Сопутствующая продукция</a></li>
+            </ul>
+        </li>
+        <li><a href="/actions.html">Акции</a></li>
+        <li><a href="/payment.html">Оплата и доставка</a></li>
+        <li><a href="/shops.html">Магазины</a></li>
+        <li><a href="/service.html">Сервисный центр</a></li>
+    </ul>
+    <ul class="fab">
+        <li>
+            <a href="javascript:void(0);" class="z-depth-2"><i class="mdi mdi-phone"></i></a>
+            <ul>
+                <li><a target="_blank" class="z-depth-1 phone" href="tel://+79862044444"><i class="mdi mdi-phone"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 cellphone" href="tel://+79883334443"><i class="mdi mdi-cellphone-iphone"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 whatsapp" href="https://wa.me/79862044444"><i class="mdi mdi-whatsapp"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 telegram" href="https://t.me/+79862044444"><i class="mdi mdi-telegram"></i></a></li>
+            </ul>
+        </li>
+    </ul>
+    <form class="modal" id="login">
+        <div class="modal-content">
+            <div class="row flex vcenter">
+                <div class="col xs9 s9 t9">
+                    <h3 class="no-margin">Вход</h3>
+                </div>
+                <div class="col xs3 s3 t3 right-align">
+                    <a href="#!" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a>
+                </div>
+                <div class="col s12">
+                    <div class="input-field">
+                        <input type="text" placeholder="Логин">
+                        <label for="">Логин</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="input-field">
+                        <input type="text" placeholder="Пароль">
+                        <label for="">Пароль</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#register" class="bttn-flat left modal-trigger modal-close waves-effect">Регистрация</a>
+            <a href="/profile.html" class="bttn-flat modal-close">Войти</a>
+        </div>
+    </form>
+    <form action="" class="modal" id="register">
+        <div class="modal-content">
+            <div class="row flex vcenter">
+                <div class="col xs9 s9 t9">
+                    <h3>Регистрация</h3>
+                </div>
+                <div class="col xs3 s3 t3 right-align"><a href="" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a></div>
+                <div class="col s12">
+                    <input type="radio" value="physical" name="account-type" checked id="type1" class="styled">
+                    <label for="type1">Физическое лицо</label>
+                    <input type="radio" value="law" name="account-type" id="type2" class="styled">
+                    <label for="type2">Юридическое лицо</label>
+                </div>
+            </div>
+            <div class="row" data-mode="physical" id="fieldset">
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Организация">
+                        <label for="">Организация</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Фамилия">
+                        <label for="">Фамилия</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Имя">
+                        <label for="">Имя</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Отчество">
+                        <label for="">Отчество</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Телефон">
+                        <label for="">Телефон</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="ИНН">
+                        <label for="">ИНН</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="ОГРН/ОГРИП">
+                        <label for="">ОГРН/ОГРИП</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="email" class="styled" placeholder="E-mail">
+                        <label for="">E-mail</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="password" class="styled" placeholder="Пароль">
+                        <label for="">Пароль</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="password" class="styled" placeholder="Подтверждение">
+                        <label for="">Подтверждение</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#login" class="bttn-flat waves-effect modal-trigger modal-close left">Войти</a>
+            <a href="/profile.html" class="bttn-flat modal-close">Отправить</a>
+        </div>
+    </form>
+    <main id="shops" class="mountains">
+        <section>
+            <div class="container">
+                <div class="white-block">
+                    <div class="row flex">
+                        <div class="col s12">
+                            <h1>Магазины</h1>
+                        </div>
+                        <div class="col xl8 l7 m12">
+                            <div id="map"></div>
+                        </div>
+                        <div class="col xl4 l5 m12">
+                            <div class="shops-wrapper">
+                                <div class="address-entry" data-lon="38.961389" data-lat="45.037802" data-zoom="15">
+                                    <div class="img-wrapper">
+                                        <img alt="" class="lazy responsive-img" data-src="/img/shops/budenogo.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <div class="address">ул. Буденного, 73</div>
+
+                                        <div class="timing">
+                                            <div class="timing-prefix">Время работы</div>
+
+
+                                            <div class="timing-entry">
+                                                <div class="key">Ежедневно</div>
+                                                <div class="value">с 8:00 до 20:00</div>
+                                            </div>
+
+                                            <div class="timing-entry">
+                                                <div class="key">Перерыв</div>
+                                                <div class="value">с 13:00 до 14:00</div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="link-wrapper">
+                                            <a href="https://yandex.ru/maps/-/CCU0MPSOtC" target="_blank" rel="">Смотреть на карте</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-entry" data-lon="38.929104" data-lat="45.013103" data-zoom="15">
+                                    <div class="img-wrapper">
+                                        <img alt="" class="lazy responsive-img" data-src="/img/shops/tc-adygeya.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <div class="address">Тургеневское шоссе, 27 (ТЦ Мега-Адыгея)</div>
+
+                                        <div class="description">Вход со сто­роны ги­пер­марке­та Ашан</div>
+
+                                        <div class="timing">
+                                            <div class="timing-prefix">Время работы</div>
+
+
+                                            <div class="timing-entry">
+                                                <div class="key">Ежедневно</div>
+                                                <div class="value">с 8:00 до 22:00</div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="link-wrapper">
+                                            <a href="https://yandex.ru/maps/-/CCU0MPcdLB" target="_blank" rel="">Смотреть на карте</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-entry" data-lon="38.919707" data-lat="45.062980" data-zoom="15">
+                                    <div class="img-wrapper">
+                                        <img alt="" class="lazy responsive-img" data-src="/img/shops/krasnyh-partizan.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <div class="address">ул. Красных Партизан, 123</div>
+
+                                        <div class="timing">
+                                            <div class="timing-prefix">Время работы</div>
+
+
+                                            <div class="timing-entry">
+                                                <div class="key">Ежед­невно</div>
+                                                <div class="value">с 8:00 до 20:00</div>
+                                            </div>
+
+                                            <div class="timing-entry">
+                                                <div class="key">Пе­рерыв</div>
+                                                <div class="value">с 13:00 до 14:00</div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="link-wrapper">
+                                            <a href="https://yandex.ru/maps/-/CCU0MPDvkC" target="_blank" rel="">Смотреть на карте</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-entry" data-lon="38.987773" data-lat="45.071109" data-zoom="15">
+                                    <div class="img-wrapper">
+                                        <img alt="" class="lazy responsive-img" data-src="/img/shops/rostovskoe-shosse.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <div class="address">Ростовское шоссе, 14</div>
+
+                                        <div class="timing">
+                                            <div class="timing-prefix">Время работы</div>
+
+
+                                            <div class="timing-entry">
+                                                <div class="key">Ежед­невно</div>
+                                                <div class="value">с 8:00 до 20:00</div>
+                                            </div>
+
+                                            <div class="timing-entry">
+                                                <div class="key">Пе­рерыв</div>
+                                                <div class="value">с 13:00 до 14:00</div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="link-wrapper">
+                                            <a href="https://yandex.ru/maps/-/CCU0MPHhsD" target="_blank" rel="">Смотреть на карте</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-entry" data-lon="39.083794" data-lat="45.037025" data-zoom="15">
+                                    <div class="img-wrapper">
+                                        <img alt="" class="lazy responsive-img" data-src="/img/shops/uralskaya.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <div class="address">ул. Уральская, 144</div>
+
+                                        <div class="timing">
+                                            <div class="timing-prefix">Время работы</div>
+
+
+                                            <div class="timing-entry">
+                                                <div class="key">Вт-Сб</div>
+                                                <div class="value">с 9:00 до 17:00</div>
+                                            </div>
+
+                                            <div class="timing-entry">
+                                                <div class="key">Вс, Пн</div>
+                                                <div class="value">выходные</div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="link-wrapper">
+                                            <a href="https://yandex.ru/maps/-/CCU0MPXa-B" target="_blank" rel="">Смотреть на карте</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-entry" data-lon="39.122529" data-lat="45.011446" data-zoom="15">
+                                    <div class="img-wrapper">
+                                        <img alt="" class="lazy responsive-img" data-src="/img/shops/oz-mall.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <div class="address">ул. Крылатая, 2 (ТРЦ OZ Молл)</div>
+
+                                        <div class="description">Вход со сто­роны ги­пер­марке­та ОКей</div>
+
+                                        <div class="timing">
+                                            <div class="timing-prefix">Время работы</div>
+
+
+                                            <div class="timing-entry">
+                                                <div class="key">Ежед­невно</div>
+                                                <div class="value">с 8:00 до 22:00</div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="link-wrapper">
+                                            <a href="https://yandex.ru/maps/-/CCU0MTRFLA" target="_blank" rel="">Смотреть на карте</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="howto">
+
+            <div class="howto-content">
+                <div class="container white-block">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2 class="pseudo-h1">Как заказать</h2>
+                        </div>
+                        <div class="col l3 m6 s12 howto-block">
+                            <div class="icon"><i class="mdi mdi-phone"></i></div>
+                            <h3>По телефону</h3>
+                            <div class="links">
+                                <a href="tel://+79883334443"><i class="mdi mdi-phone"></i>7 (988) 333-444-3</a>
+                            </div>
+                        </div>
+                        <div class="col l3 m6 s12 howto-block">
+                            <div class="icon"><i class="mdi mdi-monitor"></i></div>
+                            <h3>Через сайт</h3>
+                            <div class="links">
+                                <a href="/catalog-water.html"><i class="mdi mdi-menu"></i>Каталог</a>
+                            </div>
+                        </div>
+                        <div class="col l3 m6 s12 howto-block">
+                            <div class="icon"><i class="mdi mdi-cellphone-iphone"></i></div>
+                            <h3>Через приложение</h3>
+                            <div class="links">
+                                <a href="https://play.google.com" target="_blank" rel="nofollow"><i class="mdi mdi-apple"></i>AppStore</a>
+                                <a href="https://www.apple.com/app-store/" target="_blank" rel="nofollow"><i class="mdi mdi-google-play"></i>Google Play</a>
+                            </div>
+                        </div>
+                        <div class="col l3 m6 s12 howto-block">
+                            <div class="icon"><i class="mdi mdi-message-draw"></i></div>
+                            <h3>Через мессенджер</h3>
+                            <div class="links">
+                                <a href=""><i class="mdi mdi-telegram"></i>Telegram</a>
+                                <a href=""><i class="mdi mdi-whatsapp"></i>WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row separator">
+                        <div class="col l4 offset-l4 m6 offset-m3 s8 offset-s2">
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <p>
+                                Вы можете заказать у нас интересующий Вас товар или услугу несколькими способами: вы можете воспользоваться <a href="">телефоном</a>,
+                                и наш менеджер сформирует для вас заказ, учитывая необходимость и целевой адрес доставки. В то же время, вы можете
+                                воспользоваться сайтом, и <a href="/checkout.html">сформировать заказ</a> самостоятельно. Все детали заказа можно указать
+                                в <a href="/profile.html">личном кабинете</a>. Оттуда же можно изменить адрес доставки или отменить заказ. Кроме того, вы можете использовать
+                                популярные мессенджеры <a href="">WhatsApp</a> и <a href="">Telegram</a> для формирования заказа и уточнения его деталей.
+                            </p>
+                            <p>
+                                Вы можете оплатить заказ одним из доступных для Вас способов – воспользовавшись сайтом, в частности, его функционалом
+                                <a href="/checkout.html">корзины</a>, также вы можете воспользоваться безналичным <a href="https://sber.ru/" target="_blank" rel="nofollow">банковским переводом</a>. Кроме того, возможна
+                                оплата наличными курьеру.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row flex">
+                <div class="col l2 m4 s6 xs12">
+                    <div class="footer-header">Разделы сайта</div>
+                    <ul>
+                        <li><a href="/index.html">Главная</a></li>
+                        <li><a href="/catalog_water.html">Каталог</a></li>
+                        <li><a href="/actions.html">Акции</a></li>
+                        <li><a href="/payment.html">Доставка и оплата</a></li>
+                        <li><a href="/shops.html">Магазины</a></li>
+                        <li><a href="/service.html">Сервисный центр</a></li>
+                        <li><a href="/vacances.html">Вакансии</a></li>
+                        <li><a href="/contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 m4 s6 xs12">
+                    <div class="footer-header">Покупателям</div>
+                    <ul>
+                        <li><a href="/agreement.html">Пользовательское соглашение</a></li>
+                        <li><a href="/policy.html">Политика конфиденциальности</a></li>
+                        <li><a href="/collect.html">Согласие на сбор данных</a></li>
+                        <li><a href="/about.html">О компании</a></li>
+                        <li><a href="/details.html">Реквизиты</a></li>
+                        <li><a href="/news.html">Новости компании</a></li>
+                        <li><a href="/checkout.html">Корзина</a></li>
+                        <li><a href="/account.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+                <div class="col l2 m4 s6 xs12">
+                    <div class="footer-header">Каталог</div>
+                    <ul>
+                        <li><a href="/catalog_water.html">Вода</a></li>
+                        <li><a href="/catalog_coolers.html">Кулеры</a></li>
+                        <li><a href="/catalog_coolers.html">Помпы</a></li>
+                        <li><a href="/catalog_coolers.html">Сопутствующие товары</a></li>
+                    </ul>
+                </div>
+                <div class="col xl3 l3 m8 s12">
+                    <div class="footer-header">График доставки</div>
+                    <div class="row">
+                        <div class="col xl5 l12 m5 s5 xs12">
+                            <ul>
+                                <li><u>Будние</u></li>
+                                <li>с 9:00 до 15:00</li>
+                                <li>с 12:00 до 17:00</li>
+                                <li>с 18:00 до 22:00</li>
+                            </ul>
+                        </div>
+                        <div class="col xl7 l12 m7 s7 xs12">
+                            <ul>
+                                <li><u>Выходные и праздничные</u></li>
+                                <li>с 11:00 до 16:00</li>
+                                <li>с 18:00 до 22:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l2 m4 s12 align-right-m-up">
+                    <div class="footer-header">Контакты</div>
+                    <ul>
+                        <li><a href="">204-44-44</a></li>
+                        <li><a href="">8 (988) 333-444-3</a></li>
+                        <li><a href="">E-mail: 700601@mail.ru</a></li>
+                    </ul>
+                    <ul class="social">
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/akvatoriya23"><span class="mdi mdi-telegram"></span></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://vk.com/voda_krasnodar"><span class="mdi mdi-vk"></span></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCxvG3uJHGne0AH2PFu17PjA"><span class="mdi mdi-youtube"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row no-margin">
+                <div class="col m6 s12 align-left-m-up align-center-m-down">© Аква.рус, все права защищены</div>
+                <div class="col m6 s12 align-right-m-up align-center-m-down">Дизайн, разработка – <a href=""><strong>2BR</strong></a></div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/master.js"></script>
+</body>
+
+</html>

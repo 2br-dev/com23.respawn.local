@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Оформление заказа", style: "checkout"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="checkout">
+		<section>
+			<div class="container">
+				<div class="row flex">
+					<div class="col s12">
+						<h1>Оформление заказа</h1>
+					</div>
+					<div class="col l8 order-m1">
+						<h2>Учётная запись</h2>
+						<form action="" class="row">
+							<div class="col l4 m12">
+								<div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label></div>
+							</div>
+							<div class="col l4 m6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+							</div>
+							<div class="col l4 m6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+							</div>
+							<div class="col m8 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="E-mail"><label for="">E-mail</label></div>
+							</div>
+							<div class="col l4 m4 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Телефон"><label for="">Телефон</label></div>
+							</div>
+							<div class="col s12 right-align">
+								<a href="#login" class="bttn-outline waves-effect modal-trigger">Войти</a>
+							</div>
+						</form>
+						<p>
+							Нажимая кнопку Оформить заказ», я принимаю условия <a href="/agreement.html">Пользовательского соглашения</a> 
+							и даю своё согласие на обработку персональных данных Интернет-Магазина «Аква.Рус» 
+							в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», 
+							на условиях и для целей, определенных <a href="/policy.html">Политикой конфиденциальности</a> 
+							и <a href="/collect.html">Политикой в отношении обработки персональных данных</a>
+						</p>
+						<form action="" class="row">
+							<div class="col s12">
+								<h2>Адрес доставки</h2>
+							</div>
+							<div class="col m5 s12">
+								<ul class="address-list">
+									@@loop('./parts/address.html','./data/address.json')
+								</ul>
+							</div>
+							<div class="col m7 s12">
+								<div class="row address-details">
+									<div class="col s6">
+										<div class="input-field disable"><input type="text" name="city" placeholder="Город"><label for="">Город</label></div>
+									</div>
+									<div class="col s6">
+										<div class="input-field disable"><input type="text" name="street" placeholder="Улица"><label for="">Улица</label></div>
+									</div>
+									<div class="col xl4 l6 m6 s6 xs6 t6">
+										<div class="input-field disable"><input type="text" name="house" placeholder="Дом"><label for="">Дом</label></div>
+									</div>
+									<div class="col xl4 l6 m6 s6 xs6 t6">
+										<div class="input-field disable"><input type="text" name="block" placeholder="Корпус"><label for="">Корпус</label></div>
+									</div>
+									<div class="col xl4 l6 m6 s6 xs6 t6">
+										<div class="input-field disable"><input type="text" name="app" placeholder="Квартира/офис"><label for="">Квартира/офис</label></div>
+									</div>
+									<div class="col xl4 l6 m6 s6 xs6 t6">
+										<div class="input-field disable"><input type="text" name="entrance" placeholder="Подъезд"><label for="">Подъезд</label></div>
+									</div>
+									<div class="col xl4 l6 m6 s6 xs6 t6">
+										<div class="input-field disable"><input type="text" name="floor" placeholder="Этаж"><label for="">Этаж</label></div>
+									</div>
+									<div class="col xl4 l6 m6 s6 xs6 t6">
+										<div class="input-field disable"><input type="text" name="domofon" placeholder="Домофон"><label for="">Домофон</label></div>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<h2>Дата поставки</h2>
+								<div class="row">
+									<div class="col l5 m5">
+										<ul>
+											<li><input type="radio" name="date" checked id="nearest"><label for="nearest">Ближайшая (менеджер уточнит)</label></li>
+											<li><input type="radio" name="date" id="manual"><label for="manual">Выбрать дату</label></li>
+										</ul>
+									</div>
+									<div class="col l7 m7 s12">
+										<div class="row">
+											<div class="col xs6 delivery-details" id="delivery-date">
+												<div class="input-field">
+													<input type="text" placeholder="Дата поставки" class="datepicker">
+													<i class="mdi mdi-calendar-range"></i>
+													<label for="">Дата поставки</label>
+												</div>
+												<input type="checkbox" id="dont-recall">
+												<label for="dont-recall">Не перезванивать</label>
+											</div>
+											<div class="col xs6 delivery-details" id="delivery-time">
+												<div class="input-field">
+													<div class="current empty" id="date">
+														<span></span>
+														<i class="mdi mdi-menu-down"></i>
+													</div>
+													<label for="date">Выберите интервал</label>
+													<ul class="dropdown interval-dropdown" id="weekdays">
+														<li><a href="" class="waves-effect">c 9:00 до 15:00</a></li>
+														<li><a href="" class="waves-effect">c 12:00 до 15:00</a></li>
+														<li><a href="" class="waves-effect">с 18:00 до 22:00</a></li>
+													</ul>
+													<ul class="dropdown interval-dropdown" id="holydays">
+														<li><a href="" class="waves-effect">с 11:00 до 16:00</a></li>
+														<li><a href="" class="waves-effect">с 18:00 до 22:00</a></li>
+													</ul>
+													<input type="hidden" name="interval">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<h2>Оплата</h2>
+								<div class="payments-wrapper row">
+									@@loop('./parts/payment.html', './data/payments.json')
+								</div>
+								<p>Поддерживаются основные платёжные системы, работающие в России: Visa®, MasterCard™, Мир®</p>
+								<div class="input-field">
+									<textarea placeholder="Комментарий" name=""></textarea><label for="">Комментарий</label>
+								</div>
+								<div class="right-align">
+									<a href="/result.html" class="bttn">Оформить заказ</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col l4 m12">
+						<form class="pin">
+							<h2>Состав корзины</h2>
+							<div class="cart-content">
+								@@loop('./parts/cart-entry.html','./data/cart.json')
+							</div>
+							<div class="divider"></div>
+							<div class="summary">
+								Итого к оплате: 13 420₽
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+@import '../parts/vars';
+
+main#shops{
+
+	& .address-entry{
+
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 1.4em;
+		margin-bottom: 10px;
+		position: relative;
+		z-index: 2;
+		cursor: pointer;
+		transition: background-color .2s;
+
+		@media(max-width: 900px){
+			overflow: hidden;
+		}
+
+		&:hover:after{
+			background-color: rgba(black, .03);
+		}
+
+		& .img-wrapper{
+			width: 160px;
+			flex-shrink: 0;
+			margin-right: 10px;
+
+			& img{
+				display: block;
+			}
+
+			@media(max-width: $small){
+				margin: 0;
+			}
+		}
+
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 110%;
+			height: 100%;
+
+			@media(max-width: 900px){
+				display: none;
+			}
+		}
+
+		&.active:after{
+			background-color: rgba(black, .1);
+			z-index: -1;
+		}
+
+		@media(max-width: $small){
+
+			flex-direction: column;
+			border-radius: $border-radius;
+			margin-bottom: 1.5rem;
+
+			& .img-wrapper{
+				width: 100%;
+
+				& img{
+					width: 100%;
+					aspect-ratio: 2 / 1;
+					object-fit: cover;
+				}
+			}
+
+			& .info{
+				width: 100%;
+				padding: 10px;
+				border-radius: $border-radius;
+			}
+		}
+	}
+
+	& .info{
+
+		flex-grow: 1;
+
+		& .address{
+			font-weight: 500;
+		}
+
+		& .description{
+			font-size: 14px;
+			line-height: 1.4em;
+		}
+
+		& .timing{
+
+			& .timing-prefix{
+				font-size: 14px;
+				line-height: 1.4em;
+			}
+
+			& .timing-entry{
+
+				display: flex;
+
+				& .key{
+					width: 40%;
+				}
+
+				& .value{
+					flex-grow: 1;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	& #map{
+		height: 100%;
+		min-height: 50vh;
+		
+		@media(max-width: 900px){
+			display: none;
+		}
+	}
+
+	& .shops-wrapper{
+
+		@media(max-width: $large){
+			display: flex;
+			flex-wrap: wrap;
+			margin: 2vmax 0;
+
+			& .address-entry{
+				width: 50%;
+
+				&:after{
+					width: 100%;
+				}
+			}
+		}
+
+		@media(max-width: 900px){
+			display:block;
+
+			& .address-entry{
+				width: auto;
+			}
+		}
+	}
+
+	& .link-wrapper{
+
+		@media(min-width: 900px){
+			display: none;
+		}
+	}
+}

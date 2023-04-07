@@ -1,0 +1,36 @@
+//= Media queries ========================================
+//= Less, then extra-small	// T (tiny)
+$extra-small: 400px;			// XS (extra-small)
+$small: 600px;						// S (small)
+$medium: 800px;						// M (medium)
+$large: 1200px;						// L (large)
+$extra-large: 1600px;				// XL (extra-large)
+$huge: 1601px;						// H (huge)
+
+//= Columns gutter =======================================
+$cols: 12;								// Column-count
+$gutter-width: 20px;			// Space between columns
+
+$primary: #FF2741;
+$secondary: #3C84F3;
+$text: #333333;
+$fogged: #818181;
+$disabled: #D4D4D4;
+$success: #00AC5A;
+$paper: #FBFBFD;
+
+$primary-color: $primary;
+$secondary-color: $secondary;
+
+$border-radius: 6px;
+
+$font-size: calc(16px + .1vw);
+$section-alt: #E7F0F5;
+
+@mixin debugBorder($color){
+	box-shadow: 0 0 0 1px $color inset;
+}
+
+@mixin shadow{
+	box-shadow: 0 1px 3px rgba(black, .1), 0 2px 6px rgba(black, .1), 0 8px 9px rgba(black, .1);
+}

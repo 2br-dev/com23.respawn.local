@@ -1,0 +1,114 @@
+main#catalog .catalog-content {
+  display: flex; }
+  main#catalog .catalog-content .catalog-content {
+    flex-grow: 1; }
+  main#catalog .catalog-content .product-card {
+    padding: 1vmax;
+    box-sizing: border-box;
+    transition: box-shadow .2s, background-color .2s; }
+    @media (min-width: 800px) {
+      main#catalog .catalog-content .product-card:hover {
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 1; } }
+    @media (max-width: 800px) {
+      main#catalog .catalog-content .product-card {
+        margin: 10px 0; } }
+
+main#catalog .filters {
+  position: sticky;
+  top: 80px;
+  flex-shrink: 0;
+  width: 300px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-right: 20px; }
+  main#catalog .filters .filter-param {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0; }
+    main#catalog .filters .filter-param:first-of-type, main#catalog .filters .filter-param:last-of-type {
+      border: 0; }
+    main#catalog .filters .filter-param .calibration {
+      visibility: hidden;
+      position: absolute;
+      z-index: -1;
+      pointer-events: none; }
+    main#catalog .filters .filter-param .prefix, main#catalog .filters .filter-param .suffix {
+      font-size: 14px;
+      color: #818181;
+      font-weight: 400; }
+    main#catalog .filters .filter-param .param {
+      display: flex;
+      margin-bottom: 6px; }
+      main#catalog .filters .filter-param .param label:first-of-type {
+        flex-grow: 1;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+                user-select: none;
+        cursor: pointer; }
+      main#catalog .filters .filter-param .param input {
+        display: none; }
+        main#catalog .filters .filter-param .param input ~ label {
+          display: block;
+          height: calc(16px + .2vmax);
+          aspect-ratio: 1 / 1;
+          border-radius: 4px;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset;
+          overflow: hidden;
+          cursor: pointer;
+          background-color: #eee; }
+          main#catalog .filters .filter-param .param input ~ label:before {
+            content: '\F012C';
+            font-family: 'Material Design Icons';
+            display: block;
+            aspect-ratio: 1 / 1;
+            height: 100%;
+            text-align: center;
+            line-height: calc(16px + .2vmax);
+            color: transparent;
+            transition: box-shadow .2s, color .2s;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                    user-select: none; }
+        main#catalog .filters .filter-param .param input:checked ~ label:before {
+          box-shadow: 0 0 0 calc(16px + .2vmax) #3C84F3 inset;
+          color: #fff; }
+    main#catalog .filters .filter-param .input-range {
+      margin-bottom: 20px;
+      display: inline-flex; }
+      main#catalog .filters .filter-param .input-range input {
+        width: -moz-fit-content;
+        width: fit-content;
+        border: 0;
+        font-size: calc(16px + .2vmax);
+        font-size: 'Roboto';
+        font-weight: 300;
+        background: transparent;
+        transform: translateY(-5px);
+        padding-top: 3px;
+        padding-bottom: 6px;
+        padding-left: 3px;
+        padding-right: 3px;
+        text-align: center;
+        box-sizing: content-box;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        margin: 0 3px; }
+        main#catalog .filters .filter-param .input-range input:focus {
+          box-shadow: 0 0 3px #3C84F3;
+          background-color: #fff; }
+
+main#catalog .sidenav#categories li {
+  padding: 10px;
+  line-height: unset; }
+  main#catalog .sidenav#categories li ul {
+    border: 0;
+    background: transparent; }
+
+main#catalog #water_block, main#catalog #coolers_block {
+  padding: 4vmax 0;
+  background-color: #E7F0F5; }
+  main#catalog #water_block .swiper-slide .product-card, main#catalog #coolers_block .swiper-slide .product-card {
+    background-color: transparent; }
+  main#catalog #water_block .swiper-slide:hover .product-card, main#catalog #coolers_block .swiper-slide:hover .product-card {
+    background-color: #fff; }

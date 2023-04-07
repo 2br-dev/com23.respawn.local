@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Страница воды", style: 'product'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="product">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<ul class="breadcrumbs hide-m-down">
+							<li><a href="/"><i class="mdi mdi-home"></i></a></li>
+							<li><a href="/catalog-water.html">Каталог</a></li>
+							<li><a href="/catalog-water.html">Питьевая вода</a></li>
+						</ul>
+					</div>
+					<div class="col xl7 l8 m12">
+						<div class="row flex vcenter">
+							<div class="col xl5 l5 m5 s6 offset-s3 xs8 offset-xs2 t12">
+								<img src="" alt="" class="responsive-img lazy" data-src="/img/bottles/mirabelle.png">
+							</div>
+							<div class="col xl6 offset-xl1 l7 m7">
+								<h1>Мирабель</h1>
+								<div class="price-prefix">Цена</div>
+								<div class="price-table">
+									<div class="kv-pair">
+										<div class="key">1 бутыль</div>
+										<div class="value">240₽ *</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">от 2х бутылей</div>
+										<div class="value">240₽ *</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">от 4х бутылей</div>
+										<div class="value">240₽ *</div>
+									</div>
+								</div>
+								<div class="align-center-m-down">
+									@@include('./parts/smart-bttn.html')
+								</div>
+								<ul class="tabs">
+									<li class="tab"><a href="#delivery" class="waves-effect active mdi mdi-truck-fast">Доставка</a></li>
+									<li class="tab"><a href="#docs" class="waves-effect mdi mdi-file-document-outline">Документы</a></li>
+								</ul>
+								<div id="delivery">
+									<ul class="browser-default">
+										<li>Доставка осуществляется при заказе от 2х бутылей</li>
+										<li>Цена указана  при условии наличия оборотной тары</li>
+										<li>К обмену принимается только тара из нашего ассортимента</li>
+									</ul>
+								</div>
+								<div id="docs">
+									<ul class="browser-default">
+										<li><a href="">Сертификат</a></li>
+										<li><a href="">Сертификат</a></li>
+										<li><a href="">Сертификат</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col s12">
+								<h2>Описание</h2>
+								<p>Пить­евая во­да Ми­рабель те­перь дос­туп­на в од­но­ра­зо­вой та­ре.</p>
+								<p>Дан­ная ар­те­зи­ан­ская во­да со­от­ветс­тву­ет са­мым вы­со­ким стан­дар­там оте­чес­твен­ных про­из­во­ди­те­лей. "Ми­ра­бель" до­бы­ва­ют на глу­би­не 196 мет­ров, ис­поль­зуя ис­клю­чи­тель­но ин­но­ва­ци­он­ные тех­но­ло­гии. Она об­ла­да­ет прек­рас­ным ка­чес­твом  и к ее осо­бен­нос­тям от­но­сит­ся то, что она сох­ра­ня­ет на­ту­раль­ный вкус и цвет, при­го­тов­лен­ных в ней про­дук­тов, а так­же, де­ла­ет аро­мат чая и ко­фе яр­че и на­сы­щен­ней.</p>
+								<p>"Ми­ра­бель" прек­рас­но под­хо­дит для ежед­нев­но­го при­ме­не­ния, так как сох­ра­ня­ет иде­аль­ный ба­ланс ми­не­ра­лов и мик­ро­эле­мен­тов. По­ми­мо сво­его вы­со­ко­го ка­чес­тва, дан­но­го при­ро­дой, во­да так­же про­хо­дит не­об­хо­ди­мую до­пол­ни­тель­ную очис­тку.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col offset-xl1 l4 m12 s12">
+						<div class="actions-wrapper">
+							<h2>Акции</h2>
+							<div class="swiper" id="product-actions">
+								<div class="swiper-wrapper">
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+								</div>
+							</div>
+							<div class="swiper-pagination hero-pagination actions-pagination"></div>
+						</div>
+						<div class="actions-wrapper">
+							<h2>Вас может заинтересовать</h2>
+							<div class="swiper" id="product-offers">
+								<div class="swiper-wrapper">
+									@@loop('./parts/product-card.html', './data/coolers_slider.json')
+								</div>
+							</div>
+							<div class="swiper-pagination hero-pagination offers-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

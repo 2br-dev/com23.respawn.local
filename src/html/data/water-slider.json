@@ -1,0 +1,242 @@
+[
+	{
+		"header": "Домбай Ульген",
+		"image": "/img/bottles/dombay.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "240₽",
+		"price2": "230₽",
+		"price3": "220₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Мирабель",
+		"subheader": "в одноразовой таре",
+		"image": "/img/bottles/mirabelle.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "230₽",
+		"price2": "220₽",
+		"price3": "210₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Mountain Kids",
+		"image": "/img/bottles/mountain_kids.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "320₽",
+		"price2": "300₽",
+		"price3": "290₽",
+		"class": "swiper-slide",
+		"labes":[
+			{
+				"class": "new",
+				"header": "новинка"
+			},
+			{
+				"class": "children",
+				"header": "детская"
+			}
+		]
+	},
+	{
+		"header": "Горячий Ключ",
+		"subheader": "минеральный",
+		"image": "/img/bottles/hot_key_mineral.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "260₽",
+		"price2": "240₽",
+		"price3": "210₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Горный воздух",
+		"image": "/img/bottles/mountain_air.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "320₽",
+		"price2": "310₽",
+		"price3": "300₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Почемучка",
+		"image": "/img/bottles/pochemuchka.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "240₽",
+		"price2": "210₽",
+		"price3": "190₽",
+		"class": "swiper-slide",
+		"labes":[
+			{
+				"class": "new",
+				"header": "новинка"
+			},
+			{
+				"class": "children",
+				"header": "детская"
+			}
+		]
+	},
+	{
+		"header": "Долина Джентау",
+		"image": "/img/bottles/jentau.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "260₽",
+		"price2": "230₽",
+		"price3": "210₽",
+		"class": "swiper-slide",
+		"labes":[
+			{
+				"class": "hit",
+				"header": "хит продаж"
+			}
+		]
+	},
+	{
+		"header": "Горячий ключ",
+		"image": "/img/bottles/hot_key.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "220₽",
+		"price2": "190₽",
+		"price3": "180₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Серебряная",
+		"image": "/img/bottles/silver.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "195₽",
+		"price2": "175₽",
+		"price3": "165₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Мирабель",
+		"image": "/img/bottles/mirabelle.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "190₽",
+		"price2": "170₽",
+		"price3": "160₽",
+		"class": "swiper-slide",
+		"labes":[
+			{
+				"class": "new",
+				"header": "новинка"
+			}
+		]
+	},
+	{
+		"header": "Архыз",
+		"image": "/img/bottles/arhyz.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "330₽",
+		"price2": "310₽",
+		"price3": "300₽",
+		"class": "swiper-slide",
+		"labes":[
+			{
+				"class": "hit",
+				"header": "хит продаж"
+			}
+		]
+	},
+	{
+		"header": "Эльбрусинка",
+		"subheader": "детская",
+		"image": "/img/bottles/elbrusinka.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "300₽",
+		"price2": "280₽",
+		"price3": "260₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Горная вершина",
+		"image": "/img/bottles/mountain_peak.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "250₽",
+		"price2": "230₽",
+		"price3": "220₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Домбай",
+		"image": "/img/bottles/dombay.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "240₽",
+		"price2": "230₽",
+		"price3": "220₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Пилигрим",
+		"image": "/img/bottles/piligrim.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "290₽",
+		"price2": "270₽",
+		"price3": "260₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Кубай",
+		"image": "/img/bottles/kubai.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "250₽",
+		"price2": "240₽",
+		"price3": "230₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Горный воздух",
+		"subheader": "в одноразовой таре",
+		"image": "/img/bottles/mountain_air_one.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "420₽",
+		"price2": "420₽",
+		"price3": "400₽",
+		"class": "swiper-slide"
+	},
+	{
+		"header": "Долина Джентау",
+		"subheader": "в одноразовой таре",
+		"image": "/img/bottles/jentau_one.png",
+		"link":"/product-water.html",
+		"type": "triple-price",
+		"price1": "340₽",
+		"price2": "320₽",
+		"price3": "300₽",
+		"class": "swiper-slide",
+		"labes":[
+			{
+				"class": "new",
+				"header": "новинка"
+			},
+			{
+				"class": "children",
+				"header": "детская"
+			}
+		]
+	},
+	{
+		"header": "Бутыль ПК 19 л",
+		"type": "single-price",
+		"image": "/img/bottles/empty_bottle.png",
+		"price": "400₽",
+		"class": "swiper-slide"
+	}
+]

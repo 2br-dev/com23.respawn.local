@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Спасибо за Ваш заказ!", style: "checkout"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="checkout">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col l6 offset-l3 m8 offset-m2 s12 center-align">
+						<div class="result-wrapper">
+							<i class="result-icon success mdi mdi-check-circle"></i>
+							<h1>Заказ оплачен</h1>
+							<p>
+								Спасибо за Ваш заказ! Наши сотрудники свяжутся с Вами в ближайшее время!
+								Отследить заказ Вы можете, воспользовавшись <a href="">личным кабинетом</a>
+								или с помощью менеджера, который поможет решить любой интересующий Вас вопрос
+								в рамках заказа.
+							</p>
+							<p>
+								<a href="/profile.html#orders" class="bttn-outline">К моим заказам</a>
+								<a href="/" class="bttn">На главную</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+main#product .product-image {
+  display: block;
+  width: 100%; }
+
+main#product .price-prefix {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+main#product .price-table {
+  display: table;
+  width: 100%;
+  border-top: 2px solid #333333; }
+  main#product .price-table .kv-pair {
+    display: table-row; }
+    main#product .price-table .kv-pair:nth-child(odd) {
+      background-color: rgba(0, 0, 0, 0.03); }
+    main#product .price-table .kv-pair .key, main#product .price-table .kv-pair .value {
+      display: table-cell;
+      padding: 10px; }
+    main#product .price-table .kv-pair .key {
+      font-size: 16px; }
+    main#product .price-table .kv-pair .value {
+      font-size: 1.7rem;
+      text-align: right;
+      line-height: 1.6em;
+      font-weight: 500; }
+
+main#product #delivery, main#product #docs {
+  font-size: 16px;
+  line-height: 1.4em;
+  font-weight: 400; }
+
+main#product .smart-bttn {
+  margin: 30px 0; }
+
+main#product .tabs {
+  background-color: transparent; }
+  main#product .tabs .tab a {
+    color: #333333;
+    transition: color .2s;
+    font-weight: 400;
+    font-size: calc(16px + .02vmax); }
+    main#product .tabs .tab a.active {
+      color: #FF2741; }
+    main#product .tabs .tab a:before {
+      margin-right: 6px; }
+    main#product .tabs .tab a:focus {
+      background-color: transparent; }
+  main#product .tabs .indicator {
+    background-color: #FF2741; }
+
+main#product .actions-wrapper {
+  margin-bottom: 3vmax; }
+  main#product .actions-wrapper #product-actions {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1), 0 8px 9px rgba(0, 0, 0, 0.1);
+    border-radius: 6px; }
+    main#product .actions-wrapper #product-actions a {
+      display: block;
+      aspect-ratio: 4 / 2;
+      background-size: cover;
+      background-position: center center; }
+
+main#product .price {
+  color: #3C84F3;
+  font-weight: 500;
+  margin: 30px 0;
+  font-size: 3rem;
+  line-height: 1.4em; }
+
+main#product .chars {
+  -moz-columns: 2;
+       columns: 2; }
+  @media (max-width: 800px) {
+    main#product .chars {
+      -moz-columns: 1;
+           columns: 1; } }
+  main#product .chars .kv-pair {
+    display: flex;
+    padding: 6px;
+    border-top: 1px solid #ccc; }
+    main#product .chars .kv-pair .key {
+      flex-grow: 1; }
+    main#product .chars .kv-pair .value {
+      font-weight: 500; }
+      main#product .chars .kv-pair .value .char-yes {
+        color: #00AC5A; }
+      main#product .chars .kv-pair .value .char-no {
+        color: #FF2741; }

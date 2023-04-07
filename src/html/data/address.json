@@ -1,0 +1,51 @@
+[
+	{
+		"id": "address1",
+		"address": "ул. Московская, 129/206",
+		"checked": true,
+		"city": "Краснодар",
+		"street": "Московская",
+		"house": "129",
+		"block": "",
+		"app": "206",
+		"entrance": "2",
+		"floor": "8",
+		"domofon": "206"
+	},
+	{
+		"id": "address2",
+		"address": "ул. Северная, д. 324, литер Г",
+		"city": "Краснодар",
+		"street": "Северная",
+		"house": "324",
+		"block": "Г",
+		"app": "51",
+		"entrance": "1",
+		"floor": "5",
+		"domofon": "51"
+	},
+	{
+		"id": "address3",
+		"address": "ул. Пушкина, 46/9",
+		"city": "Ессентуки",
+		"street": "Пушкина",
+		"house": "46",
+		"block": "",
+		"app": "9",
+		"entrance": "1",
+		"floor": "4",
+		"domofon": ""
+	},
+	{
+		"id": "other",
+		"address": "Указать вручную",
+		"city": "",
+		"street": "",
+		"house": "",
+		"block": "",
+		"app": "",
+		"entrance": "",
+		"floor": "",
+		"domofon": ""
+	}
+]

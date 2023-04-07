@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Заказ успешно оформлен", style: "checkout"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="checkout">
+		<section>
+			<div class="container">
+				<div class="row flex">
+					<div class="col l8 order-m1">
+						<h1>Оформление заказа</h1>
+						<strong>Заказ №41543 оформлен</strong>
+						<div class="row">
+							<div class="col l6 m6">
+								<div class="results-wrapper rw-left">
+									<div class="kv-pair">
+										<div class="key">Фамилия</div>
+										<div class="value">Иванов</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">Имя</div>
+										<div class="value">Сидор</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">Отчество</div>
+										<div class="value">Петрович</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">Телефон</div>
+										<div class="value">+7 232-322-232-322</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">E-mail</div>
+										<div class="value">petruha@mail.ru</div>
+									</div>
+								</div>
+							</div>
+							<div class="col l6 m6">
+								<div class="results-wrapper rw-right">
+									<div class="kv-pair">
+										<div class="key">Адрес доставки</div>
+										<div class="value">Краснодар, ул. Московская, 12, кв. 206, 8 этаж, 2 подъезд, домофон 206</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">Дата доставки</div>
+										<div class="value">Ближайшая</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">Время доставки</div>
+										<div class="value">Ближайшее</div>
+									</div>
+									<div class="kv-pair">
+										<div class="key">Способ оплаты</div>
+										<div class="value">Картой онлайн</div>
+									</div>
+								</div>
+							</div>
+							<div class="col s12">
+								<div class="comment">
+									<div>Комментарий</div>
+									<div><strong>Если можно, побыстрее, пить очень хочется</strong></div>
+								</div>
+								<div class="action">
+									<a href="/" class="bttn-outline">На главную</a>
+									<a href="/success.html" class="bttn right">Оплатить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col l4 xl3 offset-xl1">
+						<h2>Состав корзины</h2>
+						<div class="results-cart">
+							@@loop('./parts/result_cart_entry.html', './data/cart.json')
+						</div>
+						<div class="divider"></div>
+						<div class="summary">Итого к оплате: 13 220₽</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

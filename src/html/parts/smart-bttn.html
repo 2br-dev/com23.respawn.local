@@ -1,0 +1,25 @@
+<div class="smart-bttn-wrapper">
+	<div class="smart-bttn">
+		<div class="avers">
+			@@if(!context.btnClass){
+				<a href="" class="bttn-outline waves-effect cart-bttn">
+			}
+			@@if(context.btnClass){
+				<a href="" class="bttn waves-effect cart-bttn">
+			}
+				<i class="mdi mdi-cart-arrow-down"></i>Заказать
+			</a>
+		</div>
+		<div class="revers counter">
+			<div class="bttn-wrapper">
+				<a href="" class="mdi mdi-minus"></a>
+			</div>
+			<div class="input-wrapper">
+				<input type="number" value="0" readonly>
+			</div>
+			<div class="bttn-wrapper">
+				<a href="" class="mdi mdi-plus"></a>
+			</div>
+		</div>
+	</div>
+</div>

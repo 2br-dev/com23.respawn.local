@@ -1,0 +1,32 @@
+main#payment .delivery-header {
+  margin-left: calc(-20px - .2vmax);
+  width: calc(100% + 45px + .2vmax); }
+
+main#payment h2 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px; }
+
+main#payment h3 {
+  font-size: calc(1.2rem + .08vmax);
+  text-transform: none; }
+
+main#payment h4 {
+  font-size: calc(1rem + .1vmax);
+  color: #3C84F3;
+  margin-bottom: 0; }
+  main#payment h4 + ul {
+    margin: 0; }
+
+main#payment .regions {
+  padding-left: 16px;
+  font-size: 16px;
+  -moz-column-count: 2;
+       column-count: 2; }
+  main#payment .regions li {
+    -moz-column-break-inside: avoid;
+         break-inside: avoid-column; }
+  @media (max-width: 600px) {
+    main#payment .regions {
+      -moz-columns: 1;
+           columns: 1; } }

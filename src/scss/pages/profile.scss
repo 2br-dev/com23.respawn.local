@@ -1,0 +1,225 @@
+@import '../parts/vars';
+
+main#profile{
+
+	& .white-block{
+
+		& h2{
+			font-size: 21px;
+			margin-top: 0;
+		}
+
+		& table{
+
+			& thead{
+
+				& th{
+					font-size: 14px;
+					padding-top: 0;
+					padding-bottom: 0;
+					position: sticky;
+					background-color: #fff;
+					top: 0;
+				}
+			}
+			
+			& tbody{
+
+				& tr.order-details{
+		
+					border: 0;
+
+					& > td{
+						padding: 0;
+					}
+					
+					& ul{
+						margin: 0;
+						border-left: 2px solid $primary;
+						padding-left: 20px;
+		
+						& li{
+		
+							& a{
+								color: $primary;
+							}
+						}
+					}
+
+					& .table-wrapper{
+						display: none;
+						border-left: 2px solid $primary;
+						padding-left: 20px;
+					}
+				}
+
+				& tr{
+
+					& .actions{
+	
+						& a{
+							color: transparent;
+						}
+					}
+
+					&:hover{
+
+						& .actions{
+
+							& a{
+								color: $primary;
+							}
+						}
+					}
+				}
+
+
+				& tr:not(.order-details){
+
+					cursor: pointer;
+
+					&:hover{
+						background-color: rgba(black, .03);
+					}
+				}
+
+				& a:hover{
+					text-decoration: underline;
+				}
+			}
+
+			@media(max-width: $large){
+
+				& thead{
+					display: none;
+				}
+
+				& tbody{
+
+					display: block;
+
+					& tr{
+						display: flex;
+						flex-direction: column;
+						padding: 10px;
+						border: 0;
+						
+						&:not(.order-details){
+							border-radius: $border-radius;
+							@include shadow;
+						}
+
+						&.order-details{
+							padding-top: 0;
+						}
+
+						& td{
+							padding: 0;
+							display: block;
+							font-weight: 500;
+
+							&:before{
+								content: attr(data-name);
+								display: block;
+								font-size: 14px;
+								font-weight: 300;
+							}
+							
+							&.actions{
+	
+								& a{
+									color: $primary;
+									display: inline-block;
+									width: 32px;
+									height: 32px;
+									font-size: 21px;
+									line-height: 32px;
+									text-align: center;
+								}
+							}
+
+							& table{
+
+								& tbody{
+
+									& tr{
+										box-shadow: none !important;
+
+										& td{
+
+											&:not(:first-of-type){
+
+												&:before{
+													display: inline;
+													padding-right: 6px;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						&:hover{
+							background: transparent !important;
+						}
+					}
+				}
+			}
+		}
+
+		& .account-ballance{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			& a:not(.bttn-outline){
+				padding: 6px;
+				font-size: 1.5em;
+				margin-right: 3px;
+				color: $secondary;
+			}
+
+			& input{
+				width: 130px;
+				font-size: 1.5rem;
+				line-height: 1.5em;
+				border: 0;
+				color: $secondary;
+			}
+		}
+
+		& .name-block{
+
+			margin-bottom: 20px;
+
+			& .name{
+				font-size: 14px;
+				line-height: 1.2em;
+			}
+
+			& .value{
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+#profile-editor{
+	max-width: 800px;
+
+	& .gender-wrapper{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		& label:first-of-type{
+			margin-right: 10px;
+		}
+	}
+
+	& #password{
+		display: none;
+	}
+}

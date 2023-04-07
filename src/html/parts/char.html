@@ -1,0 +1,10 @@
+<div class="kv-pair">
+	<div class="key">@@name</div>
+	<div class="value">
+		@@if(context.value){
+			@@if(value == 'Да'){<i class="mdi mdi-check char-yes"></i>}
+			@@if(value == 'Нет'){<i class="mdi mdi-close char-no"></i>}
+			@@if(value != 'Да' && value != 'Нет'){@@value}
+		}
+	</div>
+</div>

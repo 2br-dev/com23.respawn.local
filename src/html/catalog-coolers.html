@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Главная", style: "catalog"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="catalog">
+		<section id="catalog">
+			<div class="container">
+				<div class="row col s12">
+					<h1>
+						<a href="#categories" class="hide-m-up sidenav-trigger">
+							<i class="mdi mdi-tune"></i>
+						</a>
+						Каталог
+					</h1>
+					@@include('./parts/quick-navi.html')
+				</div>
+				<div class="row flex">
+					<form class="col l12 catalog-content">
+						@@include('./parts/filters.html', {suffix: 'desktop', className: 'hide-m-down', max: 3000})
+						<div class="row flex catalog-content">
+							@@loop('./parts/product-card.html', './data/coolers.json')
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/water_block.html')
+		<ul class="sidenav" id="categories">
+			<li>
+				<form action="">
+					@@include('./parts/filters.html', {suffix: 'mobile', max: 3000})
+				</form>
+			</li>
+		</ul>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

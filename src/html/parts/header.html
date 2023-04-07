@@ -1,0 +1,249 @@
+<header>
+	<div class="container">
+		<div class="header-top">
+			<a href="/index.html" class="logo"></a>
+			<ul class="desktop-phones">
+				<li><span><i class="mdi mdi-map-marker"></i>Краснодар</span></li>
+				<li><a target="_blank" href="tel://+79862044444">204-44-44</a></li>
+				<li><a target="_blank" href="tel://+79883334443">8(988) 333-444-3</a></li>
+				<li><a target="_blank" href="https://wa.me/79862044444"><i class="mdi mdi-whatsapp"></i></a></li>
+				<li><a target="_blank" href="https://t.me/+79862044444"><i class="mdi mdi-telegram"></i></a></li>
+				<li><a href="" class="bttn"><i class="mdi mdi-autorenew"></i>Повторить заказ</a></li>
+			</ul>
+			<ul class="mobile-right">
+				<li><a href="/checkout.html" ><i class="mdi mdi-cart"></i></a></li>
+				<li><a href="#mobile-navi" class="sidenav-trigger"><i class="mdi mdi-menu"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<nav class="header-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<ul class="top-level">
+					<li class="catalog-bttn">
+						<a href="javascript:void(0)">
+							<i class="mdi mdi-text-search"></i>
+							Каталог
+						</a>
+						<ul class="z-depth-1">
+							@@loop('./navi-entry.html', '../html/data/categories.json')
+						</ul>
+						<li><a href="/actions.html">Акции</a></li>
+						<li><a href="/payment.html">Доставка и оплата</a></li>
+						<li><a href="/shops.html">Магазины</a></li>
+						<li><a href="/service.html">Сервисный центр</a></li>
+					</li>
+					<div class="separator"></div>
+					<ul class="user-section top-level">
+						<li>
+							<a href="">1/1200₽<i class="mdi mdi-cart"></i></a>
+							<ul class="z-depth-1">
+								<li><a href="/checkout.html">Оформить заказ</a></li>
+								<li><a href="javascript:void(0);">Очистить корзину</a></li>
+							</ul>
+						</li>
+						<!-- Гость -->
+						<li id="guest" class="">
+							<a href="">Профиль<i class="mdi mdi-account"></i></a>
+							<ul class="z-depth-1">
+								<li><a class="modal-trigger" href="#login">Авторизация</a></li>
+								<li><a class="modal-trigger" href="#register">Регистрация</a></li>
+							</ul>
+						</li>
+						<!-- Зарегистрированный пользователь -->
+						<li id="registered" class="hidden">
+							<a href="">MasterKadaj<i class="mdi mdi-account"></i></a>
+							<ul class="z-depth-1">
+								<li><a href="/profile.html#orders">Мои заказы</a></li>
+								<li><a href="/profile.html">Мой профиль</a></li>
+								<li><a href="/support.html">Поддержка</a></li>
+								<li>
+									<div class="divider"></div>
+								</li>
+								<li><a href="/">Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<ul class="sidenav" id="mobile-navi">
+	<!-- Гость -->
+	<li class="user-view hidden">
+		<div class="user">
+			<div class="name-wrapper">
+				<i class="mdi mdi-shield-lock"></i>
+				<span class="name">Аккаунт</span>
+			</div>
+			<div class="actions">
+				<a href=""><i class="mdi mdi-login-variant"></i><span>Войти</span></a>
+				<a href=""><i class="mdi mdi-file-document-edit-outline"></i><span>Создать</span></a>
+			</div>
+		</div>
+	</li>
+	<!-- Авторизованный пользователь -->
+	<li class="user-view">
+		<div class="user">
+			<div class="name-wrapper">
+				<i class="mdi mdi-account-circle"></i>
+				<span class="name">Профиль</span>
+			</div>
+			<div class="actions">
+				<a href=""><i class="mdi mdi-cog"></i><span>Настройки</span></a>
+				<a href=""><i class="mdi mdi-logout-variant"></i><span>Выход</span></a>
+			</div>
+		</div>
+	</li>
+	<li class="location"><i class="mdi mdi-map-marker"></i><span>Краснодар</span></li>
+	<li><a href="/">Главная</a></li>
+	<li>
+		<a href="/catalog.html">Каталог</a>
+		<ul>
+			<li><a href="/catalog_water.html">Питьевая бутилированная вода</a></li>
+			<li><a href="/catalog_cooler.html">Кулеры для воды</a></li>
+			<li><a href="/catalog_cooler.html">Помпы для воды</a></li>
+			<li><a href="/catalog_cooler.html">Сопутствующая продукция</a></li>
+		</ul>
+	</li>
+	<li><a href="/actions.html">Акции</a></li>
+	<li><a href="/payment.html">Оплата и доставка</a></li>
+	<li><a href="/shops.html">Магазины</a></li>
+	<li><a href="/service.html">Сервисный центр</a></li>
+</ul>
+<ul class="fab">
+	<li>
+		<a href="javascript:void(0);" class="z-depth-2"><i class="mdi mdi-phone"></i></a>
+		<ul>
+			<li><a target="_blank" class="z-depth-1 phone" href="tel://+79862044444"><i class="mdi mdi-phone"></i></a></li>
+			<li><a target="_blank" class="z-depth-1 cellphone" href="tel://+79883334443"><i class="mdi mdi-cellphone-iphone"></i></a></li>
+			<li><a target="_blank" class="z-depth-1 whatsapp" href="https://wa.me/79862044444"><i class="mdi mdi-whatsapp"></i></a></li>
+			<li><a target="_blank" class="z-depth-1 telegram" href="https://t.me/+79862044444"><i class="mdi mdi-telegram"></i></a></li>
+		</ul>
+	</li>
+</ul>
+<form class="modal" id="login">
+	<div class="modal-content">
+		<div class="row flex vcenter">
+			<div class="col xs9 s9 t9">
+				<h3 class="no-margin">Вход</h3>
+			</div>
+			<div class="col xs3 s3 t3 right-align">
+				<a href="#!" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a>
+			</div>
+			<div class="col s12">
+				<div class="input-field">
+					<input type="text" placeholder="Логин">
+					<label for="">Логин</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+			<div class="col s12">
+				<div class="input-field">
+					<input type="text" placeholder="Пароль">
+					<label for="">Пароль</label>
+					<div class="indicator"></div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="modal-footer">
+		<a href="#register" class="bttn-flat left modal-trigger modal-close waves-effect">Регистрация</a>
+		<a href="/profile.html" class="bttn-flat modal-close">Войти</a>
+	</div>
+</form>
+<form action="" class="modal" id="register">
+	<div class="modal-content">
+		<div class="row flex vcenter">
+			<div class="col xs9 s9 t9">
+				<h3>Регистрация</h3>
+			</div>
+			<div class="col xs3 s3 t3 right-align"><a href="" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a></div>
+			<div class="col s12">
+                <input type="radio" value="physical" name="account-type" checked id="type1" class="styled">
+                <label for="type1">Физическое лицо</label>
+                <input type="radio" value="law" name="account-type" id="type2" class="styled">
+                <label for="type2">Юридическое лицо</label>
+            </div>
+		</div>
+		<div class="row" data-mode="physical" id="fieldset">
+            <div class="col m6 s12 law">
+                <div class="input-field">
+					<input type="text" class="styled" placeholder="Организация">
+					<label for="">Организация</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field">
+					<input type="text" class="styled" placeholder="Фамилия">
+					<label for="">Фамилия</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field">
+					<input type="text" class="styled" placeholder="Имя">
+					<label for="">Имя</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field">
+					<input type="text" class="styled" placeholder="Отчество">
+					<label for="">Отчество</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field">
+					<input type="text" class="styled" placeholder="Телефон">
+					<label for="">Телефон</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12 law">
+                <div class="input-field">
+					<input type="text" class="styled" placeholder="ИНН">
+					<label for="">ИНН</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12 law">
+                <div class="input-field">
+					<input type="text" class="styled" placeholder="ОГРН/ОГРИП">
+					<label for="">ОГРН/ОГРИП</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field">
+					<input type="email" class="styled" placeholder="E-mail">
+					<label for="">E-mail</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field">
+					<input type="password" class="styled" placeholder="Пароль">
+					<label for="">Пароль</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field">
+					<input type="password" class="styled" placeholder="Подтверждение">
+					<label for="">Подтверждение</label>
+					<div class="indicator"></div>
+				</div>
+            </div>
+        </div>
+	</div>
+	<div class="modal-footer">
+		<a href="#login" class="bttn-flat waves-effect modal-trigger modal-close left">Войти</a>
+		<a href="/profile.html" class="bttn-flat modal-close">Отправить</a>
+	</div>
+</form>

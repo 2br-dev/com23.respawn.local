@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "О компании", style:"actions"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="action" class="mountains">
+		<section>
+			<div class="container">
+				<div class="white-block">
+					<div class="lazy action-hero" data-bg="/img/action_hero.jpg"></div>
+					<div class="row flex">
+						<div class="col offset-xl1 m4 hide-m-down"><img alt="" class="lazy responsive-img" data-src="/img/action_content.png"></div>
+						<div class="col xl6 l8 m8">
+							<h1 class="align-center-m-down no-margin">Лёгкий старт</h1>
+							<div class="prices">
+								<div class="price-old">1 640<span class="rur">₽</span></div>
+								<div class="price-new">1 200<span class="rur">₽</span></div>
+							</div>
+							<div class="action align-center-m-down">
+								<a href="" class="bttn">
+									<i class="mdi mdi-cart-arrow-down"></i>
+									<span>Заказать</span>
+								</a>
+							</div>
+							<p>Компания Аква.Рус проводит серию акций «Лёгкий старт», в рамках которой предлагается приобрести набор включающий в себя всё необходимое для того, чтобы обеспечить себя и своих близких чистой питьевой водой. </p>
+							<p>Серия акций включает в себя набор питьевой бутилированной воды, фасованой в бутыли 19 литров, сменную тару для последующего заказа и удобную помпу-кран.</p>
+							<p>Акция Лёгкий старт-1 включает в себя следующий состав:</p>
+							<ul class="browser-default">
+								<li>2 бутыли питьевой воды «Мирабель»</li>
+								<li>2 сменные тары 19 литров</li>
+								<li>Механическая помпа</li>
+							</ul>
+							<p>При этом стоимость набора по сравнению с тем же составом, приобретённым по отдельности значительно дешевле.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/coolers_block.html')
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

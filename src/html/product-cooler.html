@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Страница воды", style: 'product'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="product">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<ul class="breadcrumbs hide-m-down">
+							<li><a href="/"><i class="mdi mdi-home"></i></a></li>
+							<li><a href="/catalog-water.html">Каталог</a></li>
+							<li><a href="/catalog-water.html">Кулеры</a></li>
+						</ul>
+					</div>
+					<div class="col xl7 l8 m12">
+						<div class="row flex vcenter">
+							<div class="col xl5 l5 m5 s6 offset-s3 xs8 offset-xs2 t12">
+								<img src="" alt="" class="responsive-img lazy product-image" data-src="/img/coolers/cooler2.png">
+							</div>
+							<div class="col xl6 offset-xl1 l7 m7">
+								<div class="align-center-m-down">
+									<h1>Aqua Well 08-M</h1>
+									<div class="subheader">Aqua Well 08-M AW ПК BH-YLR-LB-08M белый</div>
+									<div class="price">12 500₽</div>
+								</div>
+								<div class="align-center-m-down">
+									@@include('./parts/smart-bttn.html')
+									<a href="" class="bttn credit"><i class="mdi mdi-checkbox-marked-circle-outline"></i>Кредит</a>
+								</div>
+								<ul class="tabs">
+									<li class="tab"><a href="#delivery" class="waves-effect active mdi mdi-truck-fast">Доставка</a></li>
+									<li class="tab"><a href="#docs" class="waves-effect mdi mdi-file-document-outline">Документы</a></li>
+								</ul>
+								<div id="delivery">
+									<ul class="browser-default">
+										<li>Доставка осуществляется при заказе от 2х бутылей</li>
+										<li>Цена указана  при условии наличия оборотной тары</li>
+										<li>К обмену принимается только тара из нашего ассортимента</li>
+									</ul>
+								</div>
+								<div id="docs">
+									<ul class="browser-default">
+										<li><a href="">Сертификат</a></li>
+										<li><a href="">Сертификат</a></li>
+										<li><a href="">Сертификат</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col s12">
+								<h2>Характеристики</h2>
+								<div class="chars">
+									@@loop('./parts/char.html', './data/chars.json')
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col offset-xl1 l4 m12 s12">
+						<div class="actions-wrapper">
+							<h2>Акции</h2>
+							<div class="swiper" id="product-actions">
+								<div class="swiper-wrapper">
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+									<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+								</div>
+							</div>
+							<div class="swiper-pagination hero-pagination actions-pagination"></div>
+						</div>
+						<div class="actions-wrapper">
+							<h2>Вас может заинтересовать</h2>
+							<div class="swiper" id="product-offers">
+								<div class="swiper-wrapper">
+									@@loop('./parts/product-card.html', './data/water-slider.json')
+								</div>
+							</div>
+							<div class="swiper-pagination hero-pagination offers-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

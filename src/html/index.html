@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Главная", style: "main"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="main" class="mountains">
+		<section id="hero">
+			<div class="container">
+				<div class="row flex">
+					<div class="col xl9 l8 m12">
+						<div class="swiper" id="actions-slider">
+							<div class="swiper-wrapper">
+								<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+								<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+								<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+								<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+								<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+								<a href="/action.html" class="action swiper-slide lazy" data-bg="/img/fish/action.jpg"></a>
+							</div>
+						</div>
+						<div class="swiper-pagination hero-pagination actions-pagination"></div>
+					</div>
+					<div class="col xl3 l4 m12">
+						<div class="pop-wrapper">
+							<div class="pop-header">Популярные товары</div>
+							<div class="swiper" id="pop-slider">
+								<div class="swiper-wrapper">
+									@@loop('./parts/product-card.html', './data/popular.json')
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination hero-pagination pop-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="categories">
+			<div class="container">
+				<div class="row flex">
+					<div class="col">
+						<h1 class="pseudo-h2">Бесплатная доставка воды в Краснодаре</h1>
+					</div>
+					@@loop('./parts/category.html', './data/categories.json')
+				</div>
+			</div>
+		</section>
+		@@include('./parts/water_block.html')
+		<section id="contacts">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 m12">
+						<div class="row">
+							<div class="col m6 s12">
+								<div class="input-container">
+									<label for="">Как вас зовут?</label>
+									<input type="text" placeholder="Фамилия, Имя, Отчество">
+								</div>
+							</div>
+							<div class="col m6 s12">
+								<div class="input-container">
+									<label for="">Как с Вами связаться?</label>
+									<input type="text" placeholder="Контактный телефон или e-mail">
+								</div>
+							</div>
+							<div class="col s12">
+								<div class="input-container">
+									<label for="">Чем я могу Вам помочь?</label>
+									<textarea name="" id="" cols="0" rows="3" placeholder="Опишите Вашу ситуацию"></textarea>
+								</div>
+							</div>
+							<div class="col s12 align-right-m-up align-center-m-down">
+								<a href="" class="bttn">Отправить</a>
+							</div>
+						</div>
+					</div>
+					<div class="col xl5 offset-xl1 l6 align-center-m-down">
+						<p>Если у вас возникла проблемная ситуация, вы всегда можете обратиться за помощью напрямую к директору. Мы постараемся решить вашу проблему максимально эффективно и как можно быстрее.</p>
+						<p>Пожалуйста, примите во внимание, что используя данную форму обратной связи вы даёте своё <a href="/agreement.html">согласие</a> на сбор и обработку персональных данных в соответствии с <a href="/policy.html">Политикой конфиденциальности</a> и <a href="/collect.html">Пользовательским соглашением</a>.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/coolers_block.html')
+		@@include('./parts/howto.html', {includeImage: true})
+		<section id="news">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h2>Новости компании</h2>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/news-entry.html', './data/news_short.json')
+				</div>
+				<div class="row">
+					<div class="col s12 center-align"><a href="/news.html" class="bttn">Читать все новости</a></div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

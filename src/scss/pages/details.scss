@@ -1,0 +1,51 @@
+@import '../parts/vars';
+
+main#details{
+
+	& .kv-table{
+
+		display: table;
+		width: 100%;
+		
+		& .kv-pair{
+
+			display: table-row;
+
+			& .key{
+				display: table-cell;
+				padding-right: 20px;
+				font-size: 14px;
+				line-height: 1.4em;
+			}
+
+			& .value{
+				display: table-cell;
+				font-weight: 400;
+			}
+
+			& > *{
+				padding: 6px 0;
+			}
+		}
+
+		@media(max-width: $small){
+			display: block;
+
+			& .kv-pair{
+				display: block;
+
+				& .key, & .value{
+					display: block;
+				}
+
+				& .key{
+					padding-bottom: 0;
+				}
+
+				& .value{
+					padding-top: 0;
+				}
+			}
+		}
+	}
+}

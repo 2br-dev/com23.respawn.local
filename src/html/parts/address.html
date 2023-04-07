@@ -1,0 +1,20 @@
+<li>
+	<input 
+		id="@@id" 
+		name="address" 
+		type="radio" 
+		data-city="@@city"
+		data-street="@@street"
+		data-house="@@house"
+		data-block="@@block"
+		data-app="@@app"
+		data-entrance="@@entrance"
+		data-domofon="@@domofon"
+		@@if(context.checked){checked}>
+	<label for="@@id">@@address</label>
+	@@if(context.id){
+		@@if(id!='other'){
+			<a href="#!" class="mdi mdi-delete"></a>
+		}
+	}
+</li>

@@ -1,0 +1,104 @@
+[
+	{
+		"img": "/img/shops/budenogo.jpg",
+		"lon": "38.961389",
+		"lat": "45.037802",
+		"zoom": "15",
+		"address": "ул. Буденного, 73",
+		"link": "https://yandex.ru/maps/-/CCU0MPSOtC",
+		"timing": [
+			{
+				"name": "Ежедневно",
+				"value": "с 8:00 до 20:00"
+			},
+			{
+				"name": "Перерыв",
+				"value": "с 13:00 до 14:00"
+			}
+		]
+	},
+	{
+		"img": "/img/shops/tc-adygeya.jpg",
+		"lon": "38.929104",
+		"lat": "45.013103",
+		"zoom": "15",
+		"address": "Тургеневское шоссе, 27 (ТЦ Мега-Адыгея)",
+		"description": "Вход со сто­роны ги­пер­марке­та Ашан",
+		"link": "https://yandex.ru/maps/-/CCU0MPcdLB",
+		"timing": [
+			{
+				"name": "Ежедневно",
+				"value": "с 8:00 до 22:00"
+			}
+		]
+	},
+	{
+		"img": "/img/shops/krasnyh-partizan.jpg",
+		"lon": "38.919707",
+		"lat": "45.062980",
+		"zoom": "15",
+		"address": "ул. Красных Партизан, 123",
+		"link": "https://yandex.ru/maps/-/CCU0MPDvkC",
+		"timing": [
+			{
+				"name": "Ежед­невно",
+				"value": "с 8:00 до 20:00"
+			},
+			{
+				"name": "Пе­рерыв",
+				"value": "с 13:00 до 14:00"
+			}
+		]
+	},
+	{
+		"img": "/img/shops/rostovskoe-shosse.jpg",
+		"lon": "38.987773",
+		"lat": "45.071109",
+		"zoom": "15",
+		"address": "Ростовское шоссе, 14",
+		"link": "https://yandex.ru/maps/-/CCU0MPHhsD",
+		"timing": [
+			{
+				"name": "Ежед­невно",
+				"value": "с 8:00 до 20:00"
+			},
+			{
+				"name": "Пе­рерыв",
+				"value": "с 13:00 до 14:00"
+			}
+		]
+	},
+	{
+		"img": "/img/shops/uralskaya.jpg",
+		"lon": "39.083794",
+		"lat": "45.037025",
+		"zoom": "15",
+		"address": "ул. Уральская, 144",
+		"link": "https://yandex.ru/maps/-/CCU0MPXa-B",
+		"timing": [
+			{
+				"name": "Вт-Сб",
+				"value": "с 9:00 до 17:00"
+			},
+			{
+				"name": "Вс, Пн",
+				"value": "выходные"
+			}
+		]
+	},
+	{
+		"img": "/img/shops/oz-mall.jpg",
+		"lon": "39.122529",
+		"lat": "45.011446",
+		"zoom": "15",
+		"address": "ул. Крылатая, 2 (ТРЦ OZ Молл)",
+		"description": "Вход со сто­роны ги­пер­марке­та ОКей",
+		"link": "https://yandex.ru/maps/-/CCU0MTRFLA",
+		"timing": [
+			{
+				"name": "Ежед­невно",
+				"value": "с 8:00 до 22:00"
+			}
+		]
+	}
+]

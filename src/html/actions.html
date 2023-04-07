@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Главная", style: "actions"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="actions" class="mountains">
+		<section>
+			<div class="container white-block">
+				<div class="row">
+					<div class="col s12">
+						<h1>Акции</h1>
+						@@include('./parts/quick-navi.html')
+					</div>
+				</div>
+				<div class="row">
+					@@loop('./parts/action_card.html', './data/actions.json')
+				</div>
+			</div>
+		</section>
+		@@include('./parts/water_block.html')
+		@@include('./parts/coolers_block.html')
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

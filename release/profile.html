@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="/css/master.css">
+
+    <link rel="stylesheet" href="/css/pages/profile.css">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favico/favicon-16x16.png">
+    <link rel="manifest" href="/img/favico/site.webmanifest">
+    <link rel="mask-icon" href="/img/favico/safari-pinned-tab.svg" color="#ff2741">
+    <link rel="shortcut icon" href="/img/favico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff2741">
+    <meta name="msapplication-config" content="/img/favico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="/index.html" class="logo"></a>
+                <ul class="desktop-phones">
+                    <li><span><i class="mdi mdi-map-marker"></i>Краснодар</span></li>
+                    <li><a target="_blank" href="tel://+79862044444">204-44-44</a></li>
+                    <li><a target="_blank" href="tel://+79883334443">8(988) 333-444-3</a></li>
+                    <li><a target="_blank" href="https://wa.me/79862044444"><i class="mdi mdi-whatsapp"></i></a></li>
+                    <li><a target="_blank" href="https://t.me/+79862044444"><i class="mdi mdi-telegram"></i></a></li>
+                    <li><a href="" class="bttn"><i class="mdi mdi-autorenew"></i>Повторить заказ</a></li>
+                </ul>
+                <ul class="mobile-right">
+                    <li><a href="/checkout.html"><i class="mdi mdi-cart"></i></a></li>
+                    <li><a href="#mobile-navi" class="sidenav-trigger"><i class="mdi mdi-menu"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="top-level">
+                        <li class="catalog-bttn">
+                            <a href="javascript:void(0)">
+                                <i class="mdi mdi-text-search"></i>
+                                Каталог
+                            </a>
+                            <ul class="z-depth-1">
+                                <li><a href="catalog-water.html">Питьевая вода</a></li>
+                                <li><a href="catalog-coolers.html">Кулеры для воды</a></li>
+                                <li><a href="catalog-coolers.html">Помпы для воды</a></li>
+                                <li><a href="catalog-coolers.html">Сопутствующие товары</a></li>
+                            </ul>
+                        <li><a href="/actions.html">Акции</a></li>
+                        <li><a href="/payment.html">Доставка и оплата</a></li>
+                        <li><a href="/shops.html">Магазины</a></li>
+                        <li><a href="/service.html">Сервисный центр</a></li>
+                        </li>
+                        <div class="separator"></div>
+                        <ul class="user-section top-level">
+                            <li>
+                                <a href="">1/1200₽<i class="mdi mdi-cart"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a href="/checkout.html">Оформить заказ</a></li>
+                                    <li><a href="javascript:void(0);">Очистить корзину</a></li>
+                                </ul>
+                            </li>
+                            <!-- Гость -->
+                            <li id="guest" class="">
+                                <a href="">Профиль<i class="mdi mdi-account"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a class="modal-trigger" href="#login">Авторизация</a></li>
+                                    <li><a class="modal-trigger" href="#register">Регистрация</a></li>
+                                </ul>
+                            </li>
+                            <!-- Зарегистрированный пользователь -->
+                            <li id="registered" class="hidden">
+                                <a href="">MasterKadaj<i class="mdi mdi-account"></i></a>
+                                <ul class="z-depth-1">
+                                    <li><a href="/profile.html#orders">Мои заказы</a></li>
+                                    <li><a href="/profile.html">Мой профиль</a></li>
+                                    <li><a href="/support.html">Поддержка</a></li>
+                                    <li>
+                                        <div class="divider"></div>
+                                    </li>
+                                    <li><a href="/">Выход</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-navi">
+        <!-- Гость -->
+        <li class="user-view hidden">
+            <div class="user">
+                <div class="name-wrapper">
+                    <i class="mdi mdi-shield-lock"></i>
+                    <span class="name">Аккаунт</span>
+                </div>
+                <div class="actions">
+                    <a href=""><i class="mdi mdi-login-variant"></i><span>Войти</span></a>
+                    <a href=""><i class="mdi mdi-file-document-edit-outline"></i><span>Создать</span></a>
+                </div>
+            </div>
+        </li>
+        <!-- Авторизованный пользователь -->
+        <li class="user-view">
+            <div class="user">
+                <div class="name-wrapper">
+                    <i class="mdi mdi-account-circle"></i>
+                    <span class="name">Профиль</span>
+                </div>
+                <div class="actions">
+                    <a href=""><i class="mdi mdi-cog"></i><span>Настройки</span></a>
+                    <a href=""><i class="mdi mdi-logout-variant"></i><span>Выход</span></a>
+                </div>
+            </div>
+        </li>
+        <li class="location"><i class="mdi mdi-map-marker"></i><span>Краснодар</span></li>
+        <li><a href="/">Главная</a></li>
+        <li>
+            <a href="/catalog.html">Каталог</a>
+            <ul>
+                <li><a href="/catalog_water.html">Питьевая бутилированная вода</a></li>
+                <li><a href="/catalog_cooler.html">Кулеры для воды</a></li>
+                <li><a href="/catalog_cooler.html">Помпы для воды</a></li>
+                <li><a href="/catalog_cooler.html">Сопутствующая продукция</a></li>
+            </ul>
+        </li>
+        <li><a href="/actions.html">Акции</a></li>
+        <li><a href="/payment.html">Оплата и доставка</a></li>
+        <li><a href="/shops.html">Магазины</a></li>
+        <li><a href="/service.html">Сервисный центр</a></li>
+    </ul>
+    <ul class="fab">
+        <li>
+            <a href="javascript:void(0);" class="z-depth-2"><i class="mdi mdi-phone"></i></a>
+            <ul>
+                <li><a target="_blank" class="z-depth-1 phone" href="tel://+79862044444"><i class="mdi mdi-phone"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 cellphone" href="tel://+79883334443"><i class="mdi mdi-cellphone-iphone"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 whatsapp" href="https://wa.me/79862044444"><i class="mdi mdi-whatsapp"></i></a></li>
+                <li><a target="_blank" class="z-depth-1 telegram" href="https://t.me/+79862044444"><i class="mdi mdi-telegram"></i></a></li>
+            </ul>
+        </li>
+    </ul>
+    <form class="modal" id="login">
+        <div class="modal-content">
+            <div class="row flex vcenter">
+                <div class="col xs9 s9 t9">
+                    <h3 class="no-margin">Вход</h3>
+                </div>
+                <div class="col xs3 s3 t3 right-align">
+                    <a href="#!" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a>
+                </div>
+                <div class="col s12">
+                    <div class="input-field">
+                        <input type="text" placeholder="Логин">
+                        <label for="">Логин</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="input-field">
+                        <input type="text" placeholder="Пароль">
+                        <label for="">Пароль</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#register" class="bttn-flat left modal-trigger modal-close waves-effect">Регистрация</a>
+            <a href="/profile.html" class="bttn-flat modal-close">Войти</a>
+        </div>
+    </form>
+    <form action="" class="modal" id="register">
+        <div class="modal-content">
+            <div class="row flex vcenter">
+                <div class="col xs9 s9 t9">
+                    <h3>Регистрация</h3>
+                </div>
+                <div class="col xs3 s3 t3 right-align"><a href="" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a></div>
+                <div class="col s12">
+                    <input type="radio" value="physical" name="account-type" checked id="type1" class="styled">
+                    <label for="type1">Физическое лицо</label>
+                    <input type="radio" value="law" name="account-type" id="type2" class="styled">
+                    <label for="type2">Юридическое лицо</label>
+                </div>
+            </div>
+            <div class="row" data-mode="physical" id="fieldset">
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Организация">
+                        <label for="">Организация</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Фамилия">
+                        <label for="">Фамилия</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Имя">
+                        <label for="">Имя</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Отчество">
+                        <label for="">Отчество</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="Телефон">
+                        <label for="">Телефон</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="ИНН">
+                        <label for="">ИНН</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12 law">
+                    <div class="input-field">
+                        <input type="text" class="styled" placeholder="ОГРН/ОГРИП">
+                        <label for="">ОГРН/ОГРИП</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="email" class="styled" placeholder="E-mail">
+                        <label for="">E-mail</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="password" class="styled" placeholder="Пароль">
+                        <label for="">Пароль</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+                <div class="col m6 s12">
+                    <div class="input-field">
+                        <input type="password" class="styled" placeholder="Подтверждение">
+                        <label for="">Подтверждение</label>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#login" class="bttn-flat waves-effect modal-trigger modal-close left">Войти</a>
+            <a href="/profile.html" class="bttn-flat modal-close">Отправить</a>
+        </div>
+    </form>
+    <main id="profile">
+        <section>
+            <div class="container">
+                <div class="row flex">
+                    <div class="col s12">
+                        <h1>Личный кабинет</h1>
+                    </div>
+                    <div class="col xl3 l4 m5 s12">
+                        <div class="pin">
+                            <div class="white-block">
+                                <h2>Состояние счёта</h2>
+                                <div class="account-ballance">
+                                    <a href="" class="toggle-ballance"><i class="mdi mdi-eye"></i></a>
+                                    <input value="200₽" id="ballance" type="password" readonly>
+                                    <a href="" class="bttn-outline">Пополнить</a>
+                                </div>
+                                <p>на Вашем счёте</p>
+                            </div>
+                            <div class="white-block">
+                                <h2>Персональные данные</h2>
+                                <div class="name-block">
+                                    <div class="name">фамилия</div>
+                                    <div class="value">Кондратенко</div>
+                                </div>
+                                <div class="name-block">
+                                    <div class="name">имя</div>
+                                    <div class="value">Мария</div>
+                                </div>
+                                <div class="name-block">
+                                    <div class="name">отчество</div>
+                                    <div class="value">Петровна</div>
+                                </div>
+                                <div class="name-block">
+                                    <div class="name">e-mail</div>
+                                    <div class="value">ivanova@maria@gmail.com</div>
+                                </div>
+                                <div class="name-block">
+                                    <div class="name">телефон</div>
+                                    <div class="value">+7 (918) 123-4567</div>
+                                </div>
+                                <div class="name-block">
+                                    <div class="name">дата рождения</div>
+                                    <div class="value">12 февраля 1967 г.</div>
+                                </div>
+                                <div><a href="#profile-editor" class="bttn-outline modal-trigger">Изменить</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col xl9 l8 m7 s12">
+                        <div class="white-block">
+                            <h2>Мои заказы</h2>
+                            <div class="row flex vcenter">
+                                <div class="col l4 m6 s12">
+                                    <div class="input-field prefix">
+                                        <i class="mdi mdi-magnify"></i>
+                                        <input type="text" placeholder="Поиск">
+                                        <label for="">Поиск</label>
+                                    </div>
+                                </div>
+                                <div class="col l4 offset-l4 m6 s12 right-align">
+                                    <input type="checkbox" id="include-complete">
+                                    <label for="include-complete">Показывать завершённые заказы</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Номер</th>
+                                                <th>Сумма</th>
+                                                <th>Статус</th>
+                                                <th>Способ оплаты</th>
+                                                <th>Действия</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-row">
+                                                <td data-name="Номер">№23452467 от 1 декабря 2012</td>
+                                                <td data-name="Сумма">14 000₽</td>
+                                                <td data-name="Статус">Выполнен</td>
+                                                <td data-name="Способ оплаты">Наличными курьеру</td>
+                                                <td data-name="Действия" class="actions">
+                                                    <a href="" data-tooltip="Изменить доставку" data-position="top" class="tooltipped mdi mdi-map-marker"></a>
+                                                    <a href="" data-tooltip="Квитанция" data-position="top" class="tooltipped mdi mdi-receipt"></a>
+                                                    <a href="" data-tooltip="Оплатить" data-position="top" class="tooltipped mdi mdi-currency-rub"></a>
+                                                    <a href="" data-tooltip="Повторить" data-position="top" class="tooltipped mdi mdi-autorenew"></a>
+                                                    <a href="" data-tooltip="Отменить" data-position="top" class="tooltipped mdi mdi-cancel"></a>
+                                                </td>
+                                            </tr>
+                                            <tr class="order-details">
+                                                <td colspan="5">
+                                                    <div class="table-wrapper">
+                                                        <table>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Наименование продукции</th>
+                                                                    <th>Количество</th>
+                                                                    <th>Цена за единицу</th>
+                                                                    <th>Итоговая цена</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Кубай»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Вода «Эльбрусинка детская»</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Пустая тара</a></td>
+                                                                    <td data-name="Кол-во">2шт</td>
+                                                                    <td data-name="Цена за единицу">120₽</td>
+                                                                    <td data-name="Общая цена">240₽</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><a href="/product.html">Кулер Aqua Well 08-MAW ПК BH-YLR-LB-08M белый</a></td>
+                                                                    <td data-name="Кол-во">1шт</td>
+                                                                    <td data-name="Цена за единицу">12 500₽</td>
+                                                                    <td data-name="Общая цена">12 500₽</td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="modal" id="profile-editor">
+        <div class="modal-content">
+            <div class="row flex">
+                <div class="col s9 xs9 t9">
+                    <h3 class="no-margin">Редактор профиля</h3>
+                </div>
+                <div class="col s3 xs3 t3 right-align">
+                    <a href="#!" class="mdi mdi-close modal-close modal-close-x"></a>
+                </div>
+                <div class="col s6">
+                    <div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label></div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field"><input type="text" placeholder="E-mail"><label for="">E-mail</label></div>
+                </div>
+                <div class="col m3 s6">
+                    <div class="input-field"><input type="text" placeholder="Дата рождения"><label for="">Дата рождения</label></div>
+                </div>
+                <div class="col m3 s6">
+                    <div class="input-field"><input type="text" placeholder="Телефон"><label for="">Телефон</label></div>
+                </div>
+                <div class="col s6">
+                    <div class="gender-wrapper">
+                        <input name="gender" type="radio" id="male" checked><label for="male">Мужчина</label>
+                        <input name="gender" type="radio" id="female"><label for="female">Женщина</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div><input type="checkbox" id="news-agree"><label for="news-agree">Я хочу получать уведомления о новинках и акциях</label></div>
+                    <div><input type="checkbox" id="change-password"><label for="change-password">Сменить пароль</label></div>
+                </div>
+            </div>
+            <div class="row" id="password">
+                <div class="col m4 s12">
+                    <div class="input-field"><input type="text" placeholder="Старый пароль"><label for="">Старый пароль</label></div>
+                </div>
+                <div class="col m4 s12">
+                    <div class="input-field"><input type="text" placeholder="Новый пароль"><label for="">Новый пароль</label></div>
+                </div>
+                <div class="col m4 s12">
+                    <div class="input-field"><input type="text" placeholder="Подтверждение пароля"><label for="">Подтверждение пароля</label></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="bttn-flat left waves-effect">Удалить профиль</a><a href="#!" class="bttn-flat waves-effect modal-close">Сохранить</a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row flex">
+                <div class="col l2 m4 s6 xs12">
+                    <div class="footer-header">Разделы сайта</div>
+                    <ul>
+                        <li><a href="/index.html">Главная</a></li>
+                        <li><a href="/catalog_water.html">Каталог</a></li>
+                        <li><a href="/actions.html">Акции</a></li>
+                        <li><a href="/payment.html">Доставка и оплата</a></li>
+                        <li><a href="/shops.html">Магазины</a></li>
+                        <li><a href="/service.html">Сервисный центр</a></li>
+                        <li><a href="/vacances.html">Вакансии</a></li>
+                        <li><a href="/contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 m4 s6 xs12">
+                    <div class="footer-header">Покупателям</div>
+                    <ul>
+                        <li><a href="/agreement.html">Пользовательское соглашение</a></li>
+                        <li><a href="/policy.html">Политика конфиденциальности</a></li>
+                        <li><a href="/collect.html">Согласие на сбор данных</a></li>
+                        <li><a href="/about.html">О компании</a></li>
+                        <li><a href="/details.html">Реквизиты</a></li>
+                        <li><a href="/news.html">Новости компании</a></li>
+                        <li><a href="/checkout.html">Корзина</a></li>
+                        <li><a href="/account.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+                <div class="col l2 m4 s6 xs12">
+                    <div class="footer-header">Каталог</div>
+                    <ul>
+                        <li><a href="/catalog_water.html">Вода</a></li>
+                        <li><a href="/catalog_coolers.html">Кулеры</a></li>
+                        <li><a href="/catalog_coolers.html">Помпы</a></li>
+                        <li><a href="/catalog_coolers.html">Сопутствующие товары</a></li>
+                    </ul>
+                </div>
+                <div class="col xl3 l3 m8 s12">
+                    <div class="footer-header">График доставки</div>
+                    <div class="row">
+                        <div class="col xl5 l12 m5 s5 xs12">
+                            <ul>
+                                <li><u>Будние</u></li>
+                                <li>с 9:00 до 15:00</li>
+                                <li>с 12:00 до 17:00</li>
+                                <li>с 18:00 до 22:00</li>
+                            </ul>
+                        </div>
+                        <div class="col xl7 l12 m7 s7 xs12">
+                            <ul>
+                                <li><u>Выходные и праздничные</u></li>
+                                <li>с 11:00 до 16:00</li>
+                                <li>с 18:00 до 22:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l2 m4 s12 align-right-m-up">
+                    <div class="footer-header">Контакты</div>
+                    <ul>
+                        <li><a href="">204-44-44</a></li>
+                        <li><a href="">8 (988) 333-444-3</a></li>
+                        <li><a href="">E-mail: 700601@mail.ru</a></li>
+                    </ul>
+                    <ul class="social">
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/akvatoriya23"><span class="mdi mdi-telegram"></span></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://vk.com/voda_krasnodar"><span class="mdi mdi-vk"></span></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCxvG3uJHGne0AH2PFu17PjA"><span class="mdi mdi-youtube"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row no-margin">
+                <div class="col m6 s12 align-left-m-up align-center-m-down">© Аква.рус, все права защищены</div>
+                <div class="col m6 s12 align-right-m-up align-center-m-down">Дизайн, разработка – <a href=""><strong>2BR</strong></a></div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/master.js"></script>
+</body>
+
+</html>

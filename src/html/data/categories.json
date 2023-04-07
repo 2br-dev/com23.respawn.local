@@ -1,0 +1,34 @@
+[
+	{
+		"name":"Питьевая вода",
+		"image":"/img/categories/water.png",
+		"background":"/img/categories/water_bg.jpg",
+		"low":"175",
+		"link": "catalog-water.html",
+		"class": " active"
+	},
+	{
+		"name":"Кулеры для воды",
+		"image":"/img/categories/cooler.png",
+		"background":"/img/categories/cooler_bg.jpg",
+		"low":"175",
+		"link": "catalog-coolers.html",
+		"class": ""
+	},
+	{
+		"name":"Помпы для воды",
+		"image":"/img/categories/pump.png",
+		"background":"/img/categories/pump_bg.jpg",
+		"low":"175",
+		"link": "catalog-coolers.html",
+		"class": ""
+	},
+	{
+		"name":"Сопутствующие товары",
+		"image":"/img/categories/misc.png",
+		"background":"/img/categories/misc_bg.jpg",
+		"low":"175",
+		"link": "catalog-coolers.html",
+		"class": ""
+	}
+]

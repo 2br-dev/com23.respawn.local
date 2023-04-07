@@ -1,0 +1,179 @@
+@import '../parts/vars';
+
+main#catalog{
+
+
+	& .catalog-content{
+		
+		display: flex;
+
+		& .catalog-content{
+			flex-grow: 1;
+		}
+
+		& .product-card{
+
+			padding: 1vmax;
+			box-sizing: border-box;
+			transition: box-shadow .2s, background-color .2s;
+	
+			@media(min-width: $medium){
+	
+				&:hover{
+					background: #fff;
+					box-shadow: 0 0 10px rgba(black, .1), 0 0 20px rgba(black, .1), 0 0 30px rgba(black, .1);
+					z-index: 1;
+				}
+			}
+	
+			@media(max-width: $medium){
+				margin: 10px 0;
+			}
+		}
+	}
+
+	& .filters{
+		position: sticky;
+		top: 80px;
+		flex-shrink: 0;
+		width: 300px;
+		height: fit-content;
+		padding-right: 20px;
+
+		& .filter-param{
+
+			border-bottom: 1px solid #ccc;
+			padding: 10px 0;
+			
+			&:first-of-type, &:last-of-type{
+				border: 0;
+			}
+
+			& .calibration{
+				visibility: hidden;
+				position: absolute;
+				z-index: -1;
+				pointer-events: none;
+			}
+			
+			& .prefix, & .suffix{
+				font-size: 14px;
+				color: $fogged;
+				font-weight: 400;
+			}
+			
+			& .param{
+
+				display: flex;
+				margin-bottom: 6px;
+				
+				& label:first-of-type{
+					flex-grow: 1;
+					user-select: none;
+					cursor: pointer;
+				}
+
+				& input{
+
+					display: none;
+					$size: calc(16px + .2vmax);
+
+					& ~ label{
+
+						display: block;
+						height: $size;
+						aspect-ratio: 1 / 1;
+						border-radius: 4px;
+						box-shadow: 0 0 4px rgba(black, .4) inset;
+						overflow: hidden;
+						cursor: pointer;
+						background-color: #eee;
+						
+						&:before{
+							content: '\F012C';
+							font-family: 'Material Design Icons';
+							display: block;
+							aspect-ratio: 1 / 1;
+							height: 100%;
+							text-align: center;
+							line-height: $size;
+							color: transparent;
+							transition: box-shadow .2s, color .2s;
+							user-select: none;
+						}
+					}
+
+					&:checked{
+
+						& ~ label:before{
+
+							box-shadow: 0 0 0 $size $secondary inset;
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			& .input-range{
+
+				margin-bottom: 20px;
+				display: inline-flex;
+
+				& input{
+					width: fit-content;
+					border: 0;
+					font-size: calc(16px + .2vmax);
+					font-size: 'Roboto';
+					font-weight: 300;
+					background: transparent;
+					transform: translateY(-5px);
+					padding-top: 3px;
+					padding-bottom: 6px;
+					padding-left: 3px;
+					padding-right: 3px;
+					text-align: center;
+					box-sizing: content-box;
+					border-radius: $border-radius;
+					border: 1px solid #ccc;
+					margin: 0 3px;
+					
+					&:focus{
+						box-shadow: 0 0 3px $secondary;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+
+	}
+
+	& .sidenav#categories{
+		
+		& li{
+
+			padding: 10px;
+			line-height: unset;
+			
+			& ul{
+				border: 0;
+				background: transparent;
+			}
+		}
+	}
+
+	& #water_block, & #coolers_block{
+		padding: 4vmax 0;
+		background-color: $section-alt;
+
+		& .swiper-slide{
+
+			& .product-card{
+				background-color: transparent;
+			}
+
+			&:hover .product-card{
+				background-color: #fff;
+			}
+		}
+	}
+}

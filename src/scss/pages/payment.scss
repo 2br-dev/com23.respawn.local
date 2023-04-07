@@ -1,0 +1,45 @@
+@import '../parts/vars';
+
+main#payment{
+
+	& .delivery-header{
+		margin-left: calc(-20px - .2vmax);
+		width: calc(100% + 45px + .2vmax);
+	}
+
+	& h2{
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 4px;
+	}
+
+	& h3{
+		font-size: calc(1.2rem + .08vmax);
+		text-transform: none;
+	}
+
+	& h4{
+		font-size: calc(1rem + .1vmax);
+		color: $secondary;
+		margin-bottom: 0;
+
+		& + ul{
+			margin: 0;
+		}
+	}
+
+	& .regions{
+
+		padding-left: 16px;
+		font-size: 16px;
+		column-count: 2;
+
+		& li{
+			break-inside: avoid-column;
+		}
+
+		@media(max-width: $small){
+			columns: 1;
+		}
+	}
+}

@@ -1,0 +1,156 @@
+.product-card{
+
+	display: grid;
+	grid-template-columns: .8fr 1.2fr;
+	padding: 10px 2px;
+	grid-gap: 0 10px;
+	position: relative;
+	height: 100%;
+	background-color: $paper;
+	transition: background-color .2s;
+
+	& .product-image{
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		& img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	& .labes{
+
+		display: block;
+		flex-wrap: wrap;
+		font-size: 13px;
+		line-height: 1.3em;
+		grid-column: auto / span 2;
+		margin: 0;
+		margin-bottom: 6px;
+		
+		& .labe{
+			display: inline-block;
+			width: fit-content;
+			padding: 0 10px;
+			margin: 0 1px;
+			border-radius: 14px;
+			color: #fff;
+			margin-bottom: 3px;
+			text-transform: lowercase;
+
+			&:first-of-type{
+				margin-left: 0;
+			}
+
+			&:last-of-type{
+				margin-right: 0;
+			}
+
+			&.new{
+				background-color: $success;
+			}
+
+			&.hit{
+				background-color: $primary;
+			}
+
+			&.children{
+				background: #ff6600;
+			}
+		}
+	}
+
+	& .product-info{
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		& .header{
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+
+		& .subheader{
+			font-size: 14px;
+			line-height: 1.4em;
+			font-weight: 400;
+		}
+
+		& .kv-table{
+
+			display: table;
+			width: 100%;
+			margin: 20px 0;
+
+			& .kv-pair{
+
+				display: table-row;
+
+				& .key{
+					display: table-cell;
+					font-size: 14px;
+				}
+
+				& .value{
+					@extend .key;
+					font-weight: bold;
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		& .disclamer{
+			font-size: 12px;
+			line-height: 1.2em;
+			list-style-type: '*';
+			list-style-position: outside;
+			padding: 0;
+			padding-left: 6px;
+			margin-top: 0;
+
+			@media(max-width: 320px){
+				display: none;
+			}
+
+			& li{
+
+				padding-left: 6px;
+				margin-bottom: 6px;
+
+				&:before{
+					content: '* ';
+					display: inline-block;
+					transform: translateX(-6px);
+				}
+			}
+		}
+
+		& .chars{
+			font-size: 14px;
+			line-height: 1.2em;
+			margin-bottom: 20px;
+			
+			& li{
+				margin-bottom: 6px;
+			}
+
+			@media(max-width: $medium){
+				width: min-content;
+			}
+
+			@media(max-width: $small){
+				display: none;
+			}
+
+		}
+	}
+
+	& .action{
+		width: 100%;
+	}
+
+}

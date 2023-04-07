@@ -1,0 +1,28 @@
+[
+	{
+		"img":"/img/bottles/mirabelle.png",
+		"title": "Мирабель",
+		"count": 1,
+		"price": "240₽"
+	},
+	{
+		"img":"/img/bottles/elbrusinka.png",
+		"title": "Эльбрусинка",
+		"subtitle":"Детская",
+		"count": 1,
+		"price": "260"
+	},
+	{
+		"img":"/img/bottles/empty_bottle.png",
+		"title": "Мирабель",
+		"count": 1,
+		"price": "240₽"
+	},
+	{
+		"img":"/img/coolers/cooler2.png",
+		"title": "Aqua-Well 08-M",
+		"subtitle": "AW ПК BH-YLR-LB-08M белый",
+		"count": 1,
+		"price": "12 500₽"
+	}
+]

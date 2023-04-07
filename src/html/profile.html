@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Личный кабинет", style: "profile"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="profile">
+		<section>
+			<div class="container">
+				<div class="row flex">
+					<div class="col s12">
+						<h1>Личный кабинет</h1>
+					</div>
+					<div class="col xl3 l4 m5 s12">
+						<div class="pin">
+							<div class="white-block">
+								<h2>Состояние счёта</h2>
+								<div class="account-ballance">
+									<a href="" class="toggle-ballance"><i class="mdi mdi-eye"></i></a>
+									<input value="200₽" id="ballance" type="password" readonly>
+									<a href="" class="bttn-outline">Пополнить</a>
+								</div>
+								<p>на Вашем счёте</p>
+							</div>
+							<div class="white-block">
+								<h2>Персональные данные</h2>
+								<div class="name-block">
+									<div class="name">фамилия</div>
+									<div class="value">Кондратенко</div>
+								</div>
+								<div class="name-block">
+									<div class="name">имя</div>
+									<div class="value">Мария</div>
+								</div>
+								<div class="name-block">
+									<div class="name">отчество</div>
+									<div class="value">Петровна</div>
+								</div>
+								<div class="name-block">
+									<div class="name">e-mail</div>
+									<div class="value">ivanova@maria@gmail.com</div>
+								</div>
+								<div class="name-block">
+									<div class="name">телефон</div>
+									<div class="value">+7 (918) 123-4567</div>
+								</div>
+								<div class="name-block">
+									<div class="name">дата рождения</div>
+									<div class="value">12 февраля 1967 г.</div>
+								</div>
+								<div><a href="#profile-editor" class="bttn-outline modal-trigger">Изменить</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col xl9 l8 m7 s12">
+						<div class="white-block">
+							<h2>Мои заказы</h2>
+							<div class="row flex vcenter">
+								<div class="col l4 m6 s12">
+									<div class="input-field prefix">
+										<i class="mdi mdi-magnify"></i>
+										<input type="text" placeholder="Поиск">
+										<label for="">Поиск</label>
+									</div>
+								</div>
+								<div class="col l4 offset-l4 m6 s12 right-align">
+									<input type="checkbox" id="include-complete">
+									<label for="include-complete">Показывать завершённые заказы</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12">
+									<table>
+										<thead>
+											<tr>
+												<th>Номер</th>
+												<th>Сумма</th>
+												<th>Статус</th>
+												<th>Способ оплаты</th>
+												<th>Действия</th>
+											</tr>
+										</thead>
+										<tbody>
+											@@loop('./parts/order_row.html', './data/my-orders.json')
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="modal" id="profile-editor">
+		<div class="modal-content">
+			<div class="row flex">
+				<div class="col s9 xs9 t9">
+					<h3 class="no-margin">Редактор профиля</h3>
+				</div>
+				<div class="col s3 xs3 t3 right-align">
+					<a href="#!" class="mdi mdi-close modal-close modal-close-x"></a>
+				</div>
+				<div class="col s6">
+					<div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label></div>
+				</div>
+				<div class="col s6">
+					<div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+				</div>
+				<div class="col s6">
+					<div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+				</div>
+				<div class="col s6">
+					<div class="input-field"><input type="text" placeholder="E-mail"><label for="">E-mail</label></div>
+				</div>
+				<div class="col m3 s6">
+					<div class="input-field"><input type="text" placeholder="Дата рождения"><label for="">Дата рождения</label></div>
+				</div>
+				<div class="col m3 s6">
+					<div class="input-field"><input type="text" placeholder="Телефон"><label for="">Телефон</label></div>
+				</div>
+				<div class="col s6">
+					<div class="gender-wrapper">
+						<input name="gender" type="radio" id="male" checked><label for="male">Мужчина</label>
+						<input name="gender" type="radio" id="female"><label for="female">Женщина</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<div><input type="checkbox" id="news-agree"><label for="news-agree">Я хочу получать уведомления о новинках и акциях</label></div>
+					<div><input type="checkbox" id="change-password"><label for="change-password">Сменить пароль</label></div>
+				</div>
+			</div>
+			<div class="row" id="password">
+				<div class="col m4 s12">
+					<div class="input-field"><input type="text" placeholder="Старый пароль"><label for="">Старый пароль</label></div>
+				</div>
+				<div class="col m4 s12">
+					<div class="input-field"><input type="text" placeholder="Новый пароль"><label for="">Новый пароль</label></div>
+				</div>
+				<div class="col m4 s12">
+					<div class="input-field"><input type="text" placeholder="Подтверждение пароля"><label for="">Подтверждение пароля</label></div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="bttn-flat left waves-effect">Удалить профиль</a><a href="#!" class="bttn-flat waves-effect modal-close">Сохранить</a>
+		</div>
+	</div>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

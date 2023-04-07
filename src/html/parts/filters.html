@@ -1,0 +1,64 @@
+@@if(context.className){
+	<ul class="filters @@className">
+}
+@@if(!context.className){
+	<ul class="filters">
+}
+	<li class="filter-param">
+		<div class="input-range" data-max="@@max">
+			<div class="calibration"></div>
+			<div class="price-label">Цена: </div>
+			<input type="number" class="min" value="" data-type="min" id="price-min-@@suffix" max="@@max">
+			<div class="separator">–</div>
+			<input type="number" class="max" value="" data-type="max" id="price-max-@@suffix" max="@@max">
+			<div class="price-suffix">₽</div>
+			<input type="hidden" id="min-@@suffix" name="price-min">
+			<input type="hidden" id="max-@@suffix" name="price-max">
+		</div>
+		<div id="price-range-@@suffix"></div>
+	</li>
+	<li class="filter-param">
+		<span class="prefix">Загрузка</span>
+		<div class="param">
+			<label for="loading-top-@@suffix">Верхняя</label><input type="checkbox" id="loading-top-@@suffix"><label for="loading-top-@@suffix"></label>
+		</div>
+		<div class="param">
+			<label for="loading-bottom-@@suffix">Нижняя</label><input type="checkbox" id="loading-bottom-@@suffix"><label for="loading-bottom-@@suffix"></label>
+		</div>
+	</li>
+	<li class="filter-param">
+		<span class="prefix">Тип кулера</span>
+		<div class="param">
+			<label for="floor-@@suffix">Напольный</label><input type="checkbox" id="floor-@@suffix"><label for="floor-@@suffix"></label>
+		</div>
+		<div class="param">
+			<label for="desk-@@suffix">Настольный</label><input type="checkbox" id="desk-@@suffix"><label for="desk-@@suffix"></label>
+		</div>
+	</li>
+	<li class="filter-param">
+		<span class="prefix">Тип охлаждения</span>
+		<div class="param">
+			<label for="compressor-@@suffix">Компрессорный</label><input type="checkbox" id="compressor-@@suffix"><label for="compressor-@@suffix"></label>
+		</div>
+		<div class="param">
+			<label for="electronic-@@suffix">Электронный</label><input type="checkbox" id="electronic-@@suffix"><label for="electronic-@@suffix"></label>
+		</div>
+	</li>
+	<li class="filter-param">
+		<span class="prefix">Функции</span>
+		<div class="param">
+			<label for="hit-cold-@@suffix">Охлаждение и нагрев</label><input type="checkbox" id="hit-cold-@@suffix"><label for="hit-cold-@@suffix"></label>
+		</div>
+		<div class="param">
+			<label for="no-cold-@@suffix">Без охлаждения</label><input type="checkbox" id="no-cold-@@suffix"><label for="no-cold-@@suffix"></label>
+		</div>
+		<div class="param">
+			<label for="no-both-@@suffix">Без охлаждения и нагрева</label><input type="checkbox" id="no-both-@@suffix"><label for="no-both-@@suffix"></label>
+		</div>
+	</li>
+	<li class="filter-param">
+		<div class="param">
+			<label for="cooler-@@suffix">Холодильник</label><input type="checkbox" id="cooler-@@suffix"><label for="cooler-@@suffix"></label>
+		</div>
+	</li>
+</ul>

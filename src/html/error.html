@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Ошибк оформления заказа!", style: "checkout"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="checkout">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col l6 offset-l3 m8 offset-m2 s12 center-align">
+						<div class="result-wrapper">
+							<i class="result-icon error mdi mdi-alert-circle"></i>
+							<h1>Ошибка</h1>
+							<p>
+								При оплате заказа произошла ошибка: списание денежных средств не было осуществлено. Возможные причины: 
+								недостаточно средств на Вашем счёте, карта заблокирована, банк отклонил транзакцию, ошибка соединения с сервером.
+							</p>
+							<p>
+								Убедитесь, что на Вашем счёте находится достаточно средств для оплаты заказа. Если средств достаточно, но оплата
+								всё равно не проходит, свяжитесь с Вашим банком-эмитентом для получения более развёрнутой информации.
+							</p>
+							<p>
+								<a href="/profile.html#orders" class="bttn-outline">К моим заказам</a>
+								<a href="/" class="bttn">На главную</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+	{
+		"image": "/img/fish/action.jpg",
+		"name": "Лёгкий старт №1",
+		"old_price": "1200 ₽",
+		"new_price": "900 ₽"
+	},
+	{
+		"image": "/img/fish/action.jpg",
+		"name": "Лёгкий старт №2",
+		"old_price": "1200 ₽",
+		"new_price": "900 ₽"
+	},
+	{
+		"image": "/img/fish/action.jpg",
+		"name": "Лёгкий старт №3",
+		"old_price": "1200 ₽",
+		"new_price": "900 ₽"
+	},
+	{
+		"image": "/img/fish/action.jpg",
+		"name": "Лёгкий старт №4",
+		"old_price": "1200 ₽",
+		"new_price": "900 ₽"
+	},
+	{
+		"image": "/img/fish/action.jpg",
+		"name": "Лёгкий старт №5",
+		"old_price": "1200 ₽",
+		"new_price": "900 ₽"
+	},
+	{
+		"image": "/img/fish/action.jpg",
+		"name": "Лёгкий старт №6",
+		"old_price": "1200 ₽",
+		"new_price": "900 ₽"
+	}
+]

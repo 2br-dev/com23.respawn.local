@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Главная", style: "news"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="news" class="mountains">
+		<section id="news">
+			<div class="container white-block">
+				<div class="row">
+					<div class="col s12">
+						<div class="top-news-entry row flex vcenter">
+							<div class="top-news-image col l4 m5 s12">
+								<img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news1.png">
+							</div>
+							<div class="top-news-content col xl7 offset-xl1 l8 m7 s12">
+								<div class="date">12 марта 2023 г.</div>
+								<h1 class="title">
+									Приведите друга и получите подарок!
+								</h1>
+								<div class="intro">
+									Если вы рекомендуете нас своим друзьям, то мы доставим вам подарок с вашим заказом! Как участвовать в акции? Ваш друг, при оформлении заказа вод…
+								</div>
+								<div class="link">
+									<a href="/news-entry.html">Подробнее»</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<h2>Акции</h2>
+					</div>
+					<div class="col s12">
+						<div class="swiper" id="news-actions-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+								<div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
+							</div>
+						</div>
+						<div class="swiper-pagination news-actions-pagination hero-pagination"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<h2>Новости компании</h2>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/news-entry.html', './data/news.json')
+				</div>
+				<div class="row">
+					<div class="col s12 center-align">
+						<ul class="pagination">
+							<li class="page"><a href="">1</a></li>
+							<li class="dots"><span>…</span></li>
+							<li class="page active"><a href="">7</a></li>
+							<li class="page"><a href="">8</a></li>
+							<li class="page"><a href="">9</a></li>
+							<li class="dots"><span>…</span></li>
+							<li class="page"><a href="">200</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/howto.html')
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

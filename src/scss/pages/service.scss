@@ -1,0 +1,143 @@
+@import '../parts/vars';
+
+main#service{
+
+
+	& section{
+		position: relative;
+		overflow: hidden;
+	}
+
+	& #hero{
+
+		overflow: hidden;
+
+		& .image-row{
+
+			& .col{
+
+				& .img-wrapper{
+					position: relative;
+					z-index: 1;
+
+					&:before{
+						content: '';
+						display: block;
+						position: absolute;
+						height: 100%;
+						aspect-ratio: 3 / 1;
+						left: 50%;
+						transform: translateX(-50%);
+						background: url(../../img/service-top.svg);
+						z-index: -1;
+						background-size: 100% auto;
+					}
+				}
+
+				& img{
+					display: block;
+				}
+			}
+		}
+
+		background-color: $secondary;
+		margin-top: 0;
+		color: #fff;
+
+		& .hero-header{
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		& blockquote{
+			border-color: #fff;
+		}
+
+		& .text-container{
+
+			position: absolute;
+			width: 100%;
+			height: auto;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 16px;
+			line-height: 1.4em;
+			z-index: 3;
+
+			@media(max-width: $large){
+				position: relative;
+				top: unset;
+				transform: none;
+				padding: 2vmax 0;
+				box-sizing: border-box;
+				position: relative;
+
+				&:before{
+					content: '';
+					display: block;
+					width: 100%;
+					height: 1px;
+					background: linear-gradient(to right, transparent, #fff, #fff, transparent);
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	& #post-guarantee{
+
+		background-color: $secondary;
+		color: #fff;
+
+		& a{
+			color: #fff;
+			border-color: #fff;
+		}
+
+		& .text-container{
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 3;
+
+			@media(max-width: $large){
+				position: relative;
+				top: unset;
+				transform: none;
+				padding: 2vmax 0;
+			}
+		}
+
+		& .image-row{
+
+			& .img-wrapper{
+
+				position: relative;
+				z-index: 1;
+
+				&:before{
+					content: '';
+					display: block;
+					height: 100%;
+					aspect-ratio: 3 / 1;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					background-size: 100% auto;
+					background-image: url(../../img/service-bottom.svg);
+					z-index: -1;
+				}
+			}
+		}
+	}
+
+	& #garantee1{
+
+		& blockquote{
+			color: $primary;
+		}
+	}
+}

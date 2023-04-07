@@ -1,0 +1,14 @@
+<div class="@@class">
+	<div class="payment">
+		<input type="radio" name="payment" id="@@id"@@if(context.checked){ checked}>
+		<label for="@@id">
+			<span class="title">@@title</span>
+			@@if(!context.link){
+				<span class="subtitle">@@subtitle</span>
+			}
+			@@if(context.link){
+				<a href="@@link">@@subtitle</a>
+			}
+		</label>
+	</div>
+</div>

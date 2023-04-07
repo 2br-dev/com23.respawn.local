@@ -1,0 +1,39 @@
+[
+	{
+		"id": "cash",
+		"class": "col xl2 l4 m4 s6 xs6 t12",
+		"title":"Наличными",
+		"subtitle": "курьеру",
+		"checked": true
+	},
+	{
+		"id": "card-online",
+		"class": "col xl2 l4 m4 s6 xs6 t12",
+		"title":"Картой",
+		"subtitle": "онлайн"
+	},
+	{
+		"id": "card-offline",
+		"class": "col xl2 l4 m4 s6 xs6 t12",
+		"title":"Картой",
+		"subtitle": "при получении"
+	},
+	{
+		"id": "non-cash",
+		"class": "col xl2 l4 m4 s6 xs6 t12",
+		"title":"Безналичный",
+		"subtitle": "расчёт"
+	},
+	{
+		"id": "on-arrival",
+		"class": "col xl2 l4 m4 s6 xs6 t12",
+		"title":"Наличными",
+		"subtitle": "курьеру"
+	},
+	{
+		"id": "from-ballance",
+		"class": "col xl2 l4 m4 s6 xs6 t12",
+		"title":"С балланса",
+		"subtitle": "240 ₽"
+	}
+]

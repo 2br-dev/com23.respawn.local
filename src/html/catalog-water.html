@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Главная", style: "catalog"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="catalog">
+		<section id="catalog">
+			<div class="container">
+				<div class="row col s12">
+					<h1>Каталог</h1>
+					@@include('./parts/quick-navi.html')
+				</div>
+				<div class="row flex catalog-content">
+					@@loop('./parts/product-card.html', './data/water.json')
+				</div>
+			</div>
+		</section>
+		@@include('./parts/coolers_block.html')
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

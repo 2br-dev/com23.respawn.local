@@ -1,0 +1,160 @@
+@import '../parts/vars';
+
+main{
+
+	&#actions{
+
+		& .action-card{
+	
+			margin-bottom: 2rem;
+	
+			& img{
+				display: block;
+				aspect-ratio: 2 / 1.05;
+				object-fit: cover;
+				border-radius: $border-radius;
+				margin-bottom: 10px;
+				transition: box-shadow .2s;
+			}
+	
+			& .action-description{
+	
+				display: flex;
+				align-items: flex-end;
+	
+				& .info{
+					flex-grow: 1;
+				}
+	
+				& .name{
+					flex-grow: 1;
+					font-weight: 500;
+					font-size: calc(20px + .02vmax);
+					width: 100%;
+				}
+	
+				& .prices{
+					display: inline-flex;
+					align-items: baseline;
+				}
+	
+				& .old-price, & .new-price{
+					margin: 0 6px;
+				}
+	
+				& .new-price{
+					font-weight: 500;
+					font-size: calc(20px + .02vmax);
+					color: $success;
+				}
+	
+				& .old-price{
+					font-weight: 500;
+					color: $fogged;
+					text-decoration: line-through;
+				}
+	
+				& .smart-bttn-wrapper{
+					margin-right: 0;
+				}
+			}
+	
+			&:hover img{
+				@include shadow;
+			}
+		}
+	
+		& #water_block{
+			padding: 2vmax 0;
+			background: $section-alt;
+	
+			& .product-card{
+				background-color: transparent;
+			}
+		}
+	
+		& #coolers_block{
+			padding: 2vmax 0;
+		}
+	}
+
+	&#action{
+
+		& .action-hero{
+			margin-left: calc(-10px - .2vmax);
+			width: calc(100% + 20px + .4vmax);
+			margin-top: calc(-15px - .2vmax);
+			aspect-ratio: 3 / 1;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+
+			@media(max-width: $medium){
+				aspect-ratio: 2 / 1;
+			}
+
+			&:before{
+				content: '';
+				display: block;
+				height: 100%;
+				background: linear-gradient(to bottom, transparent 90%, #fff);
+			}
+
+			& + .row{
+
+				@media(max-width: $extra-large){
+					margin: 0;
+					align-items: flex-start;
+				}
+
+				& .prices{
+
+					display: flex;
+
+					@media(max-width: $medium){
+						justify-content: center;
+					}
+
+					& > *{
+						margin: 1vmax 0;
+						font-size: 3rem;
+						line-height: 1.2em;
+						font-weight: 500;
+						position: relative;
+						
+						&:not(:last-of-type){
+							margin-right: 40px;
+						}
+
+						& span.rur{
+							font-size: .7em;
+							font-weight: 600;
+						}
+
+						&.price-old{
+
+							color: $fogged;
+
+							&:before{
+								content: '';
+								display: block;
+								width: 100%;
+								height: 4px;
+								background: $primary;
+								position: absolute;
+								top: 50%;
+								transform: translateY(-50%) rotate(-4deg);
+								pointer-events: none;
+							}
+						}
+
+						&.price-new{
+							color: $secondary;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
