@@ -8,9 +8,6 @@
     <title>Страница воды</title>
     <link rel="stylesheet" href="/css/master.css">
 
-    <link rel="stylesheet" href="/css/pages/product.css">
-
-
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favico/favicon-16x16.png">
@@ -63,37 +60,35 @@
                         <li><a href="/shops.html">Магазины</a></li>
                         <li><a href="/service.html">Сервисный центр</a></li>
                         </li>
-                        <div class="separator"></div>
-                        <ul class="user-section top-level">
-                            <li>
-                                <a href="">1/1200₽<i class="mdi mdi-cart"></i></a>
-                                <ul class="z-depth-1">
-                                    <li><a href="/checkout.html">Оформить заказ</a></li>
-                                    <li><a href="javascript:void(0);">Очистить корзину</a></li>
-                                </ul>
-                            </li>
-                            <!-- Гость -->
-                            <li id="guest" class="">
-                                <a href="">Профиль<i class="mdi mdi-account"></i></a>
-                                <ul class="z-depth-1">
-                                    <li><a class="modal-trigger" href="#login">Авторизация</a></li>
-                                    <li><a class="modal-trigger" href="#register">Регистрация</a></li>
-                                </ul>
-                            </li>
-                            <!-- Зарегистрированный пользователь -->
-                            <li id="registered" class="hidden">
-                                <a href="">MasterKadaj<i class="mdi mdi-account"></i></a>
-                                <ul class="z-depth-1">
-                                    <li><a href="/profile.html#orders">Мои заказы</a></li>
-                                    <li><a href="/profile.html">Мой профиль</a></li>
-                                    <li><a href="/support.html">Поддержка</a></li>
-                                    <li>
-                                        <div class="divider"></div>
-                                    </li>
-                                    <li><a href="/">Выход</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <li class="separator"></li>
+                        <li>
+                            <a href="">1/1200₽<i class="mdi mdi-cart"></i></a>
+                            <ul class="z-depth-1 user-section">
+                                <li><a href="/checkout.html">Оформить заказ</a></li>
+                                <li><a href="javascript:void(0);">Очистить корзину</a></li>
+                            </ul>
+                        </li>
+                        <!-- Гость -->
+                        <li id="guest" class="">
+                            <a href="">Профиль<i class="mdi mdi-account"></i></a>
+                            <ul class="z-depth-1 user-section">
+                                <li><a class="modal-trigger" href="#login">Авторизация</a></li>
+                                <li><a class="modal-trigger" href="#register">Регистрация</a></li>
+                            </ul>
+                        </li>
+                        <!-- Зарегистрированный пользователь -->
+                        <li id="registered" class="hidden">
+                            <a href="">MasterKadaj<i class="mdi mdi-account"></i></a>
+                            <ul class="z-depth-1 user-section">
+                                <li><a href="/profile.html#orders">Мои заказы</a></li>
+                                <li><a href="/profile.html">Мой профиль</a></li>
+                                <li><a href="/support.html">Поддержка</a></li>
+                                <li>
+                                    <div class="divider"></div>
+                                </li>
+                                <li><a href="/">Выход</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -189,7 +184,7 @@
                 <div class="col xs9 s9 t9">
                     <h3>Регистрация</h3>
                 </div>
-                <div class="col xs3 s3 t3 right-align"><a href="" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a></div>
+                <div class="col xs3 s3 t3 right-align"><a href="#!" class="modal-close modal-close-x"><i class="mdi mdi-close"></i></a></div>
                 <div class="col s12">
                     <input type="radio" value="physical" name="account-type" checked id="type1" class="styled">
                     <label for="type1">Физическое лицо</label>

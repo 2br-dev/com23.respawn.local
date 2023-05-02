@@ -46,11 +46,24 @@
 // @import "../../node_modules/materialize-css/sass/components/timepicker";
 
 
-// Parts
-
+// :::::::::::::::::::::::::: PARTS :::::::::::::::::::::::::::::::::
 @import './parts/safe-picker';
 @import './parts/typography';
 @import './parts/custom_grid';
 @import './parts/helpers';
 @import './parts/header';
 @import './parts/footer';
+
+// :::::::::::::::::::::::::: PAGES :::::::::::::::::::::::::::::::::
+@import './pages/about';
+@import './pages/actions';
+@import './pages/catalog';
+@import './pages/checkout';
+@import './pages/details';
+@import './pages/main';
+@import './pages/news';
+@import './pages/payment';
+@import './pages/product';
+@import './pages/profile';
+@import './pages/service';
+@import './pages/shops';

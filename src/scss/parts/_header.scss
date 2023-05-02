@@ -54,6 +54,8 @@ body{
 		background: $secondary;
 		box-shadow: 0 1px 3px rgba(black, .3), 0 2px 4px rgba(black, .3);
 		position: relative;
+		position: sticky;
+		top: 0;
 		z-index: 5;
 	
 		& .container{
@@ -72,13 +74,13 @@ body{
 						display: flex;
 	
 						& .separator{
+							display: block;
 							flex-grow: 1;
 						}
 					}
-					
-					& .user-section{
-						display: flex;
 
+					& .user-section{
+						
 						& a{
 
 							display: flex;
@@ -136,6 +138,11 @@ body{
 					opacity: 0;
 					pointer-events: none;
 					z-index: 5;
+
+					&.user-section{
+						left: unset;
+						right: 0;
+					}
 		
 					& li{
 		
@@ -162,17 +169,17 @@ body{
 	
 		}
 	
-		& .user-section{
+		// & .user-section{
 	
-			& li{
+		// 	& li{
 	
-				& ul{
-					left: unset;
-					right: 0;
-					background: #fff;
-				}
-			}
-		}
+		// 		& ul{
+		// 			left: unset;
+		// 			right: 0;
+		// 			background: #fff;
+		// 		}
+		// 	}
+		// }
 	
 		& .catalog-bttn{
 	
