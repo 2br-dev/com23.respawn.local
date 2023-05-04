@@ -8,6 +8,7 @@
 		"price1": "320₽",
 		"price2": "310₽",
 		"price3": "300₽",
+		"noHeader": true,
 		"labes":[
 			{
 				"class": "new",
@@ -24,6 +25,7 @@
 		"price1": "240₽",
 		"price2": "210₽",
 		"price3": "190₽",
+		"noHeader": true,
 		"labes":[
 			{
 				"class": "new",
@@ -43,7 +45,8 @@
 		"class": "swiper-slide",
 		"price1": "260₽",
 		"price2": "230₽",
-		"price3": "210₽"
+		"price3": "210₽",
+		"noHeader": true
 	},
 	{
 		"header": "Горячий ключ",
@@ -53,7 +56,8 @@
 		"class": "swiper-slide",
 		"price1": "220₽",
 		"price2": "190₽",
-		"price3": "180₽"
+		"price3": "180₽",
+		"noHeader": true
 	},
 	{
 		"header": "Мирабель",
@@ -64,6 +68,7 @@
 		"price1": "190₽",
 		"price2": "170₽",
 		"price3": "160₽",
+		"noHeader": true,
 		"labes":[
 			{
 				"class": "hit",
@@ -80,6 +85,7 @@
 		"price1": "300₽",
 		"price2": "280₽",
 		"price3": "260₽",
+		"noHeader": true,
 		"labes":[
 			{
 				"class": "new",
@@ -99,7 +105,8 @@
 		"class": "swiper-slide",
 		"price1": "250₽",
 		"price2": "230₽",
-		"price3": "220₽"
+		"price3": "220₽",
+		"noHeader": true
 	},
 	{
 		"header": "Кубай",
@@ -109,6 +116,7 @@
 		"class": "swiper-slide",
 		"price1": "250₽",
 		"price2": "240₽",
-		"price3": "230₽"
+		"price3": "230₽",
+		"noHeader": true
 	}
 ]

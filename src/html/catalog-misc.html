@@ -20,13 +20,21 @@
 						Каталог
 					</h1>
 					@@include('./parts/quick-navi.html')
-					<div class="disclaimer info">
-						Дата доставки кулера согласовывается с менеджером при оформлении заказа
+					<div class="disclaimer warning">
+						Доставка товаров из данной категории осуществляется только с поставкой воды.
 					</div>
 				</div>
 				<div class="row flex">
 					<form class="col l12 catalog-content">
-						@@include('./parts/filters.html', {suffix: 'desktop', className: 'hide-m-down', max: 3000})
+						<ul class="filters">
+							<li>
+								<ul class="pin subcategories">
+									<li><a class="waves-effect" href="">Одноразовая посуда</a></li>
+									<li><a class="waves-effect" href="">Стаканодержатели</a></li>
+									<li><a class="waves-effect" href="">Доставка</a></li>
+								</ul>
+							</li>
+						</ul>
 						<div class="row flex catalog-content">
 							<div class="col s12">
 								<h2>Кулеры для воды</h2>

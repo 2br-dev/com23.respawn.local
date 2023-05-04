@@ -23199,8 +23199,10 @@ body {
     flex-direction: column;
     justify-content: center; }
     .product-card .product-info .header {
-      font-weight: bold;
-      font-size: 1.2rem; }
+      font-weight: bold; }
+      .product-card .product-info .header h3, .product-card .product-info .header body h4, body .product-card .product-info .header h4 {
+        font-size: 1.2rem;
+        text-transform: none; }
     .product-card .product-info .subheader {
       font-size: 14px;
       line-height: 1.4em;
@@ -23563,6 +23565,31 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; }
+  body .disclaimer {
+    padding: 12px 18px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center; }
+    body .disclaimer:before, body .switcher input ~ label.disclaimer:after, body .switcher .input-field textarea ~ label.disclaimer:after, body .input-field .switcher textarea ~ label.disclaimer:after {
+      display: inline-block;
+      content: '';
+      margin-right: 10px; }
+    body .disclaimer.info {
+      box-shadow: 0 0 0 1px #3C84F3 inset;
+      background-color: rgba(60, 132, 243, 0.1);
+      color: #0f66ed; }
+      body .disclaimer.info:before, body .switcher input ~ label.disclaimer.info:after, body .switcher .input-field textarea ~ label.disclaimer.info:after, body .input-field .switcher textarea ~ label.disclaimer.info:after {
+        content: '\F02FC';
+        font-family: 'Material Design Icons';
+        color: #0f66ed; }
+    body .disclaimer.warning {
+      box-shadow: 0 0 0 1px #ff9811 inset;
+      background-color: rgba(255, 152, 17, 0.1);
+      color: #dd7d00; }
+      body .disclaimer.warning:before, body .switcher input ~ label.disclaimer.warning:after, body .switcher .input-field textarea ~ label.disclaimer.warning:after, body .input-field .switcher textarea ~ label.disclaimer.warning:after {
+        content: '\F0026';
+        font-family: 'Material Design Icons';
+        color: #dd7d00; }
   body label {
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -24037,8 +24064,8 @@ body {
         display: block;
         width: 3px;
         background-image: url(../img/first.svg);
-        background-size: auto 100%;
-        background-position: left center;
+        background-size: auto 100;
+        background-position: top left;
         background-repeat: no-repeat; }
       body .breadcrumbs li:before {
         content: '';
@@ -24046,15 +24073,15 @@ body {
         width: 16px;
         background-image: url(../img/connection.svg);
         background-size: auto 100%;
-        background-position: right center;
+        background-position: top right;
         background-repeat: no-repeat; }
       body .breadcrumbs li:last-of-type:after {
         content: '';
         display: block;
-        width: 11px;
+        width: 13px;
         background-image: url(../img/head.svg);
         background-size: auto 100%;
-        background-position: right center;
+        background-position: topcenter;
         background-repeat: no-repeat; }
       body .breadcrumbs li:hover a {
         background-color: #B7B7B7; }
@@ -24564,6 +24591,17 @@ main#action .action-hero {
           pointer-events: none; }
       main#action .action-hero + .row .prices > *.price-new {
         color: #3C84F3; }
+
+main#catalog .subcategories li a {
+  display: block;
+  padding: 10px 0;
+  border-left: 3px #FF2741 solid;
+  padding-left: 1rem; }
+  main#catalog .subcategories li a:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+
+main#catalog .subcategories li:not(:last-of-type) a {
+  border-bottom: 1px solid #cecece; }
 
 main#catalog .catalog-content {
   display: flex; }

@@ -8,6 +8,45 @@ body{
 	flex-direction: column;
 	min-height: 100vh;
 
+	& .disclaimer{
+		padding: 12px 18px;
+		border-radius: $border-radius;
+		display: flex;
+		justify-content: center;
+
+		&:before{
+			display: inline-block;
+			content: '';
+			margin-right: 10px;
+		}
+
+		&.info{
+
+			box-shadow: 0 0 0 1px $secondary inset;
+			background-color: rgba($secondary, .1);
+			color: darken($secondary, 10);
+
+			&:before{
+				content: '\F02FC';
+				font-family: 'Material Design Icons';
+				color: darken($secondary, 10);
+			}
+		}
+
+		&.warning{
+
+			box-shadow: 0 0 0 1px $warning inset;
+			background-color: rgba($warning, .1);
+			color: darken($warning, 10);
+
+			&:before{
+				content: '\F0026';
+				font-family: 'Material Design Icons';
+				color: darken($warning, 10);
+			}
+		}
+	}
+
 	& label{
 		user-select: none;
 	}
@@ -623,8 +662,8 @@ body{
 					display: block;
 					width: 3px;
 					background-image: url(/img/first.svg);
-					background-size: auto 100%;
-					background-position: left center;
+					background-size: auto 100;
+					background-position: top left;
 					background-repeat: no-repeat;
 				}
 			}
@@ -635,17 +674,17 @@ body{
 				width: 16px;
 				background-image: url(/img/connection.svg);
 				background-size: auto 100%;
-				background-position: right center;
+				background-position: top right;
 				background-repeat: no-repeat;
 			}
 
 			&:last-of-type:after{
 				content: '';
 				display: block;
-				width: 11px;
+				width: 13px;
 				background-image: url(/img/head.svg);
 				background-size: auto 100%;
-				background-position: right center;
+				background-position: topcenter;
 				background-repeat: no-repeat;
 			}
 

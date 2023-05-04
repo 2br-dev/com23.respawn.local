@@ -2,6 +2,26 @@
 
 main#catalog{
 
+	& .subcategories{
+
+		& li{
+
+			& a{
+				display: block;
+				padding: 10px 0;
+				border-left: 3px $primary solid;
+				padding-left: 1rem;
+
+				&:hover{
+					background-color: rgba(black, .05);
+				}
+			}
+			
+			&:not(:last-of-type) a{
+				border-bottom: 1px solid #cecece;
+			}
+		}
+	}
 
 	& .catalog-content{
 		

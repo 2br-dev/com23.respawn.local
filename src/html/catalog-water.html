@@ -6,13 +6,20 @@
 <body>
 	@@include('./parts/header.html')
 	<main id="catalog">
-		<section id="catalog">
+		<section id="catalog-block">
 			<div class="container">
 				<div class="row col s12">
+					<ul class="breadcrumbs">
+						<li class="crumb"><a href="/">Главная</a></li>
+						<li class="crumb"><a href="/catalog-water.html">Вода питьевая бутилированная</a></li>
+					</ul>
 					<h1>Каталог</h1>
 					@@include('./parts/quick-navi.html')
 				</div>
 				<div class="row flex catalog-content">
+					<div class="col s12">
+						<h2>Питьевая вода бутилированная</h2>
+					</div>
 					@@loop('./parts/product-card.html', './data/water.json')
 				</div>
 			</div>

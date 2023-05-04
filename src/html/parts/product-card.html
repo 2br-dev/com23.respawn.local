@@ -14,7 +14,12 @@
 				}
 			</ul>
 			<div class="header">
-				<a href="@@link">@@header</a>
+				@@if(!context.noHeader){
+					<a href="@@link"><h3 class="no-margin">@@header</h3></a>
+				}
+				@@if(context.noHeader){
+					<a href="@@link">@@header</a>
+				}
 			</div>
 			@@if(context.subheader){
 				<div class="subheader">@@subheader</div>

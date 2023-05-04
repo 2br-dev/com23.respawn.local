@@ -70,8 +70,13 @@
 		justify-content: center;
 
 		& .header{
+			
 			font-weight: bold;
-			font-size: 1.2rem;
+
+			& h3{
+				font-size: 1.2rem;
+				text-transform: none;
+			}
 		}
 
 		& .subheader{
