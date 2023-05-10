@@ -6,59 +6,61 @@
 			</a>
 		</div>
 		<div class="product-info">
-			<ul class="labes">
-				@@if(context.labes){
-					@@for(let i=0; i<labes.length; i++){
-						<li class="labe `+labes[i].class+`">`+labes[i].header+`</li>
+			<div class="info-wrapper">
+				<ul class="labes">
+					@@if(context.labes){
+						@@for(let i=0; i<labes.length; i++){
+							<li class="labe `+labes[i].class+`">`+labes[i].header+`</li>
+						}
+					}
+				</ul>
+				<div class="header">
+					@@if(!context.noHeader){
+						<a href="@@link" class="lined"><h3 class="no-margin product-header">@@header</h3></a>
+					}
+					@@if(context.noHeader){
+						<a href="@@link" class="lined">@@header</a>
+					}
+				</div>
+				@@if(context.subheader){
+					<div class="subheader">@@subheader</div>
+				}
+				@@if(context.type){
+					@@if(type=='triple-price'){
+						<div class="kv-table">
+							<div class="kv-pair">
+								<div class="key">1 бут.</div>
+								<div class="value">@@price1</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">от 2х</div>
+								<div class="value">@@price2</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">от 4х</div>
+								<div class="value">@@price3</div>
+							</div>
+						</div>
+						<ul class="disclamer">
+							<li>Доставка <span class="hide-m-down">осуществляется </span>от 2х бутылей</li>
+							<li>Цена <span class="hide-m-down">указана </span>при наличии оборотной тары</li>
+						</ul>
+					}
+					@@if(type=='single-price'){
+						<div class="kv-table">
+							<div class="kv-pair">
+								<div class="key">Цена</div>
+								<div class="value">@@price</div>
+							</div>
+						</div>
+						<ul class="chars">
+							@@if(context.loading){<li><span>Загрузка: </span><strong>@@loading</strong></li>}
+							@@if(context.cooler){<li><span>Холодильник: </span><strong>@@cooler</strong></li>}
+							@@if(context.cooler-type){<li><span>Охлаждение: </span><strong>@@cooler-type</strong></li>}
+						</ul>
 					}
 				}
-			</ul>
-			<div class="header">
-				@@if(!context.noHeader){
-					<a href="@@link"><h3 class="no-margin">@@header</h3></a>
-				}
-				@@if(context.noHeader){
-					<a href="@@link">@@header</a>
-				}
 			</div>
-			@@if(context.subheader){
-				<div class="subheader">@@subheader</div>
-			}
-			@@if(context.type){
-				@@if(type=='triple-price'){
-					<div class="kv-table">
-						<div class="kv-pair">
-							<div class="key">1 бут.</div>
-							<div class="value">@@price1</div>
-						</div>
-						<div class="kv-pair">
-							<div class="key">от 2х</div>
-							<div class="value">@@price2</div>
-						</div>
-						<div class="kv-pair">
-							<div class="key">от 4х</div>
-							<div class="value">@@price3</div>
-						</div>
-					</div>
-					<ul class="disclamer">
-						<li>Доставка <span class="hide-m-down">осуществляется </span>от 2х бутылей</li>
-						<li>Цена <span class="hide-m-down">указана </span>при наличии оборотной тары</li>
-					</ul>
-				}
-				@@if(type=='single-price'){
-					<div class="kv-table">
-						<div class="kv-pair">
-							<div class="key">Цена</div>
-							<div class="value">@@price</div>
-						</div>
-					</div>
-					<ul class="chars">
-						@@if(context.loading){<li><span>Загрузка: </span><strong>@@loading</strong></li>}
-						@@if(context.cooler){<li><span>Холодильник: </span><strong>@@cooler</strong></li>}
-						@@if(context.cooler-type){<li><span>Охлаждение: </span><strong>@@cooler-type</strong></li>}
-					</ul>
-				}
-			}
 			<div class="action">
 				@@include('./smart-bttn.html')
 			</div>

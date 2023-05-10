@@ -68,6 +68,14 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		padding-bottom: 50px;
+
+		& .info-wrapper{
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
 
 		& .header{
 			
@@ -76,6 +84,9 @@
 			& h3{
 				font-size: 1.2rem;
 				text-transform: none;
+				position: relative;
+				width: fit-content;
+				display: inline;
 			}
 		}
 

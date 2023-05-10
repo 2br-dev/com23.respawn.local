@@ -3,10 +3,32 @@
 @import './howto';
 @import './noui-slider';
 
+@mixin animatedUnderline($color, $thickness){
+	background: 
+		linear-gradient(to right, transparent, transparent),
+		linear-gradient(to right, $color, $color);
+	background-size: 100% $thickness, 0 $thickness;
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size .2s;
+
+	&:hover{
+		background-size: 0 $thickness, 100% $thickness;
+	}
+}
+
 body{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+
+	& .lined{
+		@include animatedUnderline($primary, 1px);
+	}
+
+	& .lined-white{
+		@include animatedUnderline(#fff, 1px);
+	}
 
 	& .disclaimer{
 		padding: 12px 18px;
@@ -93,6 +115,7 @@ body{
 		color: #fff;
 		font-weight: 400;
 		white-space: nowrap;
+		transition: background-color .2s;
 
 		& i{
 			margin-right: 6px
@@ -101,12 +124,20 @@ body{
 		&.credit{
 			background-color: $success
 		}
+
+		&:hover{
+			background-color: darken($primary, 15);
+		}
 	}
 
 	& .bttn-flat{
 		@extend .bttn;
 		background: transparent;
 		color: $primary;
+
+		&:hover{
+			background-color: rgba(black, .05);
+		}
 	}
 
 	& .bttn-outline{
@@ -114,6 +145,10 @@ body{
 		background-color: transparent;
 		color: $primary;
 		border: 1px solid $primary;
+
+		&:hover{
+			background-color: rgba(black, .05);
+		}
 	}
 
 	& .no-margin{
@@ -475,6 +510,7 @@ body{
 			display: inline-block;
 			line-height: 1.8em;
 			margin-bottom: 10px;
+			transition: background-color .2s;
 
 			&.active{
 				background: $primary;
@@ -482,10 +518,18 @@ body{
 				& a{
 					color: #fff;
 				}
+
+				&:hover{
+					background-color: darken($primary, 15);
+				}
 			}
 
 			&:not(:last-of-type){
 				margin-right: 10px;
+			}
+
+			&:hover{
+				background-color: rgba(black, .05);
 			}
 		}
 	}

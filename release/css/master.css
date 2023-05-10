@@ -21708,7 +21708,7 @@ body.keyboard-focused .dropdown-content li:focus {
   cursor: pointer; }
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Roboto Flex';
   font-size: calc(16px + .1vw);
   line-height: 1.4em;
   font-weight: 300;
@@ -23197,12 +23197,22 @@ body {
   .product-card .product-info {
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    padding-bottom: 50px; }
+    .product-card .product-info .info-wrapper {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
     .product-card .product-info .header {
       font-weight: bold; }
       .product-card .product-info .header h3, .product-card .product-info .header body h4, body .product-card .product-info .header h4 {
         font-size: 1.2rem;
-        text-transform: none; }
+        text-transform: none;
+        position: relative;
+        width: -moz-fit-content;
+        width: fit-content;
+        display: inline; }
     .product-card .product-info .subheader {
       font-size: 14px;
       line-height: 1.4em;
@@ -23565,6 +23575,22 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; }
+  body .lined {
+    background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, #FF2741, #FF2741);
+    background-size: 100% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .2s; }
+    body .lined:hover {
+      background-size: 0 1px, 100% 1px; }
+  body .lined-white {
+    background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, #fff, #fff);
+    background-size: 100% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .2s; }
+    body .lined-white:hover {
+      background-size: 0 1px, 100% 1px; }
   body .disclaimer {
     padding: 12px 18px;
     border-radius: 6px;
@@ -23623,18 +23649,25 @@ body {
     background: #FF2741;
     color: #fff;
     font-weight: 400;
-    white-space: nowrap; }
+    white-space: nowrap;
+    transition: background-color .2s; }
     body .bttn i, body .bttn-flat i, body .bttn-outline i {
       margin-right: 6px; }
     body .bttn.credit, body .credit.bttn-flat, body .credit.bttn-outline {
       background-color: #00AC5A; }
+    body .bttn:hover, body .bttn-flat:hover, body .bttn-outline:hover {
+      background-color: #da001a; }
   body .bttn-flat {
     background: transparent;
     color: #FF2741; }
+    body .bttn-flat:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
   body .bttn-outline {
     background-color: transparent;
     color: #FF2741;
     border: 1px solid #FF2741; }
+    body .bttn-outline:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
   body .no-margin {
     margin: 0; }
   body .input-field {
@@ -23944,13 +23977,18 @@ body {
       border-radius: 30px;
       display: inline-block;
       line-height: 1.8em;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      transition: background-color .2s; }
       body .quick-navi .quick-navi-entry.active {
         background: #FF2741; }
         body .quick-navi .quick-navi-entry.active a {
           color: #fff; }
+        body .quick-navi .quick-navi-entry.active:hover {
+          background-color: #da001a; }
       body .quick-navi .quick-navi-entry:not(:last-of-type) {
         margin-right: 10px; }
+      body .quick-navi .quick-navi-entry:hover {
+        background-color: rgba(0, 0, 0, 0.05); }
   body .switcher {
     display: flex;
     align-items: center; }
