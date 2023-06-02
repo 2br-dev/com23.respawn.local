@@ -111,6 +111,27 @@ main#product{
 		line-height: 1.4em;
 	}
 
+	& .complectations{
+
+		& .color-list{
+
+			display: flex;
+
+			& .c-color{
+				display: block;
+				width: 40px;
+				aspect-ratio: 1 / 1;
+				border-radius: 50%;
+				background-size: cover;
+				margin-right: 5px;
+
+				&.active{
+					box-shadow: 0 0 0 2px $primary inset;
+				}
+			}
+		}
+	}
+
 	& .characteristics{
 
 		columns: 2;

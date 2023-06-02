@@ -24206,6 +24206,35 @@ body header {
     margin: 0; }
   body header .mobile-right a {
     font-size: 22px; }
+  body header .mobile-cart {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    line-height: unset;
+    justify-content: center; }
+    body header .mobile-cart .indicator {
+      position: absolute;
+      font-size: 8px;
+      line-height: 1.7em;
+      width: 1.7em;
+      height: 1.7em;
+      aspect-ratio: 1 / 1;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #FF2741;
+      top: 6px;
+      right: 50%;
+      transform: translateX(100%);
+      box-shadow: 0 0 0 1px #FF2741; }
+    body header .mobile-cart .mdi-cart {
+      line-height: 1em;
+      text-align: center; }
+    body header .mobile-cart .summ {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1em;
+      height: 1em; }
   body header .header-top {
     display: flex;
     align-items: center;
@@ -25205,6 +25234,18 @@ main#product .price {
   margin: 30px 0;
   font-size: 3rem;
   line-height: 1.4em; }
+
+main#product .complectations .color-list {
+  display: flex; }
+  main#product .complectations .color-list .c-color {
+    display: block;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 5px; }
+    main#product .complectations .color-list .c-color.active {
+      box-shadow: 0 0 0 2px #FF2741 inset; }
 
 main#product .characteristics {
   -moz-columns: 2;

@@ -15,6 +15,43 @@ body{
 				font-size: 22px;
 			}
 		}
+
+		& .mobile-cart{
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			line-height: unset;
+			justify-content: center;
+
+			& .indicator{
+				position: absolute;
+				font-size: 8px;
+				line-height: 1.7em;
+				width: 1.7em;
+				height: 1.7em;
+				aspect-ratio: 1 / 1;
+				text-align: center;
+				border-radius: 50%;
+				background-color: #fff;
+				color: $primary;
+				top: 6px;
+				right: 50%;
+				transform: translateX(100%);
+				box-shadow: 0 0 0 1px $primary;
+			}
+
+			& .mdi-cart{
+				line-height: 1em;
+				text-align: center;
+			}
+
+			& .summ{
+				font-size: 12px;
+				font-weight: 300;
+				line-height: 1em;
+				height: 1em;
+			}
+		}
 		
 		& .header-top{
 	
