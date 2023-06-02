@@ -2,7 +2,7 @@
 import Lazy from 'vanilla-lazyload';
 import * as M from 'materialize-css';
 import Swiper, { Pagination, Autoplay } from 'swiper';
-import noUiSlider from 'nouislider';
+// import noUiSlider from 'nouislider';
 Swiper.use([Pagination, Autoplay]);
 // #endregion
 
@@ -12,8 +12,17 @@ let modal = M.Modal.init(document.querySelectorAll('.modal'));
 let lazy = new Lazy({}, document.querySelectorAll('.lazy'));
 let tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
 let tooltips = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
+
+//Получаем завтрашнюю дату
+var current_date = new Date();
+var tommorow = current_date.setDate(current_date.getDate() + 1);
+
 let datePicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
+    firstDay: 1,
+    autoClose: true,
+    minDate: new Date(tommorow),
 	format: 'dd mmmm yyyy',
+    onSelect: loadIntervals,
 	i18n: {
 		done: 'OK',
 		clear: 'Очистить',
@@ -37,27 +46,40 @@ let datePicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
 		],
 		monthsShort:['Янв','Фвр','Мрт','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек']
 	},
-	onSelect: (date:Date) => {
-		
-		let dayOfWeek = date.getDay();
-		let isHoliday = dayOfWeek >= 5;
-
-		$('#date span').text('');
-		$('#date').addClass('empty');
-
-		if(isHoliday){
-			$('#holydays').addClass('visible');
-			$('#weekdays').removeClass('visible');
-		}else{
-			$('#holydays').removeClass('visible');
-			$('#weekdays').addClass('visible');
-		}
-	},
 	onClose: () => {
 		$('#delivery-time').addClass('visible');
 	}
 });
 
+//= Загрузка диапазонов ===================================================
+function loadIntervals(date){
+    $('input[name="delivery_date_timestamp"]').val(date.getTime()/1000);
+    $.ajax({
+        url: $('#delivery-date').data('url'),
+        type: "POST",
+        dataType: "JSON",
+        data: {
+            delivery_date: date.getTime()/1000
+        },
+        success: (res) => {
+            console.log(res);
+            $('input[name="delivery_date"]').val(res.formatted_date);
+            let emptyLi = `<li><a class="waves-effect" data-value="undefined">Любой</a></li>`;
+            $('#interval-wrapper').empty().append(emptyLi);
+            for(var key in res.intervals){
+                let li = `<li><a data-value="${res.intervals[key]}" class="waves-effect">${res.intervals[key]}</a></li>`
+                $('#interval-wrapper').append(li);
+            }
+            $('#delivery-interval').removeClass('hidden');
+            $('#interval-0').prop('checked', 'checked');
+        },
+        error: (err) => {
+            console.error(err)
+        }
+    });
+}
+
+(window as any).lazy = Lazy;
 // #endregion
 
 // #region Инициализация слайдра цен
@@ -127,7 +149,7 @@ let noUiInit = () => {
 			// Устанавливаем значения скрытых инпутов
 			console.log("Завершение установки диапазона цен")
 		});
-	
+
 		$(window).on('resize', () => {
 			updateWidth(null, minElement, false);
 			updateWidth(null, maxElement, false);
@@ -182,7 +204,7 @@ let noUiInit = () => {
 	
 }
 
-if($('#price-range-desktop').length){ noUiInit(); }
+// if($('#price-range-desktop').length){ noUiInit(); }
 
 if($('[name=address]').length){
 	let el = <HTMLElement>document.querySelector('[name=address]');
@@ -315,19 +337,28 @@ $('body').on('click', '.input-field', (e:JQuery.ClickEvent) => {
 $('body').on('click', '.input-field li a', (e:JQuery.ClickEvent) => {
 	e.preventDefault();
 	let el = <HTMLLinkElement>e.currentTarget;
-	let content = el.textContent;
+	let value = el.getAttribute('data-value');
+	let text = el.textContent;
 	let parent = $(el).parents('.input-field');
 	let input = parent.find('[type=hidden]');
 	let valueContainer = parent.find('.current span');
-	valueContainer.text(content);
-	input.val(content);
-	if(content == ""){
+	valueContainer.text(text);
+	input.val(value);
+	if(text == ""){
 		parent.find('.current').addClass('empty');
 	}else{
 		parent.find('.current').removeClass('empty');
 	}
 	parent.removeClass('hover');
 	e.stopPropagation();
+	let elNoNeedRecall = <HTMLElement>document.getElementById("dont-recall-wrapper");
+	if(value != 'undefined'){
+	    elNoNeedRecall.classList.remove('hidden');
+    }else{
+        elNoNeedRecall.classList.add('hidden');
+        let inputNoNeedRecall = <HTMLInputElement>document.getElementById('dont-recall');
+        inputNoNeedRecall.removeAttribute('checked');
+    }
 });
 
 $('body').on('click', (e:JQuery.ClickEvent) => {
@@ -370,7 +401,7 @@ $('body').on('change', '[name=address]', (e:JQuery.ChangeEvent) => {
 });
 
 // Отображение поля Интервал в корзине
-$('body').on('change', '[name=date]', (e:JQuery.ChangeEvent) => {
+$('body').on('change', '[name=delivery-day]', (e:JQuery.ChangeEvent) => {
 	let el = e.currentTarget;
 	let id = el.id;
 
@@ -438,12 +469,12 @@ $('.filters input').on("input", (e:JQuery.ChangeEvent) => {
 	$('#' + doubleId).attr("checked", element.checked);
 
 	// Обновление слайдера
-	let $doubleContainer = $('#'+doubleId).parents('form');
-	let doubleMin = parseInt($doubleContainer.find(".min").val()?.toString());
-	let doubleMax = parseInt($doubleContainer.find(".max").val()?.toString());
-	let values = [doubleMin, doubleMax];
-	let slider = (document.getElementById('price-range-' + suffix) as any).noUiSlider;
-	slider.set(values);
+	// let $doubleContainer = $('#'+doubleId).parents('form');
+	// let doubleMin = parseInt($doubleContainer.find(".min").val()?.toString());
+	// let doubleMax = parseInt($doubleContainer.find(".max").val()?.toString());
+	// let values = [doubleMin, doubleMax];
+	// // let slider = (document.getElementById('price-range-' + suffix) as any).noUiSlider;
+	// slider.set(values);
 });
 
 // Автоизменение Textarea

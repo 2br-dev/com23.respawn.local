@@ -17929,6 +17929,8 @@
         }
         */ }
   .mdi-rotate-45:before, body .switcher input ~ label.mdi-rotate-45:after, body .switcher .input-field textarea ~ label.mdi-rotate-45:after, body .input-field .switcher textarea ~ label.mdi-rotate-45:after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
 
 .mdi-rotate-90 {
@@ -17949,6 +17951,8 @@
         }
         */ }
   .mdi-rotate-90:before, body .switcher input ~ label.mdi-rotate-90:after, body .switcher .input-field textarea ~ label.mdi-rotate-90:after, body .input-field .switcher textarea ~ label.mdi-rotate-90:after {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg); }
 
 .mdi-rotate-135 {
@@ -17969,6 +17973,8 @@
         }
         */ }
   .mdi-rotate-135:before, body .switcher input ~ label.mdi-rotate-135:after, body .switcher .input-field textarea ~ label.mdi-rotate-135:after, body .input-field .switcher textarea ~ label.mdi-rotate-135:after {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
     transform: rotate(135deg); }
 
 .mdi-rotate-180 {
@@ -17989,6 +17995,8 @@
         }
         */ }
   .mdi-rotate-180:before, body .switcher input ~ label.mdi-rotate-180:after, body .switcher .input-field textarea ~ label.mdi-rotate-180:after, body .input-field .switcher textarea ~ label.mdi-rotate-180:after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
 
 .mdi-rotate-225 {
@@ -18009,6 +18017,8 @@
         }
         */ }
   .mdi-rotate-225:before, body .switcher input ~ label.mdi-rotate-225:after, body .switcher .input-field textarea ~ label.mdi-rotate-225:after, body .input-field .switcher textarea ~ label.mdi-rotate-225:after {
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
     transform: rotate(225deg); }
 
 .mdi-rotate-270 {
@@ -18029,6 +18039,8 @@
         }
         */ }
   .mdi-rotate-270:before, body .switcher input ~ label.mdi-rotate-270:after, body .switcher .input-field textarea ~ label.mdi-rotate-270:after, body .input-field .switcher textarea ~ label.mdi-rotate-270:after {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
     transform: rotate(270deg); }
 
 .mdi-rotate-315 {
@@ -18049,25 +18061,40 @@
         }
         */ }
   .mdi-rotate-315:before, body .switcher input ~ label.mdi-rotate-315:after, body .switcher .input-field textarea ~ label.mdi-rotate-315:after, body .input-field .switcher textarea ~ label.mdi-rotate-315:after {
+    -webkit-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
     transform: rotate(315deg); }
 
 .mdi-flip-h:before, body .switcher input ~ label.mdi-flip-h:after, body .switcher .input-field textarea ~ label.mdi-flip-h:after, body .input-field .switcher textarea ~ label.mdi-flip-h:after {
+  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH"; }
 
 .mdi-flip-v:before, body .switcher input ~ label.mdi-flip-v:after, body .switcher .input-field textarea ~ label.mdi-flip-v:after, body .input-field .switcher textarea ~ label.mdi-flip-v:after {
+  -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
   filter: FlipV;
   -ms-filter: "FlipV"; }
 
 .mdi-spin:before, body .switcher input ~ label.mdi-spin:after, body .switcher .input-field textarea ~ label.mdi-spin:after, body .input-field .switcher textarea ~ label.mdi-spin:after {
+  -webkit-animation: mdi-spin 2s infinite linear;
   animation: mdi-spin 2s infinite linear; }
+
+@-webkit-keyframes mdi-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
 
 @keyframes mdi-spin {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
+    -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
 
 /**
@@ -18152,8 +18179,7 @@ swiper-slide {
 
 .swiper-backface-hidden .swiper-slide {
   transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+  backface-visibility: hidden; }
 
 /* 3D Effects */
 .swiper-3d.swiper-css-mode .swiper-wrapper {
@@ -18224,8 +18250,7 @@ swiper-slide {
   scroll-snap-stop: always; }
 
 .swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
-  -webkit-margin-start: var(--swiper-centered-offset-before);
-          margin-inline-start: var(--swiper-centered-offset-before); }
+  margin-inline-start: var(--swiper-centered-offset-before); }
 
 .swiper-centered.swiper-horizontal > .swiper-wrapper::before {
   height: 100%;
@@ -18233,8 +18258,7 @@ swiper-slide {
   width: var(--swiper-centered-offset-after); }
 
 .swiper-centered.swiper-vertical > .swiper-wrapper > .swiper-slide:first-child {
-  -webkit-margin-before: var(--swiper-centered-offset-before);
-          margin-block-start: var(--swiper-centered-offset-before); }
+  margin-block-start: var(--swiper-centered-offset-before); }
 
 .swiper-centered.swiper-vertical > .swiper-wrapper::before {
   width: 100%;
@@ -18347,9 +18371,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     margin: 0;
     padding: 0;
     box-shadow: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none; }
+    appearance: none; }
   .swiper-pagination-clickable .swiper-pagination-bullet {
     cursor: pointer; }
   .swiper-pagination-bullet:only-child {
@@ -20138,8 +20160,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -20932,9 +20953,7 @@ td, th {
   float: right !important; }
 
 .no-select {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none; }
+  user-select: none; }
 
 .circle {
   border-radius: 50%; }
@@ -21064,9 +21083,7 @@ td, th {
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   -webkit-tap-highlight-color: transparent;
   vertical-align: middle;
   z-index: 1;
@@ -21224,8 +21241,7 @@ td, th {
   z-index: 999;
   overflow-y: auto;
   will-change: transform;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: translateX(-105%); }
   .sidenav.right-aligned {
     right: 0;
@@ -21504,9 +21520,7 @@ td, th {
 .select-wrapper.valid .helper-text[data-success],
 .select-wrapper.invalid ~ .helper-text[data-error] {
   color: transparent;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none; }
 
 .select-wrapper.valid ~ .helper-text:after {
@@ -21574,9 +21588,7 @@ select {
     margin: 0;
     padding: 0;
     display: block;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
     z-index: 1; }
   .select-wrapper .caret {
     position: absolute;
@@ -21603,9 +21615,7 @@ select:disabled {
 .select-wrapper input.select-dropdown:disabled, .select-wrapper body .input-field textarea.select-dropdown:disabled, body .input-field .select-wrapper textarea.select-dropdown:disabled {
   color: rgba(0, 0, 0, 0.42);
   cursor: default;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none; }
+  user-select: none; }
 
 .select-wrapper i {
   color: rgba(0, 0, 0, 0.3); }
@@ -21708,7 +21718,7 @@ body.keyboard-focused .dropdown-content li:focus {
   cursor: pointer; }
 
 body {
-  font-family: 'Roboto Flex';
+  font-family: 'Roboto';
   font-size: calc(16px + .1vw);
   line-height: 1.4em;
   font-weight: 300;
@@ -21751,7 +21761,7 @@ body {
 
 @media (min-width: 1200px) {
   .container {
-    width: 90%; } }
+    width: 85%; } }
 
 .col .row {
   margin-left: -10px;
@@ -23176,7 +23186,6 @@ body {
     margin-bottom: 6px; }
     .product-card .labes .labe {
       display: inline-block;
-      width: -moz-fit-content;
       width: fit-content;
       padding: 0 10px;
       margin: 0 1px;
@@ -23197,22 +23206,10 @@ body {
   .product-card .product-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-bottom: 50px; }
-    .product-card .product-info .info-wrapper {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
+    justify-content: center; }
     .product-card .product-info .header {
-      font-weight: bold; }
-      .product-card .product-info .header h3, .product-card .product-info .header body h4, body .product-card .product-info .header h4 {
-        font-size: 1.2rem;
-        text-transform: none;
-        position: relative;
-        width: -moz-fit-content;
-        width: fit-content;
-        display: inline; }
+      font-weight: bold;
+      font-size: 1.2rem; }
     .product-card .product-info .subheader {
       font-size: 14px;
       line-height: 1.4em;
@@ -23255,7 +23252,6 @@ body {
         margin-bottom: 6px; }
       @media (max-width: 800px) {
         .product-card .product-info .chars {
-          width: -moz-min-content;
           width: min-content; } }
       @media (max-width: 600px) {
         .product-card .product-info .chars {
@@ -23336,9 +23332,12 @@ body {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;
+  -ms-touch-action: none;
   touch-action: none;
+  -ms-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
   border-radius: 4px;
@@ -23350,9 +23349,12 @@ body {
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-user-select: none;
+    -ms-touch-action: none;
     touch-action: none;
+    -ms-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
 .noUi-base {
@@ -23413,6 +23415,7 @@ body {
     top: -100%;
     width: 0; }
     .noUi-vertical .noUi-origin > .noUi-tooltip {
+      -webkit-transform: translate(0, -18px);
       transform: translate(0, -18px);
       top: auto;
       right: 28px; }
@@ -23424,6 +23427,7 @@ body {
   .noUi-vertical .noUi-draggable {
     cursor: ns-resize; }
   .noUi-vertical .noUi-tooltip {
+    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     top: 50%;
     right: 120%; }
@@ -23433,6 +23437,7 @@ body {
   .noUi-horizontal .noUi-origin {
     height: 0; }
     .noUi-horizontal .noUi-origin > .noUi-tooltip {
+      -webkit-transform: translate(50%, 0);
       transform: translate(50%, 0);
       left: auto;
       bottom: 10px; }
@@ -23443,6 +23448,7 @@ body {
     top: -6px;
     border-radius: 50%; }
   .noUi-horizontal .noUi-tooltip {
+    -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     left: 50%;
     bottom: 120%; }
@@ -23460,9 +23466,11 @@ body {
   width: 100%; }
 
 .noUi-state-tap .noUi-connect {
+  -webkit-transition: transform 0.3s;
   transition: transform 0.3s; }
 
 .noUi-state-tap .noUi-origin {
+  -webkit-transition: transform 0.3s;
   transition: transform 0.3s; }
 
 .noUi-state-drag * {
@@ -23487,10 +23495,12 @@ body {
   cursor: not-allowed; }
 
 .noUi-pips {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
   color: #999; }
   .noUi-pips * {
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
 .noUi-value {
@@ -23520,12 +23530,15 @@ body {
   width: 100%; }
 
 .noUi-value-horizontal {
+  -webkit-transform: translate(-50%, 50%);
   transform: translate(-50%, 50%); }
 
 .noUi-rtl .noUi-value-horizontal {
+  -webkit-transform: translate(50%, 50%);
   transform: translate(50%, 50%); }
 
 .noUi-rtl .noUi-value-vertical {
+  -webkit-transform: translate(0, 50%);
   transform: translate(0, 50%); }
 
 .noUi-marker-horizontal.noUi-marker {
@@ -23546,6 +23559,7 @@ body {
   left: 100%; }
 
 .noUi-value-vertical {
+  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding-left: 25px; }
 
@@ -23575,51 +23589,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; }
-  body .lined {
-    background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, #FF2741, #FF2741);
-    background-size: 100% 1px, 0 1px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size .2s; }
-    body .lined:hover {
-      background-size: 0 1px, 100% 1px; }
-  body .lined-white {
-    background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, #fff, #fff);
-    background-size: 100% 1px, 0 1px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size .2s; }
-    body .lined-white:hover {
-      background-size: 0 1px, 100% 1px; }
-  body .disclaimer {
-    padding: 12px 18px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center; }
-    body .disclaimer:before, body .switcher input ~ label.disclaimer:after, body .switcher .input-field textarea ~ label.disclaimer:after, body .input-field .switcher textarea ~ label.disclaimer:after {
-      display: inline-block;
-      content: '';
-      margin-right: 10px; }
-    body .disclaimer.info {
-      box-shadow: 0 0 0 1px #3C84F3 inset;
-      background-color: rgba(60, 132, 243, 0.1);
-      color: #0f66ed; }
-      body .disclaimer.info:before, body .switcher input ~ label.disclaimer.info:after, body .switcher .input-field textarea ~ label.disclaimer.info:after, body .input-field .switcher textarea ~ label.disclaimer.info:after {
-        content: '\F02FC';
-        font-family: 'Material Design Icons';
-        color: #0f66ed; }
-    body .disclaimer.warning {
-      box-shadow: 0 0 0 1px #ff9811 inset;
-      background-color: rgba(255, 152, 17, 0.1);
-      color: #dd7d00; }
-      body .disclaimer.warning:before, body .switcher input ~ label.disclaimer.warning:after, body .switcher .input-field textarea ~ label.disclaimer.warning:after, body .input-field .switcher textarea ~ label.disclaimer.warning:after {
-        content: '\F0026';
-        font-family: 'Material Design Icons';
-        color: #dd7d00; }
   body label {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none; }
+    user-select: none; }
   body strong {
     font-weight: 600; }
   body *:focus {
@@ -23635,7 +23606,7 @@ body {
     flex-grow: 1;
     background-color: #FBFBFD; }
     body main.mountains {
-      background-image: url(../img/mountains.jpg);
+      background-image: url(/img/mountains.jpg);
       background-repeat: no-repeat;
       background-size: contain; }
   body .hidden {
@@ -23649,25 +23620,18 @@ body {
     background: #FF2741;
     color: #fff;
     font-weight: 400;
-    white-space: nowrap;
-    transition: background-color .2s; }
+    white-space: nowrap; }
     body .bttn i, body .bttn-flat i, body .bttn-outline i {
       margin-right: 6px; }
     body .bttn.credit, body .credit.bttn-flat, body .credit.bttn-outline {
       background-color: #00AC5A; }
-    body .bttn:hover, body .bttn-flat:hover, body .bttn-outline:hover {
-      background-color: #da001a; }
   body .bttn-flat {
     background: transparent;
     color: #FF2741; }
-    body .bttn-flat:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
   body .bttn-outline {
     background-color: transparent;
     color: #FF2741;
     border: 1px solid #FF2741; }
-    body .bttn-outline:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
   body .no-margin {
     margin: 0; }
   body .input-field {
@@ -23687,8 +23651,6 @@ body {
       font-family: 'Roboto';
       font-weight: 300;
       background: transparent; }
-      body .input-field input::-moz-placeholder, body .input-field textarea::-moz-placeholder {
-        color: transparent; }
       body .input-field input::placeholder, body .input-field textarea::placeholder {
         color: transparent; }
       body .input-field input ~ label, body .input-field textarea ~ label {
@@ -23701,9 +23663,6 @@ body {
         border-bottom: 2px solid #3C84F3;
         transform: translateY(1px) scaleX(0);
         transition: transform .2s; }
-      body .input-field input:not(:-moz-placeholder-shown) ~ label, body .input-field textarea:not(:-moz-placeholder-shown) ~ label {
-        top: 0;
-        font-size: 12px; }
       body .input-field input:focus ~ label, body .input-field textarea:focus ~ label, body .input-field input:not(:placeholder-shown) ~ label, body .input-field textarea:not(:placeholder-shown) ~ label {
         top: 0;
         font-size: 12px; }
@@ -23769,8 +23728,6 @@ body {
         color: #D4D4D4; }
     body .input-field.prefix input ~ label, body .input-field.prefix textarea ~ label {
       left: 30px; }
-    body .input-field.prefix input:not(:-moz-placeholder-shown) ~ label, body .input-field.prefix textarea:not(:-moz-placeholder-shown) ~ label {
-      left: 2px; }
     body .input-field.prefix input:not(:placeholder-shown) ~ label, body .input-field.prefix textarea:not(:placeholder-shown) ~ label, body .input-field.prefix input:focus ~ label, body .input-field.prefix textarea:focus ~ label {
       left: 2px; }
   body .modal .modal-close-x {
@@ -23796,9 +23753,7 @@ body {
       box-shadow: 0 0 0 10px #FF2741 inset; }
   body input[type="range"], body .input-field textarea[type="range"] {
     width: 100%;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
     height: 8px;
     border-radius: 4px;
     margin-bottom: 15px;
@@ -23806,8 +23761,7 @@ body {
     position: relative;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2) inset; }
     body input[type="range"]::-webkit-slider-thumb, body .input-field textarea[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-              appearance: none;
+      appearance: none;
       width: 18px;
       height: 18px;
       border-radius: 10px;
@@ -23817,7 +23771,6 @@ body {
       background: #fff;
       overflow: visible;
       cursor: pointer;
-      -webkit-transition: border-color .2s;
       transition: border-color .2s; }
       body input[type="range"]::-webkit-slider-thumb:hover, body .input-field textarea[type="range"]::-webkit-slider-thumb:hover {
         border-color: #FF2741; }
@@ -23840,85 +23793,85 @@ body {
       position: absolute;
       overflow: hidden; }
       body .waves .wave#wave1 {
-        background-image: url(../img/waves/1.svg);
+        background-image: url(/img/waves/1.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 0.2s;
         background-size: 100% auto; }
       body .waves .wave#wave2 {
-        background-image: url(../img/waves/2.svg);
+        background-image: url(/img/waves/2.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 0.4s;
         background-size: 100% auto; }
       body .waves .wave#wave3 {
-        background-image: url(../img/waves/3.svg);
+        background-image: url(/img/waves/3.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 0.6s;
         background-size: 100% auto; }
       body .waves .wave#wave4 {
-        background-image: url(../img/waves/4.svg);
+        background-image: url(/img/waves/4.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 0.8s;
         background-size: 100% auto; }
       body .waves .wave#wave5 {
-        background-image: url(../img/waves/5.svg);
+        background-image: url(/img/waves/5.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 1s;
         background-size: 100% auto; }
       body .waves .wave#wave6 {
-        background-image: url(../img/waves/6.svg);
+        background-image: url(/img/waves/6.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 1.2s;
         background-size: 100% auto; }
       body .waves .wave#wave7 {
-        background-image: url(../img/waves/7.svg);
+        background-image: url(/img/waves/7.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 1.4s;
         background-size: 100% auto; }
       body .waves .wave#wave8 {
-        background-image: url(../img/waves/8.svg);
+        background-image: url(/img/waves/8.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 1.6s;
         background-size: 100% auto; }
       body .waves .wave#wave9 {
-        background-image: url(../img/waves/9.svg);
+        background-image: url(/img/waves/9.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 1.8s;
         background-size: 100% auto; }
       body .waves .wave#wave10 {
-        background-image: url(../img/waves/10.svg);
+        background-image: url(/img/waves/10.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 2s;
         background-size: 100% auto; }
       body .waves .wave#wave11 {
-        background-image: url(../img/waves/11.svg);
+        background-image: url(/img/waves/11.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 2.2s;
         background-size: 100% auto; }
       body .waves .wave#wave12 {
-        background-image: url(../img/waves/12.svg);
+        background-image: url(/img/waves/12.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 2.4s;
         background-size: 100% auto; }
       body .waves .wave#wave13 {
-        background-image: url(../img/waves/13.svg);
+        background-image: url(/img/waves/13.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 2.6s;
         background-size: 100% auto; }
       body .waves .wave#wave14 {
-        background-image: url(../img/waves/14.svg);
+        background-image: url(/img/waves/14.svg);
         background-repeat: repeat-x;
         animation: wave 6s infinite linear;
         animation-delay: 2.8s;
@@ -23937,8 +23890,6 @@ body {
         border-radius: 6px;
         border: 0;
         line-height: 1.6em; }
-        body .input-container label ~ input::-moz-placeholder, body .input-container .input-field label ~ textarea::-moz-placeholder, body .input-field .input-container label ~ textarea::-moz-placeholder, body .input-container label ~ textarea::-moz-placeholder {
-          color: #aaa; }
         body .input-container label ~ input::placeholder, body .input-container .input-field label ~ textarea::placeholder, body .input-field .input-container label ~ textarea::placeholder, body .input-container label ~ textarea::placeholder {
           color: #aaa; }
     body .input-container textarea {
@@ -23977,25 +23928,18 @@ body {
       border-radius: 30px;
       display: inline-block;
       line-height: 1.8em;
-      margin-bottom: 10px;
-      transition: background-color .2s; }
+      margin-bottom: 10px; }
       body .quick-navi .quick-navi-entry.active {
         background: #FF2741; }
         body .quick-navi .quick-navi-entry.active a {
           color: #fff; }
-        body .quick-navi .quick-navi-entry.active:hover {
-          background-color: #da001a; }
       body .quick-navi .quick-navi-entry:not(:last-of-type) {
         margin-right: 10px; }
-      body .quick-navi .quick-navi-entry:hover {
-        background-color: rgba(0, 0, 0, 0.05); }
   body .switcher {
     display: flex;
     align-items: center; }
     body .switcher label {
-      -webkit-user-select: none;
-         -moz-user-select: none;
-              user-select: none; }
+      user-select: none; }
       body .switcher label:first-of-type {
         display: block;
         flex-grow: 1;
@@ -24035,22 +23979,17 @@ body {
         background: #00AC5A; }
   body .smart-bttn-wrapper {
     transform-style: preserve-3d;
-    width: -moz-fit-content;
     width: fit-content;
     display: inline-block;
     margin-right: 6px; }
     body .smart-bttn-wrapper .smart-bttn {
       position: relative;
-      width: -moz-fit-content;
       width: fit-content;
       perspective: 300px; }
       body .smart-bttn-wrapper .smart-bttn .avers, body .smart-bttn-wrapper .smart-bttn .revers {
-        -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
+        backface-visibility: hidden;
         transition: transform .6s;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-                user-select: none; }
+        user-select: none; }
       body .smart-bttn-wrapper .smart-bttn .revers {
         position: absolute;
         top: 0;
@@ -24101,36 +24040,36 @@ body {
         content: '';
         display: block;
         width: 3px;
-        background-image: url(../img/first.svg);
-        background-size: auto 100;
-        background-position: top left;
+        background-image: url(/img/first.svg);
+        background-size: auto 100%;
+        background-position: left center;
         background-repeat: no-repeat; }
       body .breadcrumbs li:before {
         content: '';
         display: block;
         width: 16px;
-        background-image: url(../img/connection.svg);
+        background-image: url(/img/connection.svg);
         background-size: auto 100%;
-        background-position: top right;
+        background-position: right center;
         background-repeat: no-repeat; }
       body .breadcrumbs li:last-of-type:after {
         content: '';
         display: block;
-        width: 13px;
-        background-image: url(../img/head.svg);
+        width: 11px;
+        background-image: url(/img/head.svg);
         background-size: auto 100%;
-        background-position: topcenter;
+        background-position: right center;
         background-repeat: no-repeat; }
       body .breadcrumbs li:hover a {
         background-color: #B7B7B7; }
       body .breadcrumbs li:hover:before {
-        background-image: url(../img/connection_highlight_last.svg); }
+        background-image: url(/img/connection_highlight_last.svg); }
       body .breadcrumbs li:hover + li:before {
-        background-image: url(../img/connection_highlight_first.svg); }
+        background-image: url(/img/connection_highlight_first.svg); }
       body .breadcrumbs li:hover:last-of-type:after {
-        background-image: url(../img/head_highlight.svg); }
+        background-image: url(/img/head_highlight.svg); }
       body .breadcrumbs li:hover:first-of-type:before {
-        background-image: url(../img/first_highlight.svg); }
+        background-image: url(/img/first_highlight.svg); }
   body #water_block .swiper, body #coolers_block .swiper {
     padding: 5px; }
   body #water_block .swiper-slide, body #coolers_block .swiper-slide {
@@ -24200,8 +24139,7 @@ body {
 
 body header {
   background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); }
+  backdrop-filter: blur(10px); }
   body header ul {
     margin: 0; }
   body header .mobile-right a {
@@ -24214,7 +24152,7 @@ body header {
       display: block;
       width: 234px;
       height: 58px;
-      background: url(../img/logo.svg) center center no-repeat; }
+      background: url(/img/logo.svg) center center no-repeat; }
     body header .header-top ul {
       display: flex;
       flex-grow: 1;
@@ -24231,8 +24169,6 @@ body .header-bottom {
   background: #3C84F3;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
-  position: sticky;
-  top: 0;
   z-index: 5; }
   body .header-bottom .container .row .col a {
     line-height: 2.5em;
@@ -24240,20 +24176,21 @@ body .header-bottom {
   body .header-bottom .container .row .col > ul {
     display: flex; }
     body .header-bottom .container .row .col > ul .separator {
-      display: block;
       flex-grow: 1; }
-  body .header-bottom .container .row .col .user-section a {
-    display: flex;
-    align-items: center; }
-    body .header-bottom .container .row .col .user-section a i {
-      border: 1px solid #fff;
-      display: block;
-      text-align: center;
-      width: 24px;
-      height: 24px;
-      line-height: 24px;
-      border-radius: 50%;
-      margin-left: 6px; }
+  body .header-bottom .container .row .col .user-section {
+    display: flex; }
+    body .header-bottom .container .row .col .user-section a {
+      display: flex;
+      align-items: center; }
+      body .header-bottom .container .row .col .user-section a i {
+        border: 1px solid #fff;
+        display: block;
+        text-align: center;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 50%;
+        margin-left: 6px; }
 
 body header ul, body header .row, body nav ul, body nav .row {
   margin: 0; }
@@ -24276,9 +24213,6 @@ body header .top-level > li, body nav .top-level > li {
     opacity: 0;
     pointer-events: none;
     z-index: 5; }
-    body header .top-level > li ul.user-section, body nav .top-level > li ul.user-section {
-      left: unset;
-      right: 0; }
     body header .top-level > li ul li a, body nav .top-level > li ul li a {
       display: block;
       padding: 0 10px;
@@ -24291,6 +24225,11 @@ body header .top-level > li, body nav .top-level > li {
     transform: none;
     opacity: 1;
     pointer-events: all; }
+
+body header .user-section li ul, body nav .user-section li ul {
+  left: unset;
+  right: 0;
+  background: #fff; }
 
 body header .catalog-bttn, body nav .catalog-bttn {
   background-color: #FF2741; }
@@ -24491,7 +24430,7 @@ main#about section#hero .container {
   padding: 0 4vmax;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1), 0 8px 9px rgba(0, 0, 0, 0.1); }
-  main#about section#hero .container:before, main#about section#hero body .switcher input ~ label.container:after, body .switcher main#about section#hero input ~ label.container:after, main#about section#hero body .switcher .input-field textarea ~ label.container:after, body .switcher .input-field main#about section#hero textarea ~ label.container:after, main#about section#hero body .input-field .switcher textarea ~ label.container:after, body .input-field .switcher main#about section#hero textarea ~ label.container:after {
+  main#about section#hero .container:before {
     content: '';
     display: block;
     position: absolute;
@@ -24503,9 +24442,8 @@ main#about section#hero .container {
     color: #fff;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.3);
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px); }
-    main#about section#hero .container .hero-content h1, main#about section#hero .container .hero-content body h2, body main#about section#hero .container .hero-content h2, main#about section#hero .container .hero-content body h3, body main#about section#hero .container .hero-content h3, main#about section#hero .container .hero-content body h4, body main#about section#hero .container .hero-content h4 {
+    backdrop-filter: blur(10px); }
+    main#about section#hero .container .hero-content h1 {
       margin: 0; }
     main#about section#hero .container .hero-content p {
       margin-left: 2vmax; }
@@ -24537,8 +24475,7 @@ main#actions .action-card {
   main#actions .action-card img {
     display: block;
     aspect-ratio: 2 / 1.05;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 6px;
     margin-bottom: 10px;
     transition: box-shadow .2s; }
@@ -24570,10 +24507,10 @@ main#actions .action-card {
   main#actions .action-card:hover img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1), 0 8px 9px rgba(0, 0, 0, 0.1); }
 
-main#actions #water_block, main#actions body #coolers_block, body main#actions #coolers_block {
+main#actions #water_block {
   padding: 2vmax 0;
   background: #E7F0F5; }
-  main#actions #water_block .product-card, main#actions body #coolers_block .product-card, body main#actions #coolers_block .product-card {
+  main#actions #water_block .product-card {
     background-color: transparent; }
 
 main#actions #coolers_block {
@@ -24590,7 +24527,7 @@ main#action .action-hero {
   @media (max-width: 800px) {
     main#action .action-hero {
       aspect-ratio: 2 / 1; } }
-  main#action .action-hero:before, main#action body .switcher input ~ label.action-hero:after, body .switcher main#action input ~ label.action-hero:after, main#action body .switcher .input-field textarea ~ label.action-hero:after, body .switcher .input-field main#action textarea ~ label.action-hero:after, main#action body .input-field .switcher textarea ~ label.action-hero:after, body .input-field .switcher main#action textarea ~ label.action-hero:after {
+  main#action .action-hero:before {
     content: '';
     display: block;
     height: 100%;
@@ -24617,7 +24554,7 @@ main#action .action-hero {
         font-weight: 600; }
       main#action .action-hero + .row .prices > *.price-old {
         color: #818181; }
-        main#action .action-hero + .row .prices > *.price-old:before, main#action .action-hero + .row body .switcher .prices > input ~ label.price-old:after, body .switcher main#action .action-hero + .row .prices > input ~ label.price-old:after, main#action .action-hero + .row body .switcher .input-field .prices > textarea ~ label.price-old:after, body .switcher .input-field main#action .action-hero + .row .prices > textarea ~ label.price-old:after, main#action .action-hero + .row body .input-field .switcher .prices > textarea ~ label.price-old:after, body .input-field .switcher main#action .action-hero + .row .prices > textarea ~ label.price-old:after {
+        main#action .action-hero + .row .prices > *.price-old:before {
           content: '';
           display: block;
           width: 100%;
@@ -24629,17 +24566,6 @@ main#action .action-hero {
           pointer-events: none; }
       main#action .action-hero + .row .prices > *.price-new {
         color: #3C84F3; }
-
-main#catalog .subcategories li a {
-  display: block;
-  padding: 10px 0;
-  border-left: 3px #FF2741 solid;
-  padding-left: 1rem; }
-  main#catalog .subcategories li a:hover {
-    background-color: rgba(0, 0, 0, 0.05); }
-
-main#catalog .subcategories li:not(:last-of-type) a {
-  border-bottom: 1px solid #cecece; }
 
 main#catalog .catalog-content {
   display: flex; }
@@ -24663,7 +24589,6 @@ main#catalog .filters {
   top: 80px;
   flex-shrink: 0;
   width: 300px;
-  height: -moz-fit-content;
   height: fit-content;
   padding-right: 20px; }
   main#catalog .filters .filter-param {
@@ -24685,13 +24610,11 @@ main#catalog .filters {
       margin-bottom: 6px; }
       main#catalog .filters .filter-param .param label:first-of-type {
         flex-grow: 1;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-                user-select: none;
+        user-select: none;
         cursor: pointer; }
-      main#catalog .filters .filter-param .param input, main#catalog .filters .filter-param .param body .input-field textarea, body .input-field main#catalog .filters .filter-param .param textarea {
+      main#catalog .filters .filter-param .param input {
         display: none; }
-        main#catalog .filters .filter-param .param input ~ label, main#catalog .filters .filter-param .param body .input-field textarea ~ label, body .input-field main#catalog .filters .filter-param .param textarea ~ label {
+        main#catalog .filters .filter-param .param input ~ label {
           display: block;
           height: calc(16px + .2vmax);
           aspect-ratio: 1 / 1;
@@ -24700,7 +24623,7 @@ main#catalog .filters {
           overflow: hidden;
           cursor: pointer;
           background-color: #eee; }
-          main#catalog .filters .filter-param .param input ~ label:before, main#catalog .filters .filter-param .param body .input-field textarea ~ label:before, body .input-field main#catalog .filters .filter-param .param textarea ~ label:before, main#catalog .filters .filter-param .param body .switcher input ~ label:after, body .switcher main#catalog .filters .filter-param .param input ~ label:after, body .input-field main#catalog .filters .filter-param .param .switcher textarea ~ input ~ label:after, body .input-field main#catalog .filters .filter-param .param .switcher input ~ textarea ~ label:after, main#catalog .filters .filter-param .param body .switcher .input-field input ~ textarea ~ label:after, body .switcher .input-field main#catalog .filters .filter-param .param input ~ textarea ~ label:after, main#catalog .filters .filter-param .param body .switcher .input-field textarea ~ input ~ label:after, body .switcher .input-field main#catalog .filters .filter-param .param textarea ~ input ~ label:after, main#catalog .filters .filter-param .param body .switcher .input-field textarea ~ label:after, body .switcher .input-field main#catalog .filters .filter-param .param textarea ~ label:after, main#catalog .filters .filter-param .param body .input-field .switcher input ~ textarea ~ label:after, body .input-field .switcher main#catalog .filters .filter-param .param input ~ textarea ~ label:after, main#catalog .filters .filter-param .param body .input-field .switcher textarea ~ input ~ label:after, body .input-field .switcher main#catalog .filters .filter-param .param textarea ~ input ~ label:after, main#catalog .filters .filter-param .param body .input-field .switcher textarea ~ label:after, body .input-field main#catalog .filters .filter-param .param .switcher textarea ~ label:after, body .input-field .switcher main#catalog .filters .filter-param .param textarea ~ label:after {
+          main#catalog .filters .filter-param .param input ~ label:before {
             content: '\F012C';
             font-family: 'Material Design Icons';
             display: block;
@@ -24710,17 +24633,14 @@ main#catalog .filters {
             line-height: calc(16px + .2vmax);
             color: transparent;
             transition: box-shadow .2s, color .2s;
-            -webkit-user-select: none;
-               -moz-user-select: none;
-                    user-select: none; }
-        main#catalog .filters .filter-param .param input:checked ~ label:before, main#catalog .filters .filter-param .param body .input-field textarea:checked ~ label:before, body .input-field main#catalog .filters .filter-param .param textarea:checked ~ label:before, main#catalog .filters .filter-param .param body .switcher input:checked ~ label:after, body .switcher main#catalog .filters .filter-param .param input:checked ~ label:after, main#catalog .filters .filter-param .param body .input-field .switcher textarea:checked ~ input ~ label:after, main#catalog .filters .filter-param .param body .switcher .input-field textarea:checked ~ input ~ label:after, main#catalog .filters .filter-param .param body .input-field .switcher input ~ textarea:checked ~ label:after, main#catalog .filters .filter-param .param body .switcher .input-field input ~ textarea:checked ~ label:after, body .input-field main#catalog .filters .filter-param .param .switcher textarea:checked ~ input ~ label:after, body .switcher .input-field main#catalog .filters .filter-param .param textarea:checked ~ input ~ label:after, body .input-field main#catalog .filters .filter-param .param .switcher input ~ textarea:checked ~ label:after, body .switcher .input-field main#catalog .filters .filter-param .param input ~ textarea:checked ~ label:after, main#catalog .filters .filter-param .param body .switcher .input-field input:checked ~ textarea ~ label:after, body .switcher .input-field main#catalog .filters .filter-param .param input:checked ~ textarea ~ label:after, main#catalog .filters .filter-param .param body .switcher .input-field textarea ~ input:checked ~ label:after, body .switcher .input-field main#catalog .filters .filter-param .param textarea ~ input:checked ~ label:after, main#catalog .filters .filter-param .param body .switcher .input-field textarea:checked ~ label:after, body .switcher .input-field main#catalog .filters .filter-param .param textarea:checked ~ label:after, main#catalog .filters .filter-param .param body .input-field .switcher input:checked ~ textarea ~ label:after, body .input-field .switcher main#catalog .filters .filter-param .param input:checked ~ textarea ~ label:after, main#catalog .filters .filter-param .param body .input-field .switcher textarea ~ input:checked ~ label:after, body .input-field .switcher main#catalog .filters .filter-param .param textarea ~ input:checked ~ label:after, main#catalog .filters .filter-param .param body .input-field .switcher textarea:checked ~ label:after, body .input-field main#catalog .filters .filter-param .param .switcher textarea:checked ~ label:after, body .input-field .switcher main#catalog .filters .filter-param .param textarea:checked ~ label:after {
+            user-select: none; }
+        main#catalog .filters .filter-param .param input:checked ~ label:before {
           box-shadow: 0 0 0 calc(16px + .2vmax) #3C84F3 inset;
           color: #fff; }
     main#catalog .filters .filter-param .input-range {
       margin-bottom: 20px;
       display: inline-flex; }
-      main#catalog .filters .filter-param .input-range input, main#catalog .filters .filter-param .input-range body .input-field textarea, body .input-field main#catalog .filters .filter-param .input-range textarea {
-        width: -moz-fit-content;
+      main#catalog .filters .filter-param .input-range input {
         width: fit-content;
         border: 0;
         font-size: calc(16px + .2vmax);
@@ -24737,7 +24657,7 @@ main#catalog .filters {
         border-radius: 6px;
         border: 1px solid #ccc;
         margin: 0 3px; }
-        main#catalog .filters .filter-param .input-range input:focus, main#catalog .filters .filter-param .input-range body .input-field textarea:focus, body .input-field main#catalog .filters .filter-param .input-range textarea:focus {
+        main#catalog .filters .filter-param .input-range input:focus {
           box-shadow: 0 0 3px #3C84F3;
           background-color: #fff; }
 
@@ -24748,12 +24668,12 @@ main#catalog .sidenav#categories li {
     border: 0;
     background: transparent; }
 
-main#catalog #water_block, main#catalog body #coolers_block, body main#catalog #coolers_block, main#catalog #coolers_block {
+main#catalog #water_block, main#catalog #coolers_block {
   padding: 4vmax 0;
   background-color: #E7F0F5; }
-  main#catalog #water_block .swiper-slide .product-card, main#catalog body #coolers_block .swiper-slide .product-card, body main#catalog #coolers_block .swiper-slide .product-card, main#catalog #coolers_block .swiper-slide .product-card {
+  main#catalog #water_block .swiper-slide .product-card, main#catalog #coolers_block .swiper-slide .product-card {
     background-color: transparent; }
-  main#catalog #water_block .swiper-slide:hover .product-card, main#catalog body #coolers_block .swiper-slide:hover .product-card, body main#catalog #coolers_block .swiper-slide:hover .product-card, main#catalog #coolers_block .swiper-slide:hover .product-card {
+  main#catalog #water_block .swiper-slide:hover .product-card, main#catalog #coolers_block .swiper-slide:hover .product-card {
     background-color: #fff; }
 
 main#checkout form .address-list li {
@@ -24775,7 +24695,7 @@ main#checkout .delivery-details {
 main#checkout .payments-wrapper .payment {
   color: #3C84F3;
   margin-bottom: 1.5rem; }
-  main#checkout .payments-wrapper .payment input[type=radio] ~ label, main#checkout .payments-wrapper .payment body .input-field textarea[type=radio] ~ label, body .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ label, main#checkout .payments-wrapper .payment body input[type=checkbox] ~ label, body main#checkout .payments-wrapper .payment input[type=checkbox] ~ label, main#checkout .payments-wrapper .payment body .input-field textarea[type=checkbox] ~ label, body .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label {
+  main#checkout .payments-wrapper .payment input[type=radio] ~ label {
     text-align: center;
     background: #FBFBFD;
     border: 1px solid #3C84F3;
@@ -24783,16 +24703,16 @@ main#checkout .payments-wrapper .payment {
     display: block;
     padding: 10px 0;
     transition: box-shadow .2s, background-color .2s; }
-    main#checkout .payments-wrapper .payment input[type=radio] ~ label span, main#checkout .payments-wrapper .payment body .input-field textarea[type=radio] ~ label span, body .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ label span, main#checkout .payments-wrapper .payment body input[type=checkbox] ~ label span, body main#checkout .payments-wrapper .payment input[type=checkbox] ~ label span, main#checkout .payments-wrapper .payment body .input-field textarea[type=checkbox] ~ label span, body .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label span, main#checkout .payments-wrapper .payment input[type=radio] ~ label a, main#checkout .payments-wrapper .payment body .input-field textarea[type=radio] ~ label a, body .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ label a, main#checkout .payments-wrapper .payment body input[type=checkbox] ~ label a, body main#checkout .payments-wrapper .payment input[type=checkbox] ~ label a, main#checkout .payments-wrapper .payment body .input-field textarea[type=checkbox] ~ label a, body .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label a {
+    main#checkout .payments-wrapper .payment input[type=radio] ~ label span, main#checkout .payments-wrapper .payment input[type=radio] ~ label a {
       display: block; }
-    main#checkout .payments-wrapper .payment input[type=radio] ~ label .title, main#checkout .payments-wrapper .payment body .input-field textarea[type=radio] ~ label .title, body .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ label .title, main#checkout .payments-wrapper .payment body input[type=checkbox] ~ label .title, body main#checkout .payments-wrapper .payment input[type=checkbox] ~ label .title, main#checkout .payments-wrapper .payment body .input-field textarea[type=checkbox] ~ label .title, body .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label .title {
+    main#checkout .payments-wrapper .payment input[type=radio] ~ label .title {
       font-weight: 400; }
-    main#checkout .payments-wrapper .payment input[type=radio] ~ label .subtitle, main#checkout .payments-wrapper .payment body .input-field textarea[type=radio] ~ label .subtitle, body .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ label .subtitle, main#checkout .payments-wrapper .payment body input[type=checkbox] ~ label .subtitle, body main#checkout .payments-wrapper .payment input[type=checkbox] ~ label .subtitle, main#checkout .payments-wrapper .payment body .input-field textarea[type=checkbox] ~ label .subtitle, body .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label .subtitle, main#checkout .payments-wrapper .payment input[type=radio] ~ label a, main#checkout .payments-wrapper .payment body .input-field textarea[type=radio] ~ label a, body .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ label a, main#checkout .payments-wrapper .payment body input[type=checkbox] ~ label a, body main#checkout .payments-wrapper .payment input[type=checkbox] ~ label a, main#checkout .payments-wrapper .payment body .input-field textarea[type=checkbox] ~ label a, body .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label a {
+    main#checkout .payments-wrapper .payment input[type=radio] ~ label .subtitle, main#checkout .payments-wrapper .payment input[type=radio] ~ label a {
       font-size: 14px;
       line-height: 1.2em; }
-    main#checkout .payments-wrapper .payment input[type=radio] ~ label:before, main#checkout .payments-wrapper .payment body .input-field textarea[type=radio] ~ label:before, body .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ label:before, main#checkout .payments-wrapper .payment body input[type=checkbox] ~ label:before, body main#checkout .payments-wrapper .payment input[type=checkbox] ~ label:before, main#checkout .payments-wrapper .payment body .input-field textarea[type=checkbox] ~ label:before, body .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label:before, main#checkout .payments-wrapper .payment body .switcher input[type=radio] ~ label:after, body .switcher main#checkout .payments-wrapper .payment input[type=radio] ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher textarea[type=radio] ~ input ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field textarea[type=radio] ~ input ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher input ~ textarea[type=radio] ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field input ~ textarea[type=radio] ~ label:after, body .input-field main#checkout .payments-wrapper .payment .switcher textarea[type=radio] ~ input ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ input ~ label:after, body .input-field main#checkout .payments-wrapper .payment .switcher input ~ textarea[type=radio] ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment input ~ textarea[type=radio] ~ label:after, main#checkout .payments-wrapper .payment body .switcher input[type=checkbox] ~ label:after, body main#checkout .payments-wrapper .payment .switcher input[type=checkbox] ~ label:after, body .switcher main#checkout .payments-wrapper .payment input[type=checkbox] ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher textarea[type=checkbox] ~ input ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field textarea[type=checkbox] ~ input ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher input ~ textarea[type=checkbox] ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field input ~ textarea[type=checkbox] ~ label:after, body .input-field main#checkout .payments-wrapper .payment .switcher textarea[type=checkbox] ~ input ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ input ~ label:after, body .input-field main#checkout .payments-wrapper .payment .switcher input ~ textarea[type=checkbox] ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment input ~ textarea[type=checkbox] ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field input[type=radio] ~ textarea ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment input[type=radio] ~ textarea ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field textarea ~ input[type=radio] ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment textarea ~ input[type=radio] ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field textarea[type=radio] ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment textarea[type=radio] ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field input[type=checkbox] ~ textarea ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field textarea ~ input[type=checkbox] ~ label:after, body main#checkout .payments-wrapper .payment .switcher .input-field input[type=checkbox] ~ textarea ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment input[type=checkbox] ~ textarea ~ label:after, body main#checkout .payments-wrapper .payment .switcher .input-field textarea ~ input[type=checkbox] ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment textarea ~ input[type=checkbox] ~ label:after, main#checkout .payments-wrapper .payment body .switcher .input-field textarea[type=checkbox] ~ label:after, body .switcher .input-field main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher input[type=radio] ~ textarea ~ label:after, body .input-field .switcher main#checkout .payments-wrapper .payment input[type=radio] ~ textarea ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher textarea ~ input[type=radio] ~ label:after, body .input-field .switcher main#checkout .payments-wrapper .payment textarea ~ input[type=radio] ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher textarea[type=radio] ~ label:after, body .input-field main#checkout .payments-wrapper .payment .switcher textarea[type=radio] ~ label:after, body .input-field .switcher main#checkout .payments-wrapper .payment textarea[type=radio] ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher input[type=checkbox] ~ textarea ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher textarea ~ input[type=checkbox] ~ label:after, body main#checkout .payments-wrapper .payment .input-field .switcher input[type=checkbox] ~ textarea ~ label:after, body .input-field .switcher main#checkout .payments-wrapper .payment input[type=checkbox] ~ textarea ~ label:after, body main#checkout .payments-wrapper .payment .input-field .switcher textarea ~ input[type=checkbox] ~ label:after, body .input-field .switcher main#checkout .payments-wrapper .payment textarea ~ input[type=checkbox] ~ label:after, main#checkout .payments-wrapper .payment body .input-field .switcher textarea[type=checkbox] ~ label:after, body .input-field main#checkout .payments-wrapper .payment .switcher textarea[type=checkbox] ~ label:after, body .input-field .switcher main#checkout .payments-wrapper .payment textarea[type=checkbox] ~ label:after {
+    main#checkout .payments-wrapper .payment input[type=radio] ~ label:before {
       display: none; }
-  main#checkout .payments-wrapper .payment input[type=radio]:checked ~ label, main#checkout .payments-wrapper .payment body .input-field textarea[type=radio]:checked ~ label, body .input-field main#checkout .payments-wrapper .payment textarea[type=radio]:checked ~ label, main#checkout .payments-wrapper .payment body input:checked[type=checkbox] ~ label, body main#checkout .payments-wrapper .payment input:checked[type=checkbox] ~ label, main#checkout .payments-wrapper .payment body .input-field textarea:checked[type=checkbox] ~ label, body .input-field main#checkout .payments-wrapper .payment textarea:checked[type=checkbox] ~ label {
+  main#checkout .payments-wrapper .payment input[type=radio]:checked ~ label {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) inset;
     background-color: #f4f4fa; }
 
@@ -24823,12 +24743,12 @@ main#checkout .cart-content {
       main#checkout .cart-content .cart-entry .counter-wrapper .counter {
         font-size: calc(16px + .1vmax);
         display: inline-flex; }
-        main#checkout .cart-content .cart-entry .counter-wrapper .counter input, main#checkout .cart-content .cart-entry .counter-wrapper .counter body .input-field textarea, body .input-field main#checkout .cart-content .cart-entry .counter-wrapper .counter textarea {
+        main#checkout .cart-content .cart-entry .counter-wrapper .counter input {
           width: 30px;
           border: 0;
           background-color: transparent;
           text-align: center; }
-          main#checkout .cart-content .cart-entry .counter-wrapper .counter input::-webkit-inner-spin-button, main#checkout .cart-content .cart-entry .counter-wrapper .counter body .input-field textarea::-webkit-inner-spin-button, body .input-field main#checkout .cart-content .cart-entry .counter-wrapper .counter textarea::-webkit-inner-spin-button, main#checkout .cart-content .cart-entry .counter-wrapper .counter input::-webkit-outer-spin-button, main#checkout .cart-content .cart-entry .counter-wrapper .counter body .input-field textarea::-webkit-outer-spin-button, body .input-field main#checkout .cart-content .cart-entry .counter-wrapper .counter textarea::-webkit-outer-spin-button {
+          main#checkout .cart-content .cart-entry .counter-wrapper .counter input::-webkit-inner-spin-button, main#checkout .cart-content .cart-entry .counter-wrapper .counter input::-webkit-outer-spin-button {
             display: none; }
     main#checkout .cart-content .cart-entry .price {
       white-space: nowrap;
@@ -24844,12 +24764,11 @@ main#checkout .summary {
 main#checkout .results-wrapper {
   margin: 1vmax 0; }
   main#checkout .results-wrapper .kv-pair {
-    -moz-column-break-inside: avoid;
-         break-inside: avoid;
+    break-inside: avoid;
     display: flex; }
     main#checkout .results-wrapper .kv-pair:nth-child(odd) {
       background-color: rgba(0, 0, 0, 0.03); }
-    main#checkout .results-wrapper .kv-pair .key, main#checkout .results-wrapper .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table main#checkout .results-wrapper .kv-pair .value {
+    main#checkout .results-wrapper .kv-pair .key {
       width: 170px;
       flex-shrink: 0; }
     main#checkout .results-wrapper .kv-pair .value {
@@ -24869,7 +24788,7 @@ main#checkout .results-wrapper {
   @media (max-width: 600px) {
     main#checkout .results-wrapper .kv-pair {
       flex-direction: column; }
-      main#checkout .results-wrapper .kv-pair .key, main#checkout .results-wrapper .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table main#checkout .results-wrapper .kv-pair .value {
+      main#checkout .results-wrapper .kv-pair .key {
         width: 100%;
         padding-bottom: 0; }
       main#checkout .results-wrapper .kv-pair .value {
@@ -24919,7 +24838,7 @@ main#details .kv-table {
   width: 100%; }
   main#details .kv-table .kv-pair {
     display: table-row; }
-    main#details .kv-table .kv-pair .key, main#details .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info main#details .kv-table .kv-pair .value {
+    main#details .kv-table .kv-pair .key {
       display: table-cell;
       padding-right: 20px;
       font-size: 14px;
@@ -24934,9 +24853,9 @@ main#details .kv-table {
       display: block; }
       main#details .kv-table .kv-pair {
         display: block; }
-        main#details .kv-table .kv-pair .key, main#details .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info main#details .kv-table .kv-pair .value, main#details .kv-table .kv-pair .value {
+        main#details .kv-table .kv-pair .key, main#details .kv-table .kv-pair .value {
           display: block; }
-        main#details .kv-table .kv-pair .key, main#details .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info main#details .kv-table .kv-pair .value {
+        main#details .kv-table .kv-pair .key {
           padding-bottom: 0; }
         main#details .kv-table .kv-pair .value {
           padding-top: 0; } }
@@ -24985,7 +24904,7 @@ body main#main section#categories .category {
   align-items: center;
   position: relative;
   overflow: hidden; }
-  body main#main section#categories .category:before, body main#main section#categories .switcher input ~ label.category:after, body .switcher main#main section#categories input ~ label.category:after, body main#main section#categories .switcher .input-field textarea ~ label.category:after, body .switcher .input-field main#main section#categories textarea ~ label.category:after, body main#main section#categories .input-field .switcher textarea ~ label.category:after, body .input-field .switcher main#main section#categories textarea ~ label.category:after {
+  body main#main section#categories .category:before {
     content: '';
     width: 100%;
     height: 100%;
@@ -25012,7 +24931,7 @@ body main#main section#categories .category {
     body main#main section#categories .category {
       flex-direction: column;
       align-items: flex-start; }
-      body main#main section#categories .category:before, body main#main section#categories .switcher input ~ label.category:after, body .switcher main#main section#categories input ~ label.category:after, body main#main section#categories .switcher .input-field textarea ~ label.category:after, body .switcher .input-field main#main section#categories textarea ~ label.category:after, body main#main section#categories .input-field .switcher textarea ~ label.category:after, body .input-field .switcher main#main section#categories textarea ~ label.category:after {
+      body main#main section#categories .category:before {
         display: none; }
       body main#main section#categories .category .info {
         width: 100%;
@@ -25023,7 +24942,7 @@ body main#main section#categories .category {
     body main#main section#categories .category {
       flex-direction: column;
       align-items: flex-start; }
-      body main#main section#categories .category:before, body main#main section#categories .switcher input ~ label.category:after, body .switcher main#main section#categories input ~ label.category:after, body main#main section#categories .switcher .input-field textarea ~ label.category:after, body .switcher .input-field main#main section#categories textarea ~ label.category:after, body main#main section#categories .input-field .switcher textarea ~ label.category:after, body .input-field .switcher main#main section#categories textarea ~ label.category:after {
+      body main#main section#categories .category:before {
         display: none; }
       body main#main section#categories .category .lazy {
         aspect-ratio: 2 / 1;
@@ -25077,7 +24996,7 @@ main#news section#news .container .top-news-entry {
   overflow: hidden;
   margin-left: 0;
   margin-right: 0; }
-  main#news section#news .container .top-news-entry:before, main#news section#news .container body .switcher input ~ label.top-news-entry:after, body .switcher main#news section#news .container input ~ label.top-news-entry:after, main#news section#news .container body .switcher .input-field textarea ~ label.top-news-entry:after, body .switcher .input-field main#news section#news .container textarea ~ label.top-news-entry:after, main#news section#news .container body .input-field .switcher textarea ~ label.top-news-entry:after, body .input-field .switcher main#news section#news .container textarea ~ label.top-news-entry:after {
+  main#news section#news .container .top-news-entry:before {
     content: '';
     display: block;
     position: absolute;
@@ -25100,19 +25019,18 @@ main#news section#news .container .top-news-entry {
 main#news section#news .container #news-actions-slider img {
   border-radius: 6px;
   aspect-ratio: 2 / 1;
-  -o-object-fit: cover;
-     object-fit: cover; }
+  object-fit: cover; }
 
 main#payment .delivery-header {
   margin-left: calc(-20px - .2vmax);
   width: calc(100% + 45px + .2vmax); }
 
-main#payment h2, main#payment body h3, body main#payment h3, main#payment body h4, body main#payment h4 {
+main#payment h2 {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px; }
 
-main#payment h3, main#payment body h4, body main#payment h4 {
+main#payment h3 {
   font-size: calc(1.2rem + .08vmax);
   text-transform: none; }
 
@@ -25126,15 +25044,12 @@ main#payment h4 {
 main#payment .regions {
   padding-left: 16px;
   font-size: 16px;
-  -moz-column-count: 2;
-       column-count: 2; }
+  column-count: 2; }
   main#payment .regions li {
-    -moz-column-break-inside: avoid;
-         break-inside: avoid-column; }
+    break-inside: avoid-column; }
   @media (max-width: 600px) {
     main#payment .regions {
-      -moz-columns: 1;
-           columns: 1; } }
+      columns: 1; } }
 
 main#product .product-image {
   display: block;
@@ -25153,10 +25068,10 @@ main#product .price-table {
     display: table-row; }
     main#product .price-table .kv-pair:nth-child(odd) {
       background-color: rgba(0, 0, 0, 0.03); }
-    main#product .price-table .kv-pair .key, main#product .price-table .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table main#product .price-table .kv-pair .value, main#product .price-table .kv-pair .value {
+    main#product .price-table .kv-pair .key, main#product .price-table .kv-pair .value {
       display: table-cell;
       padding: 10px; }
-    main#product .price-table .kv-pair .key, main#product .price-table .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table main#product .price-table .kv-pair .value {
+    main#product .price-table .kv-pair .key {
       font-size: 16px; }
     main#product .price-table .kv-pair .value {
       font-size: 1.7rem;
@@ -25206,27 +25121,25 @@ main#product .price {
   font-size: 3rem;
   line-height: 1.4em; }
 
-main#product .characteristics {
-  -moz-columns: 2;
-       columns: 2; }
+main#product .chars {
+  columns: 2; }
   @media (max-width: 800px) {
-    main#product .characteristics {
-      -moz-columns: 1;
-           columns: 1; } }
-  main#product .characteristics .kv-pair {
+    main#product .chars {
+      columns: 1; } }
+  main#product .chars .kv-pair {
     display: flex;
     padding: 6px;
     border-top: 1px solid #ccc; }
-    main#product .characteristics .kv-pair .key, main#product .characteristics .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table main#product .characteristics .kv-pair .value {
+    main#product .chars .kv-pair .key {
       flex-grow: 1; }
-    main#product .characteristics .kv-pair .value {
+    main#product .chars .kv-pair .value {
       font-weight: 500; }
-      main#product .characteristics .kv-pair .value .char-yes {
+      main#product .chars .kv-pair .value .char-yes {
         color: #00AC5A; }
-      main#product .characteristics .kv-pair .value .char-no {
+      main#product .chars .kv-pair .value .char-no {
         color: #FF2741; }
 
-main#profile .white-block h2, main#profile .white-block body h3, body main#profile .white-block h3, main#profile .white-block body h4, body main#profile .white-block h4 {
+main#profile .white-block h2 {
   font-size: 21px;
   margin-top: 0; }
 
@@ -25316,7 +25229,7 @@ main#profile .white-block .account-ballance {
     font-size: 1.5em;
     margin-right: 3px;
     color: #3C84F3; }
-  main#profile .white-block .account-ballance input, main#profile .white-block .account-ballance body .input-field textarea, body .input-field main#profile .white-block .account-ballance textarea {
+  main#profile .white-block .account-ballance input {
     width: 130px;
     font-size: 1.5rem;
     line-height: 1.5em;
@@ -25355,7 +25268,7 @@ main#service #hero {
   main#service #hero .image-row .col .img-wrapper {
     position: relative;
     z-index: 1; }
-    main#service #hero .image-row .col .img-wrapper:before, main#service #hero .image-row .col body .switcher input ~ label.img-wrapper:after, body .switcher main#service #hero .image-row .col input ~ label.img-wrapper:after, main#service #hero .image-row .col body .switcher .input-field textarea ~ label.img-wrapper:after, body .switcher .input-field main#service #hero .image-row .col textarea ~ label.img-wrapper:after, main#service #hero .image-row .col body .input-field .switcher textarea ~ label.img-wrapper:after, body .input-field .switcher main#service #hero .image-row .col textarea ~ label.img-wrapper:after {
+    main#service #hero .image-row .col .img-wrapper:before {
       content: '';
       display: block;
       position: absolute;
@@ -25390,7 +25303,7 @@ main#service #hero {
         padding: 2vmax 0;
         box-sizing: border-box;
         position: relative; }
-        main#service #hero .text-container:before, main#service #hero body .switcher input ~ label.text-container:after, body .switcher main#service #hero input ~ label.text-container:after, main#service #hero body .switcher .input-field textarea ~ label.text-container:after, body .switcher .input-field main#service #hero textarea ~ label.text-container:after, main#service #hero body .input-field .switcher textarea ~ label.text-container:after, body .input-field .switcher main#service #hero textarea ~ label.text-container:after {
+        main#service #hero .text-container:before {
           content: '';
           display: block;
           width: 100%;
@@ -25421,7 +25334,7 @@ main#service #post-guarantee {
   main#service #post-guarantee .image-row .img-wrapper {
     position: relative;
     z-index: 1; }
-    main#service #post-guarantee .image-row .img-wrapper:before, main#service #post-guarantee .image-row body .switcher input ~ label.img-wrapper:after, body .switcher main#service #post-guarantee .image-row input ~ label.img-wrapper:after, main#service #post-guarantee .image-row body .switcher .input-field textarea ~ label.img-wrapper:after, body .switcher .input-field main#service #post-guarantee .image-row textarea ~ label.img-wrapper:after, main#service #post-guarantee .image-row body .input-field .switcher textarea ~ label.img-wrapper:after, body .input-field .switcher main#service #post-guarantee .image-row textarea ~ label.img-wrapper:after {
+    main#service #post-guarantee .image-row .img-wrapper:before {
       content: '';
       display: block;
       height: 100%;
@@ -25484,8 +25397,7 @@ main#shops .address-entry {
         main#shops .address-entry .img-wrapper img {
           width: 100%;
           aspect-ratio: 2 / 1;
-          -o-object-fit: cover;
-             object-fit: cover; }
+          object-fit: cover; }
       main#shops .address-entry .info {
         width: 100%;
         padding: 10px;
@@ -25503,7 +25415,7 @@ main#shops .info {
     line-height: 1.4em; }
   main#shops .info .timing .timing-entry {
     display: flex; }
-    main#shops .info .timing .timing-entry .key, main#shops .info .timing .timing-entry .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table .kv-pair main#shops .info .timing .timing-entry .value {
+    main#shops .info .timing .timing-entry .key {
       width: 40%; }
     main#shops .info .timing .timing-entry .value {
       flex-grow: 1;
