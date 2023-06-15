@@ -1,0 +1,58 @@
+@import '../parts/vars';
+
+main#credit-howto{
+
+	background-color: $paper;
+
+	& .row.flex .col{
+		margin-bottom: $gutter-width;
+	}
+
+	& .howto-card{
+		display: flex;
+		align-items: center;
+		padding: clamp(10px, 5vmax, 40px);
+		min-height: 100%;
+		border-radius: $border-radius;
+		background-color: #fff;
+
+		box-shadow: 0 1px 2px rgba(black, .1),
+					0 2px 4px rgba(black, .1),
+					0 3px 6px rgba(black, .1),
+					0 4px 8px rgba(black, .1);
+
+		& .text{
+			& h2, & p{
+				margin: 0;
+			}
+		}
+
+		& .image{
+			width: 100px;
+			flex-shrink: 0;
+
+			& img{
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		@media(max-width: 1100px){
+			flex-direction: column;
+
+			& .text{
+				order: 1;
+			}
+
+			& .image{
+				width: 30%;
+				min-width: 100px;
+
+				& img{
+					display: block;
+					margin-bottom: $gutter-width;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Контакты", style: "contacts"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main class="mountains" id="contacts">
+		<section>
+			<div class="container">
+				<div class="white-block">
+					<div class="row">
+						<div class="col s12"><h1>Контакты</h1></div>
+						<div class="col l6 m12">
+							<div id="contacts-map"></div>
+						</div>
+						<div class="col l5 offset-l1 m12">
+							<div class="contacts-block">
+								<h2>Заказ воды и оборудования</h2>
+								<div class="row">
+									<div class="col xs6 t12">
+										<ul class="phones">
+											<li><a href="tel://+78612044444"><i class="mdi mdi-phone"></i><span>(861) 204-44-44</span></a></li>
+											<li><a href="tel://+79883334443"><i class="mdi mdi-phone"></i><span>(988) 333-444-3</span></a></li>
+											<li><a href="tel://+79283334443"><i class="mdi mdi-phone"></i><span>(928) 333-444-3</span></a></li>
+											<li><a href="tel://+79882467666"><i class="mdi mdi-phone"></i><span>(988) 246-76-66</span></a></li>
+										</ul>
+									</div>
+									<div class="col xs6 t12">
+										<ul class="phones">
+											<li><a href="tel://+79618532233"><i class="mdi mdi-phone"></i><span>(961) 853-22-33</span></a></li>
+											<li><a href="tel://+79034110306"><i class="mdi mdi-phone"></i><span>(903) 411-03-06</span></a></li>
+											<li><a href="https://t.me/voda_com23"><i class="mdi mdi-telegram"></i><span>@voda_com23</span></a></li>
+											<li><a href="mailto://700601@mail.ru"><i class="mdi mdi-email-open"></i><span>700601@mail.ru</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="contacts-block">
+								<h2>Адреса магазинов</h2>
+								<ul>
+									<li class="address" data-lon="38.961371" data-lat="45.03777">г. Краснодар, ул. Буденного, 73</li>
+									<li class="address" data-lon="38.929328" data-lat="45.013084">г. Краснодар, Тургеневское шоссе, 27 (ТЦ Мега-Адыгея)</li>
+									<li class="address" data-lon="39.081736" data-lat="45.037139">г. Краснодар, ул. Уральская, 144</li>
+									<li class="address" data-lon="38.919752" data-lat="45.063209">г. Краснодар, ул. Красных Партизан, 123</li>
+									<li class="address" data-lon="38.987161" data-lat="45.071322">г. Краснодар, ул. Ростовское шоссе, 14</li>
+									<li class="address" data-lon="39.120504" data-lat="45.009896">г. Краснодар, ул. Крылатая, 2 (ТРЦ OZ Молл)</li>
+								</ul>
+							</div>
+							<div class="contacts-block">
+								<h2>Сервисный центр</h2>
+								<ul>
+									<li><a href="tel://(988) 3334443"><i class="mdi mdi-phone"></i><span>(988) 333-444-3</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

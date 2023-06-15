@@ -23640,7 +23640,7 @@ body {
       background-size: contain; }
   body .hidden {
     display: none; }
-  body .bttn, body .bttn-flat, body .bttn-outline {
+  body .bttn, body .bttn-white, body .bttn-flat, body .bttn-outline {
     display: inline-block;
     line-height: 1.8em;
     height: 1.8em;
@@ -23651,12 +23651,17 @@ body {
     font-weight: 400;
     white-space: nowrap;
     transition: background-color .2s; }
-    body .bttn i, body .bttn-flat i, body .bttn-outline i {
+    body .bttn i, body .bttn-white i, body .bttn-flat i, body .bttn-outline i {
       margin-right: 6px; }
-    body .bttn.credit, body .credit.bttn-flat, body .credit.bttn-outline {
+    body .bttn.credit, body .credit.bttn-white, body .credit.bttn-flat, body .credit.bttn-outline {
       background-color: #00AC5A; }
-    body .bttn:hover, body .bttn-flat:hover, body .bttn-outline:hover {
+    body .bttn:hover, body .bttn-white:hover, body .bttn-flat:hover, body .bttn-outline:hover {
       background-color: #da001a; }
+  body .bttn-white {
+    background-color: #fff;
+    color: #FF2741; }
+    body .bttn-white:hover {
+      color: #fff; }
   body .bttn-flat {
     background: transparent;
     color: #FF2741; }
@@ -24146,7 +24151,7 @@ body {
         background: #fff; }
   body .pin {
     position: sticky;
-    top: 20px; }
+    top: 60px; }
     @media (max-width: 1024px) {
       body .pin {
         top: 80px; } }
@@ -24193,6 +24198,25 @@ body {
         content: '● ';
         display: block;
         width: 30px; }
+  body #bottom-toolbar {
+    border: 1px solid red;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    padding: 20px 0;
+    color: #fff; }
+    body #bottom-toolbar.error {
+      background-color: #FF2741; }
+    body #bottom-toolbar.warning {
+      background-color: orangered; }
+    body #bottom-toolbar .row {
+      margin: 0;
+      align-items: center; }
+      body #bottom-toolbar .row .col {
+        margin-bottom: 20px; }
+    body #bottom-toolbar p {
+      margin: 0; }
 
 @keyframes wave {
   100% {
@@ -24864,6 +24888,19 @@ main#checkout .cart-content {
       min-width: 80px;
       text-align: center;
       font-weight: 500; }
+
+main#checkout .cart-warning {
+  margin-top: 20px;
+  padding: 0 20px;
+  border: 1px solid #ff8800;
+  background-color: rgba(255, 136, 0, 0.05);
+  border-radius: #ff8800;
+  color: #ff8800;
+  font-size: 16px;
+  line-height: 1.4em; }
+  main#checkout .cart-warning .bttn, main#checkout .cart-warning body .bttn-white, body main#checkout .cart-warning .bttn-white, main#checkout .cart-warning body .bttn-flat, body main#checkout .cart-warning .bttn-flat, main#checkout .cart-warning body .bttn-outline, body main#checkout .cart-warning .bttn-outline {
+    color: #ff8800;
+    border-color: #ff8800; }
 
 main#checkout .summary {
   font-weight: 500;
@@ -25576,3 +25613,92 @@ main#shops #map {
 @media (min-width: 900px) {
   main#shops .link-wrapper {
     display: none; } }
+
+main#contacts #contacts-map {
+  aspect-ratio: 4 / 3; }
+  @media (max-width: 1200px) {
+    main#contacts #contacts-map {
+      aspect-ratio: 2 / 1;
+      margin-bottom: 20px; } }
+  @media (max-width: 800px) {
+    main#contacts #contacts-map {
+      aspect-ratio: 1 / 1;
+      margin-bottom: 20px; } }
+
+main#contacts .contacts-block {
+  margin-bottom: 40px; }
+  main#contacts .contacts-block h2, main#contacts .contacts-block body h3, body main#contacts .contacts-block h3, main#contacts .contacts-block body h4, body main#contacts .contacts-block h4, main#contacts .contacts-block ul {
+    margin: 10px 0; }
+  main#contacts .contacts-block i {
+    margin-right: 6px; }
+
+main#credit-terms .kv-wrapper {
+  display: table;
+  width: 100%; }
+  main#credit-terms .kv-wrapper .kv-pair {
+    display: table-row; }
+    main#credit-terms .kv-wrapper .kv-pair .key, main#credit-terms .kv-wrapper .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table main#credit-terms .kv-wrapper .kv-pair .value, main#credit-terms .kv-wrapper .kv-pair .value {
+      display: table-cell;
+      padding-right: 20px;
+      padding: 10px 20px;
+      border-top: 1px solid #ccc;
+      transition: background-color .2s; }
+    main#credit-terms .kv-wrapper .kv-pair:last-of-type .key, main#credit-terms .kv-wrapper .product-card .product-info .kv-table .kv-pair:last-of-type .value, .product-card .product-info .kv-table main#credit-terms .kv-wrapper .kv-pair:last-of-type .value, main#credit-terms .kv-wrapper .kv-pair:last-of-type .value {
+      border-bottom: 1px solid #ccc; }
+    main#credit-terms .kv-wrapper .kv-pair:hover .key, main#credit-terms .kv-wrapper .product-card .product-info .kv-table .kv-pair:hover .value, .product-card .product-info .kv-table main#credit-terms .kv-wrapper .kv-pair:hover .value, main#credit-terms .kv-wrapper .kv-pair:hover .value {
+      background: rgba(0, 0, 0, 0.03); }
+
+@media (max-width: 800px) {
+  main#credit-terms .kv-wrapper .kv-pair {
+    display: block; }
+    main#credit-terms .kv-wrapper .kv-pair .key, main#credit-terms .kv-wrapper .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table main#credit-terms .kv-wrapper .kv-pair .value, main#credit-terms .kv-wrapper .kv-pair .value {
+      display: block;
+      border: 0 !important;
+      padding-left: 0;
+      padding-right: 0; }
+    main#credit-terms .kv-wrapper .kv-pair .key, main#credit-terms .kv-wrapper .product-card .product-info .kv-table .kv-pair .value, .product-card .product-info .kv-table main#credit-terms .kv-wrapper .kv-pair .value {
+      padding-bottom: 0;
+      font-size: 14px;
+      color: #818181;
+      background-color: transparent !important; }
+    main#credit-terms .kv-wrapper .kv-pair .value {
+      padding-top: 0;
+      font-weight: 500;
+      background-color: transparent !important; } }
+
+main#credit-terms .notes li {
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #818181; }
+
+main#credit-howto {
+  background-color: #FBFBFD; }
+  main#credit-howto .row.flex .col {
+    margin-bottom: 20px; }
+  main#credit-howto .howto-card {
+    display: flex;
+    align-items: center;
+    padding: clamp(10px, 5vmax, 40px);
+    min-height: 100%;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1); }
+    main#credit-howto .howto-card .text h2, main#credit-howto .howto-card .text body h3, body main#credit-howto .howto-card .text h3, main#credit-howto .howto-card .text body h4, body main#credit-howto .howto-card .text h4, main#credit-howto .howto-card .text p {
+      margin: 0; }
+    main#credit-howto .howto-card .image {
+      width: 100px;
+      flex-shrink: 0; }
+      main#credit-howto .howto-card .image img {
+        max-width: 100%;
+        height: auto; }
+    @media (max-width: 1100px) {
+      main#credit-howto .howto-card {
+        flex-direction: column; }
+        main#credit-howto .howto-card .text {
+          order: 1; }
+        main#credit-howto .howto-card .image {
+          width: 30%;
+          min-width: 100px; }
+          main#credit-howto .howto-card .image img {
+            display: block;
+            margin-bottom: 20px; } }

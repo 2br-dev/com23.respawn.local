@@ -146,6 +146,23 @@ main#checkout{
 		}
 	}
 
+	& .cart-warning{
+		$color: #ff8800;
+		margin-top: $gutter-width;
+		padding: 0 20px;
+		border: 1px solid $color;
+		background-color: rgba($color, 0.05);
+		border-radius: $color;
+		color: $color;
+		font-size: 16px;
+		line-height: 1.4em;
+
+		& .bttn{
+			color: $color;
+			border-color: $color;
+		}
+	}
+
 	& .summary{
 		font-weight: 500;
 		margin-top: 20px;

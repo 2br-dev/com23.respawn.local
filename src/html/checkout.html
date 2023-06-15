@@ -143,6 +143,17 @@
 								@@loop('./parts/cart-entry.html','./data/cart.json')
 							</div>
 							<div class="divider"></div>
+							<div class="cart-warning">
+								<p>
+									Пожалуйста, убедитесь в наличии достаточного количества пустых бутылей на обмен!
+								</p>
+								<ul class="browser-default">
+									<li>Сейчас не хватает: Пустая тара x1 (300₽)</li>
+								</ul>
+								<p>
+									<a href="#!" class="bttn-outline">Добавить</a>
+								</p>
+							</div>
 							<div class="summary">
 								Итого к оплате: 13 420₽
 							</div>
@@ -153,6 +164,20 @@
 		</section>
 	</main>
 	@@include('./parts/footer.html')
+	<div id="bottom-toolbar" class="warning hide">
+		<div class="container">
+			<div class="row flex">
+				<div class="col m10 s12 align-left-m-up align-center-m-down">
+					<p>
+						Наш сайт, как и большинство других, использует файлы cookie и другие похожие технологии (веб-маяки, пиксельные тэги и т. п.), чтобы предоставлять услуги, наиболее отвечающие вашим потребностям, а также накапливать статистическую информацию для анализа и улучшения наших услуг и сайтов.
+					</p>
+				</div>
+				<div class="col m2 s12 align-right-m-up align-center-m-down">
+					<a href="" class="bttn-white">Принять</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="/js/master.js"></script>
 </body>
 </html>

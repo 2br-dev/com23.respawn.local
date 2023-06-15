@@ -130,6 +130,16 @@ body{
 		}
 	}
 
+	& .bttn-white{
+		@extend .bttn;
+		background-color: #fff;
+		color: $primary;
+
+		&:hover{
+			color: #fff;
+		}
+	}
+
 	& .bttn-flat{
 		@extend .bttn;
 		background: transparent;
@@ -789,7 +799,7 @@ body{
 	& .pin{
 
 		position: sticky;
-		top: 20px;
+		top: 60px;
 
 		@media(max-width: 1024px){
 			top: 80px;
@@ -892,6 +902,37 @@ body{
 					}
 				}
 			}
+		}
+	}
+
+	& #bottom-toolbar{
+		border: 1px solid red;
+		position: sticky;
+		width: 100%;
+		bottom: 0;
+		z-index: 10;
+		padding: $gutter-width 0;
+		color: #fff;
+
+		&.error{
+			background-color: $primary;
+		}
+
+		&.warning{
+			background-color: orangered;
+		}
+
+		& .row{
+			margin: 0;
+			align-items: center;
+
+			& .col{
+				margin-bottom: $gutter-width;
+			}
+		}
+
+		& p{
+			margin: 0;
 		}
 	}
 }

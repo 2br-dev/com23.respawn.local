@@ -2,7 +2,7 @@
 import Lazy from 'vanilla-lazyload';
 import * as M from 'materialize-css';
 import Swiper, { Pagination, Autoplay } from 'swiper';
-// import noUiSlider from 'nouislider';
+import noUiSlider from 'nouislider';
 Swiper.use([Pagination, Autoplay]);
 // #endregion
 
@@ -54,8 +54,10 @@ let datePicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
 //= Загрузка диапазонов ===================================================
 function loadIntervals(date){
     $('input[name="delivery_date_timestamp"]').val(date.getTime()/1000);
+	let url = $('#delivery-date').data('url');
+	debugger;
     $.ajax({
-        url: $('#delivery-date').data('url'),
+        url: url,
         type: "POST",
         dataType: "JSON",
         data: {
@@ -257,6 +259,41 @@ if($('#map').length){
 		})
 	})
 
+}
+
+if($('#contacts-map').length)
+{
+	loadScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU', () => {
+		ymaps.ready(() => {
+
+
+			let lon = 39.020000;
+			let lat = 45.032608;
+			let zoom = 11;
+			let center = [lat, lon];
+			
+			map = new ymaps.Map('contacts-map', {
+				center: center,
+				zoom: zoom,
+				controls: ['smallMapDefaultSet']
+			});
+		
+			map.behaviors.disable('scrollZoom');
+			let pointsDom = document.querySelectorAll('.address');
+
+			pointsDom.forEach(el => {
+				let element = <HTMLElement>el;
+				let lon = element.dataset['lon'];
+				let lat = element.dataset['lat'];
+
+				if(lon && lat){
+					let coords = [parseFloat(lat), parseFloat(lon)];
+					let placemark = new ymaps.Placemark(coords);
+					map.geoObjects.add(placemark);
+				}
+			})
+		})
+	})
 }
 
 // Переход по клику

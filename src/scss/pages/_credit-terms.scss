@@ -1,0 +1,75 @@
+@import '../parts/vars';
+
+main#credit-terms{
+
+	& .kv-wrapper{
+		display: table;
+		width: 100%;
+
+		& .kv-pair{
+			display: table-row;
+
+			& .key, & .value{
+				display: table-cell;
+				padding-right: $gutter-width;
+				padding: 10px 20px;
+				border-top: 1px solid #ccc;
+				transition: background-color .2s;
+			}
+
+			&:last-of-type{
+
+				& .key, & .value{
+					border-bottom: 1px solid #ccc;
+				}
+			}
+
+			&:hover{
+
+				& .key, & .value{
+					background: rgba(black, .03);
+				}
+			}
+		}
+	}
+
+	@media(max-width: $medium){
+
+		& .kv-wrapper{
+
+			& .kv-pair{
+				display: block;
+
+				& .key, & .value{
+					display: block;
+					border: 0 !important;
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				& .key{
+					padding-bottom: 0;
+					font-size: 14px;
+					color: $fogged;
+					background-color: transparent !important;
+				}
+
+				& .value{
+					padding-top: 0;
+					font-weight: 500;
+					background-color: transparent !important;
+				}
+			}
+
+		}
+	}
+
+	& .notes{
+
+		& li{
+			font-size: 16px;
+			line-height: 1.2em;
+			color: $fogged;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+@import '../parts/vars';
+
+main#contacts{
+
+	& #contacts-map{
+		aspect-ratio: 4 / 3;
+
+		@media(max-width: $large){
+			aspect-ratio: 2 / 1;
+			margin-bottom: $gutter-width;
+		}
+
+		@media(max-width: $medium){
+			aspect-ratio: 1 / 1;
+			margin-bottom: $gutter-width;
+		}
+	}
+
+	& .contacts-block{
+		margin-bottom: #{$gutter-width * 2};
+
+		& h2, & ul{
+			margin: 10px 0;
+		}
+
+		& i{
+			margin-right: 6px;
+		}
+	}
+}
