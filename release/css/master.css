@@ -23267,14 +23267,6 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 40px; }
-  @media (min-width: 1200px) and (max-width: 1500px) {
-    .news-entry {
-      flex-direction: column;
-      align-items: flex-start; } }
-  @media (min-width: 800px) and (max-width: 1000px) {
-    .news-entry {
-      flex-direction: column;
-      align-items: flex-start; } }
   @media (max-width: 600px) {
     .news-entry {
       flex-direction: column;
@@ -23282,9 +23274,14 @@ body {
       .news-entry .news-image {
         width: 100% !important; } }
   .news-entry .news-image {
-    width: 45%;
+    width: 35%;
+    min-width: 240px;
     flex-shrink: 0;
     margin-right: 15px; }
+    @media (max-width: 1200px) {
+      .news-entry .news-image {
+        width: 20%;
+        min-width: 160px; } }
     .news-entry .news-image img {
       border-radius: 6px;
       transition: box-shadow .2s; }
@@ -23305,10 +23302,13 @@ body {
 
 #howto .howto-image {
   aspect-ratio: 3 / .97;
-  background-size: contain;
+  background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
   margin-bottom: -8vmax; }
+  @media (max-width: 800px) {
+    #howto .howto-image {
+      aspect-ratio: 2 / 1; } }
 
 #howto .howto-content .container h2, #howto .howto-content .container body h3, body #howto .howto-content .container h3, #howto .howto-content .container body h4, body #howto .howto-content .container h4 {
   text-align: center;
@@ -23321,13 +23321,20 @@ body {
     font-size: calc(4rem + .2vmax);
     line-height: 1.2em; }
   #howto .howto-content .container .howto-block h3, #howto .howto-content .container .howto-block body h4, body #howto .howto-content .container .howto-block h4 {
-    color: #3C84F3; }
-  #howto .howto-content .container .howto-block .links a:not(:last-of-type) {
-    margin-right: 10px; }
-  #howto .howto-content .container .howto-block .links a:hover {
-    text-decoration: underline; }
-  #howto .howto-content .container .howto-block .links a i {
-    margin-right: 6px; }
+    color: #3C84F3;
+    font-size: clamp(18px, 2vw, 26px);
+    margin: 0; }
+  #howto .howto-content .container .howto-block .links {
+    margin-bottom: 20px; }
+    #howto .howto-content .container .howto-block .links a {
+      display: inline-block;
+      font-size: clamp(15px, 2vmax, 18px); }
+      #howto .howto-content .container .howto-block .links a:not(:last-of-type) {
+        margin-right: 10px; }
+      #howto .howto-content .container .howto-block .links a:hover {
+        text-decoration: underline; }
+      #howto .howto-content .container .howto-block .links a i {
+        margin-right: 6px; }
 
 #howto .howto-content .container .separator {
   margin: 2vmax 0; }

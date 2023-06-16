@@ -2,10 +2,14 @@
 
 	& .howto-image{
 		aspect-ratio: 3 / .97;
-		background-size: contain;
+		background-size: 100% auto;
 		background-position: top center;
 		background-repeat: no-repeat;
 		margin-bottom: -8vmax;
+
+		@media(max-width: $medium){
+			aspect-ratio: 2 / 1;
+		}
 	}
 	
 	& .howto-content{
@@ -29,11 +33,18 @@
 				
 				& h3{
 					color: $secondary;
+					font-size: clamp(18px, 2vw, 26px);
+					margin: 0;
 				}
 				
 				& .links{
+
+					margin-bottom: $gutter-width;
 					
 					& a{
+
+						display: inline-block;
+						font-size: clamp(15px, 2vmax, 18px);
 						
 						&:not(:last-of-type){
 							margin-right: 10px;
