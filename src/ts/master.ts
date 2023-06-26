@@ -321,6 +321,51 @@ $('body').on('click', '.address-entry', (e:JQuery.ClickEvent) => {
 
 // #region Обработчики событий::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+$('body').on('input', '.password-validate', (e:JQuery.ChangeEvent) => {
+
+	let val1 = $('#specimen1').val()?.toString();
+	let val2 = $('#specimen2').val()?.toString();
+
+	let success = 0;
+
+	let hasNumbers = /[0-9]/.test(val1); 								//Содержит цифры
+	let length = /^.{8,32}$/.test(val1); 								//Длинна от 8 до 32 знаков
+	let cases = /[a-z]/.test(val1) && /[A-Z]/.test(val1) 				//Содержит верхний и нижний регистр
+	let special = /[●!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/.test(val1)	// Содержит спец.символы
+	let equal = val1 === val2 && val1 != '';							// Пароли совпадают
+
+	success += hasNumbers ? 1 : 0;
+	success += length ? 1 : 0;
+	success += cases ? 1 : 0;
+	success += special ? 1 : 0;
+
+	$('#containCases').attr('class', cases ? 'condition valid' : 'condition');
+	$('#containNumbers').attr('class', hasNumbers ? 'condition valid' : 'condition');
+	$('#containSpecial').attr('class', special ? 'condition valid' : 'condition');
+	$('#validLength').attr('class', length ? 'condition valid' : 'condition');
+	
+	let percent = success / 4 * 100
+	
+	$('.complexity-val').css({
+		width: percent + '%'
+	})
+
+	let className = "";
+	let messages = ['', 'Слишком простой', 'Средний', 'Надёжный'];
+	let index = 0;
+
+	switch(true){
+		case success == 0 : index = 0; className = ''; break;
+		case success == 1 : index = 1; className = "low" ; break;
+		case success < 4 : index = 2; className = "med" ; break;
+		case success >= 4 : index = 3; className = "high"; break;
+	}
+	
+	$('#passwordsEqual').attr('class', equal ? 'condition valid' : 'condition');
+	$('.complexity-val').attr('class', 'complexity-val ' + className);
+	$('#complexity-label').text(messages[index]);
+})
+
 // Переключение типа аккаунта в модальном окне
 $('body').on('change', '[name="account-type"]', (e:JQuery.ChangeEvent) => {
 	let val = (<HTMLInputElement>e.currentTarget).value;

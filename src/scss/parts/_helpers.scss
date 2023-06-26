@@ -935,6 +935,61 @@ body{
 			margin: 0;
 		}
 	}
+
+	& .condition{
+		color: $fogged;
+
+		& i{
+			margin-right: 6px;
+			opacity: 0;
+			transition: color .2s, opacity .2s;
+		}
+
+		&.valid{
+			color: $success;
+
+			& i{
+				opacity: 1;
+			}
+
+			& .invalid{
+				display: none;
+			}
+		}
+	}
+
+	.complexity-check{
+		height: 4px;
+		border-radius: 8px;
+		background: #efefef;
+		overflow: hidden;
+		
+		& .complexity-val{
+			height: 100%;
+			border-radius: 8px;
+			width: 0;
+			background: #ccc;
+			transition: width .2s, background-color .2s;
+
+			&.low{
+				background: $primary;
+			}
+
+			&.med{
+				background: $warning;
+			}
+
+			&.high{
+				background: $success;
+			}
+		}
+	}
+
+	#complexity-label{
+		font-size: 14px;
+		color: $fogged;
+		padding: 10px 0;
+	}
 }
 
 @keyframes wave{

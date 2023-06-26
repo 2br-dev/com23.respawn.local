@@ -24224,6 +24224,39 @@ body {
         margin-bottom: 20px; }
     body #bottom-toolbar p {
       margin: 0; }
+  body .condition {
+    color: #818181; }
+    body .condition i {
+      margin-right: 6px;
+      opacity: 0;
+      transition: color .2s, opacity .2s; }
+    body .condition.valid {
+      color: #00AC5A; }
+      body .condition.valid i {
+        opacity: 1; }
+      body .condition.valid .invalid {
+        display: none; }
+  body .complexity-check {
+    height: 4px;
+    border-radius: 8px;
+    background: #efefef;
+    overflow: hidden; }
+    body .complexity-check .complexity-val {
+      height: 100%;
+      border-radius: 8px;
+      width: 0;
+      background: #ccc;
+      transition: width .2s, background-color .2s; }
+      body .complexity-check .complexity-val.low {
+        background: #FF2741; }
+      body .complexity-check .complexity-val.med {
+        background: #ff9811; }
+      body .complexity-check .complexity-val.high {
+        background: #00AC5A; }
+  body #complexity-label {
+    font-size: 14px;
+    color: #818181;
+    padding: 10px 0; }
 
 @keyframes wave {
   100% {
