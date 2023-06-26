@@ -21923,7 +21923,7 @@ body {
         right: 100%; }
       .row .col.push-t12 {
         left: 100%; } }
-    @media (min-width: 400px) {
+    @media (min-width: 401px) {
       .row .col.xs1 {
         width: 8.33333%;
         margin-left: 0;
@@ -22056,7 +22056,7 @@ body {
         right: 100%; }
       .row .col.push-xs12 {
         left: 100%; } }
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       .row .col.s1 {
         width: 8.33333%;
         margin-left: 0;
@@ -22189,7 +22189,7 @@ body {
         right: 100%; }
       .row .col.push-s12 {
         left: 100%; } }
-    @media (min-width: 800px) {
+    @media (min-width: 801px) {
       .row .col.m1 {
         width: 8.33333%;
         margin-left: 0;
@@ -22322,7 +22322,7 @@ body {
         right: 100%; }
       .row .col.push-m12 {
         left: 100%; } }
-    @media (min-width: 1200px) {
+    @media (min-width: 1201px) {
       .row .col.l1 {
         width: 8.33333%;
         margin-left: 0;
@@ -22455,7 +22455,7 @@ body {
         right: 100%; }
       .row .col.push-l12 {
         left: 100%; } }
-    @media (min-width: 1600px) {
+    @media (min-width: 1601px) {
       .row .col.xl1 {
         width: 8.33333%;
         margin-left: 0;
@@ -22588,7 +22588,7 @@ body {
         right: 100%; }
       .row .col.push-xl12 {
         left: 100%; } }
-    @media (min-width: 1601px) {
+    @media (min-width: 1602px) {
       .row .col.h1 {
         width: 8.33333%;
         margin-left: 0;
@@ -25057,6 +25057,14 @@ body main#main section#hero #actions-slider {
     @media (max-width: 1200px) {
       body main#main section#hero #actions-slider a {
         aspect-ratio: 2 / 1; } }
+
+body main#main section#hero #actions-slider-mobile {
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1), 0 8px 9px rgba(0, 0, 0, 0.1); }
+  body main#main section#hero #actions-slider-mobile a {
+    background-position: center center;
+    background-size: cover;
+    aspect-ratio: 1 / 1.25; }
 
 body main#main section#hero .pop-wrapper {
   padding: 16px;

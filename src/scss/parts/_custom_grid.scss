@@ -126,34 +126,33 @@
 			@include gridCol("t");
 		}
 
-		// //= Extra-small rules ===================================
-
-		@media(min-width: $extra-small) {
+		//= Extra-small rules ===================================
+		@media(min-width: #{$extra-small + 1}) {
 			@include gridCol("xs");
 		}
 
-		// //= Small rules =========================================
-		@media(min-width: $small) {
+		//= Small rules =========================================
+		@media(min-width: #{$small + 1}) {
 			@include gridCol("s");
 		}
 
-		// //= Medium rules =========================================
-		@media(min-width: $medium) {
+		//= Medium rules =========================================
+		@media(min-width: #{$medium + 1}) {
 			@include gridCol('m');
 		}
 
-		// //= Large rules ==========================================
-		@media(min-width: $large) {
+		//= Large rules ==========================================
+		@media(min-width: #{$large + 1}) {
 			@include gridCol('l');
 		}
 
-		// //= Extra-large rules ====================================
-		@media(min-width: $extra-large) {
+		//= Extra-large rules ====================================
+		@media(min-width: #{$extra-large + 1}) {
 			@include gridCol('xl');
 		}
 
-		// //= Huge rules ====================================
-		@media(min-width: $huge) {
+		//= Huge rules ====================================
+		@media(min-width: #{$huge + 1}) {
 			@include gridCol('h');
 		}
 	}

@@ -24,6 +24,17 @@ body{
 							}
 						}
 					}
+
+					& #actions-slider-mobile{
+						border-radius: $border-radius;
+						@include shadow;
+
+						& a{
+							background-position: center center;
+							background-size: cover;
+							aspect-ratio: 1 / 1.25;
+						}
+					}
 		
 					& .pop-wrapper{
 						padding: 16px;

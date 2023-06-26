@@ -1,9 +1,9 @@
 // #region Imports ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 import Lazy from 'vanilla-lazyload';
 import * as M from 'materialize-css';
-import Swiper, { Pagination, Autoplay } from 'swiper';
+import Swiper, { Pagination, Autoplay, Controller } from 'swiper';
 import noUiSlider from 'nouislider';
-Swiper.use([Pagination, Autoplay]);
+Swiper.use([Pagination, Autoplay, Controller]);
 // #endregion
 
 // #region MaterializeCSS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -581,6 +581,24 @@ let actionsSlider = $('#actions-slider').length ? new Swiper('#actions-slider', 
 		clickable: true
 	}
 }): null;
+
+let actionsMobileSlider = $('#actions-slider-mobile').length ? new Swiper('#actions-slider-mobile', {
+	speed: 800,
+	loop: true,
+	autoplay: {
+		delay: 3000
+	},
+	pagination:{
+		type: 'bullets',
+		el: '.actions-pagination',
+		clickable: true
+	}
+}) : null;
+
+if(actionsSlider && actionsMobileSlider){
+	actionsSlider.controller.control = actionsMobileSlider;
+	actionsMobileSlider.controller.control = actionsSlider;
+}
 
 let popularSlider = $('#pop-slider').length ? new Swiper('#pop-slider', {
 	loop: true,
