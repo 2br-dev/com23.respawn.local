@@ -152,10 +152,25 @@ main#checkout{
 		padding: 0 20px;
 		border: 1px solid $color;
 		background-color: rgba($color, 0.05);
-		border-radius: $color;
+		border-color: $color;
 		color: $color;
 		font-size: 16px;
 		line-height: 1.4em;
+
+		& .bttn{
+			color: $color;
+			border-color: $color;
+		}
+	}
+
+	& .cart-info{
+		@extend .cart-warning;
+
+		$color: $secondary;
+
+		color: $color;
+		background-color: rgba($color, 0.05);
+		border-color: $color;
 
 		& .bttn{
 			color: $color;

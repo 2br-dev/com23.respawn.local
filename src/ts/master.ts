@@ -1,9 +1,10 @@
 // #region Imports ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 import Lazy from 'vanilla-lazyload';
 import * as M from 'materialize-css';
-import Swiper, { Pagination, Autoplay, Controller } from 'swiper';
+import Swiper, { Pagination, Autoplay, Controller, Navigation } from 'swiper';
 import noUiSlider from 'nouislider';
-Swiper.use([Pagination, Autoplay, Controller]);
+import Zoomer from './lib/zoomer';
+Swiper.use([Pagination, Autoplay, Controller, Navigation]);
 // #endregion
 
 // #region MaterializeCSS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -80,6 +81,8 @@ function loadIntervals(date){
         }
     });
 }
+
+let zoomer = new Zoomer('.zoomer', 'src', true);
 
 (window as any).lazy = Lazy;
 // #endregion
@@ -290,6 +293,14 @@ if($('#contacts-map').length)
 					let coords = [parseFloat(lat), parseFloat(lon)];
 					let placemark = new ymaps.Placemark(coords);
 					map.geoObjects.add(placemark);
+
+					placemark.events.add('click', (p) => {
+						let coordinates = p.originalEvent.target.geometry.getCoordinates();
+						let lon = coordinates[0];
+						let lat = coordinates[1];
+						let url = `https://yandex.ru/maps/35/krasnodar/?ll=${lat}%2C${lon}&mode=routes&rtext=~${lon}%2C${lat}&rtt=auto&ruri=~&z=14`
+						window.open(url, '_blank');
+					})
 				}
 			})
 		})
@@ -320,6 +331,17 @@ $('body').on('click', '.address-entry', (e:JQuery.ClickEvent) => {
 // #endregion
 
 // #region Обработчики событий::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$('body').on('click', '.disclaimer-toggle', (e:JQuery.ClickEvent) => {
+	e.preventDefault();
+	let $content = $(e.currentTarget).parents('.disclaimer').find('.disclaimer-content');
+	let current = $content.css('display');
+	let $button = $(e.currentTarget);
+	$content.css({
+		display: current == '-webkit-box' ? 'block' : '-webkit-box'
+	});
+
+	$button.text(current != 'block' ? '« Меньше' : 'Больше »');
+})
 
 $('body').on('input', '.password-validate', (e:JQuery.ChangeEvent) => {
 
@@ -528,6 +550,8 @@ $(window).on('resize', () => {
 			let sidenav = M.Sidenav.getInstance(el);
 			sidenav.close();
 		});
+
+		$('.disclaimer-content').removeAttr('style');
 	}
 
 	$('.material-tooltip').css({
@@ -714,14 +738,20 @@ let newsSlider = $('#news-slider').length ? new Swiper('#news-slider', {
 
 let productActionsSlider = $('#product-actions').length ? new Swiper('#product-actions', {
 	loop: true,
+	speed: 800,
 	pagination: {
 		el: '.actions-pagination',
 		type: 'bullets',
 		clickable: true
+	},
+	autoplay: {
+		delay: 2000
 	}
 }): null;
 
 let productOffersSlider = $('#product-offers').length ? new Swiper('#product-offers', {
+	loop: true,
+	speed: 800,
 	pagination: {
 		el: '.offers-pagination',
 		type: 'bullets',
@@ -739,8 +769,23 @@ let productOffersSlider = $('#product-offers').length ? new Swiper('#product-off
 		1200: {
 			slidesPerView: 1
 		}
+	},
+	autoplay: {
+		delay: 3000
 	}
 }): null;
+
+let productSlider = $('#product-swiper').length ? new Swiper('#product-swiper', {
+	loop: true,
+	pagination: {
+		el: '#product-pagination',
+		type: 'bullets'
+	},
+	navigation: {
+		nextEl: '.product-next',
+		prevEl: '.product-prev'
+	}
+}) : null ;
 // #endregion
 
 // #region Функции :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
