@@ -24775,7 +24775,8 @@ main#action .action-hero {
   aspect-ratio: 3 / 1;
   background-size: cover;
   background-position: center;
-  position: relative; }
+  position: relative;
+  margin-bottom: 20px; }
   @media (max-width: 800px) {
     main#action .action-hero {
       aspect-ratio: 2 / 1; } }

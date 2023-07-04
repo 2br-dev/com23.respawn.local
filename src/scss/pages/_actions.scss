@@ -88,6 +88,7 @@ main{
 			background-size: cover;
 			background-position: center;
 			position: relative;
+			margin-bottom: $gutter-width;
 
 			@media(max-width: $medium){
 				aspect-ratio: 2 / 1;
