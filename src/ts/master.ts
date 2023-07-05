@@ -8,11 +8,11 @@ Swiper.use([Pagination, Autoplay, Controller, Navigation]);
 // #endregion
 
 // #region MaterializeCSS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-let sidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'));
-let modal = M.Modal.init(document.querySelectorAll('.modal'));
 let lazy = new Lazy({}, document.querySelectorAll('.lazy'));
-let tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
-let tooltips = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
+let sidenav = document.querySelectorAll('.sidenav').length ? M.Sidenav.init(document.querySelectorAll('.sidenav')) : null;
+let modal = document.querySelectorAll('.modal').length ? M.Modal.init(document.querySelectorAll('.modal')) : null;
+let tabs = document.querySelectorAll('.tabs').length ? M.Tabs.init(document.querySelectorAll('.tabs')) : null;
+let tooltips = document.querySelectorAll('.tooltipped').length ? M.Tooltip.init(document.querySelectorAll('.tooltipped')) : null;
 
 //Получаем завтрашнюю дату
 var current_date = new Date();
