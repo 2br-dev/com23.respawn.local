@@ -28,9 +28,9 @@ let datePicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
 		done: 'OK',
 		clear: 'Очистить',
 		cancel: 'Отмена',
-		weekdays: ['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],
-		weekdaysAbbrev: ['п','в','с','ч','п','с','в'],
-		weekdaysShort: ['пн','вт','ср','чт','пт','сб','вс'],
+		weekdays: ['Воскресенье', 'Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+		weekdaysAbbrev: ['вс','пн','вт','ср','чт','пт','сб'],
+		weekdaysShort: ['вс','пн','вт','ср','чт','пт','сб'],
 		months: [
 			'Январь',
 			'Февраль',
@@ -56,7 +56,6 @@ let datePicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
 function loadIntervals(date){
     $('input[name="delivery_date_timestamp"]').val(date.getTime()/1000);
 	let url = $('#delivery-date').data('url');
-	debugger;
     $.ajax({
         url: url,
         type: "POST",
