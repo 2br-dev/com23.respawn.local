@@ -14,6 +14,7 @@ body{
 			& a{
 				font-size: 22px;
 			}
+
 		}
 
 		& .mobile-cart{
@@ -50,6 +51,7 @@ body{
 				font-weight: 300;
 				line-height: 1em;
 				height: 1em;
+				white-space: nowrap;
 			}
 		}
 		
@@ -83,6 +85,38 @@ body{
 					}
 				}
 			}
+		}
+	}
+
+	
+	& .mobile-repeat{
+		position: fixed;
+		bottom: calc(1.5vmax);
+		left: 1.5vmax;
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		border-radius: 40px;
+		background-color: $primary;
+		color: #fff;
+		z-index: 2;
+		margin: 16.5px 0;
+
+		@media(min-width: 1020px){
+			display: none;
+		}
+
+		& i{
+			font-size: 32px;
+			margin-right: 10px;
+		}
+
+		& span{
+			font-size: 14px;
+			line-height: 1.2em;
+			padding-right: 10px;
+			text-transform: uppercase;
+			font-weight: 500;
 		}
 	}
 	
@@ -226,7 +260,6 @@ body{
 				background-color: darken($primary, 15) !important;
 			}		
 		}
-	
 	}
 	
 	& .sidenav{

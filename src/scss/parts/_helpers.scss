@@ -24,6 +24,10 @@ body{
 
 	& .lined{
 		@include animatedUnderline($primary, 1px);
+
+		&-blue{
+			@include animatedUnderline($secondary, 1px);
+		}
 	}
 
 	& .lined-white{
@@ -1029,6 +1033,10 @@ body{
 		font-size: 14px;
 		color: $fogged;
 		padding: 10px 0;
+	}
+
+	& .primary-text{
+		color: $primary !important;
 	}
 }
 

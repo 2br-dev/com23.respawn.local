@@ -56,6 +56,7 @@ let datePicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
 function loadIntervals(date){
     $('input[name="delivery_date_timestamp"]').val(date.getTime()/1000);
 	let url = $('#delivery-date').data('url');
+	debugger;
     $.ajax({
         url: url,
         type: "POST",

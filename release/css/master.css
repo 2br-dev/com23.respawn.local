@@ -23206,6 +23206,8 @@ body {
       justify-content: center; }
     .product-card .product-info .header {
       font-weight: bold; }
+      .product-card .product-info .header a {
+        color: #3C84F3; }
       .product-card .product-info .header h3, .product-card .product-info .header body h4, body .product-card .product-info .header h4 {
         font-size: 1.2rem;
         text-transform: none;
@@ -23590,6 +23592,14 @@ body {
     transition: background-size .2s; }
     body .lined:hover {
       background-size: 0 1px, 100% 1px; }
+    body .lined-blue {
+      background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, #3C84F3, #3C84F3);
+      background-size: 100% 1px, 0 1px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size .2s; }
+      body .lined-blue:hover {
+        background-size: 0 1px, 100% 1px; }
   body .lined-white {
     background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, #fff, #fff);
     background-size: 100% 1px, 0 1px;
@@ -24278,6 +24288,8 @@ body {
     font-size: 14px;
     color: #818181;
     padding: 10px 0; }
+  body .primary-text {
+    color: #FF2741 !important; }
 
 @keyframes wave {
   100% {
@@ -24319,7 +24331,8 @@ body header {
       font-size: 12px;
       font-weight: 300;
       line-height: 1em;
-      height: 1em; }
+      height: 1em;
+      white-space: nowrap; }
   body header .header-top {
     display: flex;
     align-items: center;
@@ -24340,6 +24353,31 @@ body header {
         body header .header-top ul li a, body header .header-top ul li span {
           line-height: 2.5em;
           height: 2.5em; }
+
+body .mobile-repeat {
+  position: fixed;
+  bottom: calc(1.5vmax);
+  left: 1.5vmax;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #FF2741;
+  color: #fff;
+  z-index: 2;
+  margin: 16.5px 0; }
+  @media (min-width: 1020px) {
+    body .mobile-repeat {
+      display: none; } }
+  body .mobile-repeat i {
+    font-size: 32px;
+    margin-right: 10px; }
+  body .mobile-repeat span {
+    font-size: 14px;
+    line-height: 1.2em;
+    padding-right: 10px;
+    text-transform: uppercase;
+    font-weight: 500; }
 
 body .header-bottom {
   background: #3C84F3;
@@ -24791,6 +24829,9 @@ main#action .action-hero {
       align-items: flex-start; } }
   main#action .action-hero + .row .prices {
     display: flex; }
+    @media (max-width: 300px) {
+      main#action .action-hero + .row .prices {
+        flex-wrap: wrap; } }
     @media (max-width: 800px) {
       main#action .action-hero + .row .prices {
         justify-content: center; } }
@@ -24799,14 +24840,20 @@ main#action .action-hero {
       font-size: 3rem;
       line-height: 1.2em;
       font-weight: 500;
-      position: relative; }
-      main#action .action-hero + .row .prices > *:not(:last-of-type) {
-        margin-right: 40px; }
+      position: relative;
+      white-space: nowrap; }
       main#action .action-hero + .row .prices > * span.rur {
         font-size: .7em;
         font-weight: 600; }
       main#action .action-hero + .row .prices > *.price-old {
-        color: #818181; }
+        color: #818181;
+        margin-right: 40px; }
+        @media (max-width: 400px) {
+          main#action .action-hero + .row .prices > *.price-old {
+            margin-right: 20px; } }
+        @media (max-width: 300px) {
+          main#action .action-hero + .row .prices > *.price-old {
+            margin-right: 0; } }
         main#action .action-hero + .row .prices > *.price-old:before, main#action .action-hero + .row body .switcher .prices > input ~ label.price-old:after, body .switcher main#action .action-hero + .row .prices > input ~ label.price-old:after, main#action .action-hero + .row body .switcher .input-field .prices > textarea ~ label.price-old:after, body .switcher .input-field main#action .action-hero + .row .prices > textarea ~ label.price-old:after, main#action .action-hero + .row body .input-field .switcher .prices > textarea ~ label.price-old:after, body .input-field .switcher main#action .action-hero + .row .prices > textarea ~ label.price-old:after {
           content: '';
           display: block;

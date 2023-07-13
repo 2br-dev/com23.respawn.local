@@ -112,6 +112,10 @@ main{
 
 					display: flex;
 
+					@media(max-width: 300px){
+						flex-wrap: wrap;
+					}
+
 					@media(max-width: $medium){
 						justify-content: center;
 					}
@@ -122,11 +126,8 @@ main{
 						line-height: 1.2em;
 						font-weight: 500;
 						position: relative;
+						white-space: nowrap;
 						
-						&:not(:last-of-type){
-							margin-right: 40px;
-						}
-
 						& span.rur{
 							font-size: .7em;
 							font-weight: 600;
@@ -135,7 +136,16 @@ main{
 						&.price-old{
 
 							color: $fogged;
+							margin-right: 40px;
 
+							@media(max-width: 400px){
+								margin-right: 20px;
+							}
+							
+							@media(max-width: 300px){
+								margin-right: 0;
+							}
+							
 							&:before{
 								content: '';
 								display: block;
