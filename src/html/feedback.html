@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Отзывы и предложения'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="feedback">
+		<div class="container">
+			<div class="row no-margin flex">
+				<div class="col hide-xl-up mobile-top">
+					<h1>Отзывы и предложения</h1>
+					<p>Также Вы можете связаться сo службой поддержки клиентов по телефону</p>
+					<p>В онлайн режиме сотрудник службы с 9:00 до 17:00, в остальное время информация принимается на автоответчик.</p>
+				</div>
+				<div class="col xl4 l6 m6 offset-lx1 order-m1">
+					<div class="form-wrapper">
+						<div class="form-content">
+							<h1 class="hide-xl-down">Отзывы и предложения</h1>
+							<p class="hide-xl-down">Также Вы можете связаться сo cлужбой поддержки клиентов по телефону</p>
+							<p class="hide-xl-down">В онлайн режиме сотрудник службы с 9:00 до 17:00, в остальное время информация принимается на автоответчик.</p>
+							<form class="row" enctype="multipart/form-data">
+								<div class="col l6 m6 s6">
+									<input type="text" name="name" placeholder="Фамилия, Имя, Отчество">
+								</div>
+								<div class="col l6 m6 s6">
+									<input type="tel" name="phone" placeholder="Номер телефона">
+								</div>
+								<div class="col l12">
+									<input type="email" name="email" placeholder="Контактный E-mail">
+								</div>
+								<div class="col l12">
+									<textarea name="" id="" cols="30" rows="4" placeholder="Текст сообщения"></textarea>
+								</div>
+								<div class="col l12">
+									<p>Приложить файлы: допускаются файлы в форматах: jpg, png, mpg, avi объёмом до 10 Мб</p>
+									<div class="input-file">
+										<label for="attachments" class="bttn">Обзор…</label>
+										<input type="file" name="files" multiple class="hide" id="attachments">
+									</div>
+									<div class="divider"></div>
+									<input type="checkbox" id="agree">
+									<label for="agree">
+										Я прочитал(а) и принимаю условия лицензионного соглашения, 
+										<a href="/policy.html">политики конфиденциальности</a> 
+										и <a href="/agreement.html">соглашении</a> 
+										на <a href="/collect.html">сбор и обработку</a> персональных данных
+									</label>
+								</div>
+								<div class="col s12">
+									<div class="send-wrapper">
+										<a href="#feedback-error-result" class="bttn-large modal-trigger">Отправить</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col xl6 l6 m6 s8 offset-s2 offset-xl1">
+					<div class="img-wrapper">
+						<img alt="" class="lazy responsive-img" data-src="/img/support.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- Успешная отправка -->
+	<div class="modal feedback-modal" id="feedback-result">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3>Спасибо!</h3>
+				<a href="javascript:void(0);" class="modal-close mdi mdi-close"></a>
+			</div>
+			<p>Благодарим за ваш отзыв! Наш менеджер по контролю качества обслуживания свяжется с Вами в ближайшее время!</p>
+			<div class="center-align"><a href="javascript:void(0);" class="bttn modal-close">Закрыть</a></div>
+		</div>
+	</div>
+	<!-- /Успешная отправка -->
+	<!-- Ошибка отправки -->
+	<div class="modal feedback-modal" id="feedback-error-result">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3>Ошибка!</h3>
+				<a href="javascript:void(0);" class="modal-close mdi mdi-close"></a>
+			</div>
+			<p>При отправке возникли следующие ошибки:</p>
+			<ul class="error-text browser-default">
+				<li>Не заполнены обязательные поля</li>
+				<li>Размер вложений превышает лимит</li>
+				<li>Неподдерживаемый формат вложений</li>
+				<li>Вам необходимо принять условия пользовательского соглашения</li>
+			</ul>
+			<div class="center-align"><a href="javascript:void(0);" class="bttn modal-close">Закрыть</a></div>
+		</div>
+	</div>
+	<!-- /Ошибка отправки -->
+	@@include('./parts/footer.html')
+	<script src="/js/master.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ import Swiper, { Pagination, Autoplay, Controller, Navigation } from 'swiper';
 import noUiSlider from 'nouislider';
 import Zoomer from './lib/zoomer';
 Swiper.use([Pagination, Autoplay, Controller, Navigation]);
+import Mask from 'imask';
 // #endregion
 
 // #region MaterializeCSS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -83,6 +84,12 @@ function loadIntervals(date){
 }
 
 let zoomer = new Zoomer('.zoomer', 'src', true);
+
+document.querySelectorAll('input[type="tel"]').forEach((el:HTMLInputElement) => {
+	Mask(el, {
+		mask: '{+7} (000) 000 00-00'
+	});
+});
 
 (window as any).lazy = Lazy;
 // #endregion
@@ -331,6 +338,14 @@ $('body').on('click', '.address-entry', (e:JQuery.ClickEvent) => {
 // #endregion
 
 // #region Обработчики событий::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// Отображение прикрепляемого файла
+$('body').on('change', 'input[type="file"]', (e:JQuery.ChangeEvent) => {
+	let count = e.currentTarget.files.length;
+	let label = <HTMLLabelElement>e.currentTarget.parentElement.querySelector('label');
+	label.textContent = `Вложения (${count})`;
+})
+
 $('body').on('click', '.disclaimer-toggle', (e:JQuery.ClickEvent) => {
 	e.preventDefault();
 	let $content = $(e.currentTarget).parents('.disclaimer').find('.disclaimer-content');

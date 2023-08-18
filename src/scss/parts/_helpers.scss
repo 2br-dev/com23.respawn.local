@@ -172,6 +172,13 @@ body{
 		&:hover{
 			background-color: darken($primary, 15);
 		}
+
+		&-large{
+
+			@extend .bttn;
+			font-size: clamp(18px, 2vw, 21px);
+			text-transform: uppercase;
+		}
 	}
 
 	& .bttn-white{

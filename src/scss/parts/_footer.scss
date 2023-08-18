@@ -27,6 +27,18 @@ footer{
 		color: #fff;
 	}
 
+	& .responses{
+		border: 1px solid #fff;
+		padding: 0 10px;
+		line-height: calc(1em + 20px);
+		display: inline-block;
+		border-radius: $border-radius;
+
+		&:hover{
+			background-color: rgba(#fff, .1);
+		}
+	}
+
 	& u{
 		display: block;
 		margin-bottom: 10px;

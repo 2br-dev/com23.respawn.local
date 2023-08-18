@@ -1,0 +1,151 @@
+main#feedback{
+	
+	
+	background-color: #1C74FC;
+	overflow: hidden;
+	color: #fff;
+	padding-top: 4vmax;
+	
+	& .mobile-top{
+		position: relative;
+		z-index: 2;
+	}
+
+	& input, & textarea{
+		border: 0;
+		width: 100%;
+		border-radius: $border-radius;
+		padding: 10px;
+		box-sizing: border-box;
+		margin-bottom: $gutter-width;
+		
+		&::placeholder{
+			color: $fogged;
+			font-weight: 300;
+		}
+	}
+	
+	& textarea{
+		min-height: calc(5rem + 30px);
+	}
+	
+	& .form-wrapper{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		z-index: 2;
+		padding-bottom: 4vmax;
+		
+		& .divider{
+			margin: 40px 0;
+			width: 60%;
+		}
+
+		& .form-content{
+
+			@media(max-width: $medium){
+				margin: 4vmax 0;
+			}
+		}
+	}
+
+	& .send-wrapper{
+		margin-top: $gutter-width;
+	}
+
+	& label{
+
+		&:before{
+			color: #FFF;
+		}
+
+		& a{
+			color: #8cf2ff;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	& .input-file{
+
+		& label{
+
+			&:before{
+				content: '\F03E2';
+				font-family: 'Material Design Icons';
+				margin-right: 6px;
+			}
+		}
+	}
+	
+	& .img-wrapper{
+
+		position: relative;
+		z-index: 1;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			aspect-ratio: 2.8 / 1;
+			height: calc(100% + 8vmax);
+			top: calc(50% - 4vmax);
+			left: 80%;
+			transform: translate(-50%, -50%);
+			background-image: url(/img/feedback-background.svg);
+			z-index: -1;
+			background-size: contain;
+			background-position: bottom center;
+			background-repeat: no-repeat;
+
+			@media(max-width: $extra-large){
+				height: 100%;
+				top: 50%;
+			}
+
+			@media(max-width: $medium){
+				// display: none;
+			}
+		}
+		
+		& img{
+			display: block;
+		}
+	}
+
+}
+.feedback-modal{
+
+	color: $text;
+	border-radius: 12px;
+	max-width: 600px;
+	top: 32% !important;
+
+	& .modal-header{
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		& h3{
+			margin: 0;
+		}
+
+		& .modal-close{
+			font-size: 26px;
+			color: $text;
+		}
+	}
+
+	& .error-text{
+		color: $primary;
+	}
+}

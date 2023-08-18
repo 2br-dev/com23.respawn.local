@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Отзывы и предложения</title>
     <link rel="stylesheet" href="/css/master.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favico/apple-touch-icon.png">
@@ -287,260 +287,95 @@
             <a href="/profile.html" class="bttn-flat modal-close">Отправить</a>
         </div>
     </form>
-    <main id="news" class="mountains">
-        <section id="news">
-            <div class="container white-block">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="top-news-entry row flex vcenter">
-                            <div class="top-news-image col l4 m5 s12">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news1.png">
-                            </div>
-                            <div class="top-news-content col xl7 offset-xl1 l8 m7 s12">
-                                <div class="date">12 марта 2023 г.</div>
-                                <h1 class="title">
-                                    Приведите друга и получите подарок!
-                                </h1>
-                                <div class="intro">
-                                    Если вы рекомендуете нас своим друзьям, то мы доставим вам подарок с вашим заказом! Как участвовать в акции? Ваш друг, при оформлении заказа вод…
+    <main id="feedback">
+        <div class="container">
+            <div class="row no-margin flex">
+                <div class="col hide-xl-up mobile-top">
+                    <h1>Отзывы и предложения</h1>
+                    <p>Также Вы можете связаться сo службой поддержки клиентов по телефону</p>
+                    <p>В онлайн режиме сотрудник службы с 9:00 до 17:00, в остальное время информация принимается на автоответчик.</p>
+                </div>
+                <div class="col xl4 l6 m6 offset-lx1 order-m1">
+                    <div class="form-wrapper">
+                        <div class="form-content">
+                            <h1 class="hide-xl-down">Отзывы и предложения</h1>
+                            <p class="hide-xl-down">Также Вы можете связаться сo cлужбой поддержки клиентов по телефону</p>
+                            <p class="hide-xl-down">В онлайн режиме сотрудник службы с 9:00 до 17:00, в остальное время информация принимается на автоответчик.</p>
+                            <form class="row" enctype="multipart/form-data">
+                                <div class="col l6 m6 s6">
+                                    <input type="text" name="name" placeholder="Фамилия, Имя, Отчество">
                                 </div>
-                                <div class="link">
-                                    <a href="/news-entry.html">Подробнее»</a>
+                                <div class="col l6 m6 s6">
+                                    <input type="tel" name="phone" placeholder="Номер телефона">
                                 </div>
-                            </div>
+                                <div class="col l12">
+                                    <input type="email" name="email" placeholder="Контактный E-mail">
+                                </div>
+                                <div class="col l12">
+                                    <textarea name="" id="" cols="30" rows="4" placeholder="Текст сообщения"></textarea>
+                                </div>
+                                <div class="col l12">
+                                    <p>Приложить файлы: допускаются файлы в форматах: jpg, png, mpg, avi объёмом до 10 Мб</p>
+                                    <div class="input-file">
+                                        <label for="attachments" class="bttn">Обзор…</label>
+                                        <input type="file" name="files" multiple class="hide" id="attachments">
+                                    </div>
+                                    <div class="divider"></div>
+                                    <input type="checkbox" id="agree">
+                                    <label for="agree">
+                                        Я прочитал(а) и принимаю условия лицензионного соглашения,
+                                        <a href="/policy.html">политики конфиденциальности</a>
+                                        и <a href="/agreement.html">соглашении</a>
+                                        на <a href="/collect.html">сбор и обработку</a> персональных данных
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <div class="send-wrapper">
+                                        <a href="#feedback-error-result" class="bttn-large modal-trigger">Отправить</a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col s12">
-                        <h2>Акции</h2>
-                    </div>
-                    <div class="col s12">
-                        <div class="swiper" id="news-actions-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                                <div class="swiper-slide"><a href="/action.html"><img src="" alt="" class="lazy responsive-img" data-src="/img/fish/action.jpg"></a></div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination news-actions-pagination hero-pagination"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <h2>Новости компании</h2>
-                    </div>
-                </div>
-                <div class="row flex">
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news1.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Приведите друга и получите подарок!</a>
-                                <div class="intro">Если вы рекомендуете нас своим друзьям, то мы доставим вам подарок с вашим заказом!Как участвовать в акции?Ваш друг, при оформлении заказа вод…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news2.jpg">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">С Новым годом!</a>
-                                <div class="intro">Друзья, поздравляем с наступающим 2023 годом и Рождеством!Хотим пожелать всем нам стабильности, благополучия и уверенности! Чтобы все планы были…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news3.jpg">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Наша Чёрная пятница до 30.12.2022!</a>
-                                <div class="intro">Мы к вам с отличными новостями! Сегодня у нас стартует акция "Черная пятница"! И продлится она до Нового года (30/12/2022)! Наши уникальные …<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news4.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Узнавайте больше вместе с нами!</a>
-                                <div class="intro">Друзья, мы пишем не только о воде и кулерах! Вы с нами узнаете больше о питании, здоровом образе жизни, интересных местах для путешествий и друг…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news5.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Как сэкономить на воде</a>
-                                <div class="intro">Если вам до сих пор кажется, что ваши деньги после посещения супермаркета как будто "канули в Лету", ну то есть ушли на воду, которая дорожае…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news6.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">4 ноября - День народного единства</a>
-                                <div class="intro">4 ноября Россия отмечает День народного единства. Но не каждый знает, что произошло в этот день и почему он стал праздничным.<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news7.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Заботьтесь о здоровье детей с нашей водой!</a>
-                                <div class="intro">"Эльбрусинка Детская" - это несомненный повод для гордости, ведь она одобрена Рос&shy;потреб&shy;надзо&shy;ром РФ для упот&shy;ребле&shy;ния …<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news8.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Зачем заниматься спортом осенью?</a>
-                                <div class="intro">Вы замечали: летом улицы наполняются бегунами, а в парках можно наблюдать другую картину - поиски дзена на коврике для йоги? Все усиленно зани…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news9.jpg">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Здравствуй школа! Новая акция к 1 сентября</a>
-                                <div class="intro">Акция "Школьная"! С 1 сентября! &nbsp;Запускаем акцию перед новым учебным годом ! Наша арифметика с выгодой 1310 рублей: раздатчик Smixx 26TW…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news10.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">В чем польза воды, насыщенной йодом?</a>
-                                <div class="intro">Горная вода часто содержит йод.&nbsp;Мы привыкли считать, что у йода есть лишь одно применение: наносить его на кожу при травмах. Это вовсе не так.…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news11.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Из чего складывается стоимость воды?</a>
-                                <div class="intro">Нас часто спрашивают, почему одна марка воды стоит 150 рублей, а другая почти 300. Что же, давайте расскажем из чего складывается стоимость воды:Кач…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 m6 s12">
-                        <div class="news-entry">
-                            <a class="news-image" href="/news-page.html">
-                                <img src="" alt="" class="lazy responsive-img" data-src="/img/fish/news/news12.png">
-                            </a>
-                            <div class="news-content">
-                                <div class="date">03.02.2023</div>
-                                <a class="title" href="/news-page.html">Артезианская вода: в чем особенности?</a>
-                                <div class="intro">У нас в ассортименте есть артезианская вода. Она очень популярна у наших клиентов, но несмотря на это, некоторые не понимают, чем они отличается от…<a href="/news-page.html" class="news-link">ещё</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 center-align">
-                        <ul class="pagination">
-                            <li class="page"><a href="">1</a></li>
-                            <li class="dots"><span>…</span></li>
-                            <li class="page active"><a href="">7</a></li>
-                            <li class="page"><a href="">8</a></li>
-                            <li class="page"><a href="">9</a></li>
-                            <li class="dots"><span>…</span></li>
-                            <li class="page"><a href="">200</a></li>
-                        </ul>
+                <div class="col xl6 l6 m6 s8 offset-s2 offset-xl1">
+                    <div class="img-wrapper">
+                        <img alt="" class="lazy responsive-img" data-src="/img/support.png">
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="howto">
-
-            <div class="howto-content">
-                <div class="container white-block">
-                    <div class="row flex">
-                        <div class="col s12">
-                            <h2 class="pseudo-h1">Как заказать доставку воды</h2>
-                        </div>
-                        <div class="col l3 m6 s6 xs6 t6 howto-block">
-                            <div class="icon"><i class="mdi mdi-phone"></i></div>
-                            <h3>По телефону</h3>
-                            <div class="links">
-                                <a href="tel://+79883334443"><i class="mdi mdi-phone"></i>7 (988) 333-444-3</a>
-                            </div>
-                        </div>
-                        <div class="col l3 m6 s6 xs6 t6 howto-block">
-                            <div class="icon"><i class="mdi mdi-monitor"></i></div>
-                            <h3>Через сайт</h3>
-                            <div class="links">
-                                <a href="/catalog-water.html"><i class="mdi mdi-menu"></i>Каталог</a>
-                            </div>
-                        </div>
-                        <div class="col l3 m6 s6 xs6 t6 howto-block">
-                            <div class="icon"><i class="mdi mdi-cellphone-iphone"></i></div>
-                            <h3>Через приложение</h3>
-                            <div class="links">
-                                <a href="https://play.google.com/store/apps/details?id=com.rsm.rus.aqua" target="_blank" rel="nofollow"><i class="mdi mdi-apple"></i>AppStore</a>
-                                <a href="https://apps.apple.com/app/id6446617853" target="_blank" rel="nofollow"><i class="mdi mdi-google-play"></i>Google Play</a>
-                            </div>
-                        </div>
-                        <div class="col l3 m6 s6 xs6 t6 howto-block">
-                            <div class="icon"><i class="mdi mdi-message-draw"></i></div>
-                            <h3>Через мессенджер</h3>
-                            <div class="links">
-                                <a href="https://t.me/voda_com23"><i class="mdi mdi-telegram"></i>Telegram</a>
-                                <!-- <a href=""><i class="mdi mdi-whatsapp"></i>WhatsApp</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
+    <!-- Успешная отправка -->
+    <div class="modal feedback-modal" id="feedback-result">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Спасибо!</h3>
+                <a href="javascript:void(0);" class="modal-close mdi mdi-close"></a>
+            </div>
+            <p>Благодарим за ваш отзыв! Наш менеджер по контролю качества обслуживания свяжется с Вами в ближайшее время!</p>
+            <div class="center-align"><a href="javascript:void(0);" class="bttn modal-close">Закрыть</a></div>
+        </div>
+    </div>
+    <!-- /Успешная отправка -->
+    <!-- Ошибка отправки -->
+    <div class="modal feedback-modal" id="feedback-error-result">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Ошибка!</h3>
+                <a href="javascript:void(0);" class="modal-close mdi mdi-close"></a>
+            </div>
+            <p>При отправке возникли следующие ошибки:</p>
+            <ul class="error-text browser-default">
+                <li>Не заполнены обязательные поля</li>
+                <li>Размер вложений превышает лимит</li>
+                <li>Неподдерживаемый формат вложений</li>
+                <li>Вам необходимо принять условия пользовательского соглашения</li>
+            </ul>
+            <div class="center-align"><a href="javascript:void(0);" class="bttn modal-close">Закрыть</a></div>
+        </div>
+    </div>
+    <!-- /Ошибка отправки -->
     <footer>
         <div class="container">
             <div class="row flex">

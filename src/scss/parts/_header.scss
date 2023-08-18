@@ -99,7 +99,7 @@ body{
 		border-radius: 40px;
 		background-color: $primary;
 		color: #fff;
-		z-index: 2;
+		z-index: 2000;
 		margin: 16.5px 0;
 
 		@media(min-width: 1020px){
@@ -177,6 +177,25 @@ body{
 	}
 	
 	& header, & nav{
+
+		& .responses{
+
+			position: relative;
+
+			&:before{
+				content: '';
+				display: block;
+				width: calc(100% - 8px);
+				height: calc(100% - 8px);
+				border: 1px solid #fff;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				pointer-events: none;
+				border-radius: $border-radius;
+			}
+		}
 	
 		& ul, & .row{
 			margin: 0;
@@ -425,7 +444,7 @@ body{
 		}
 	}
 
-	@media(max-width: 1020px){
+	@media(max-width: 1245px){
 
 		& header{
 
@@ -457,7 +476,7 @@ body{
 		}
 	}
 
-	@media(min-width: 1020px){
+	@media(min-width: 1245px){
 
 		& header{
 
