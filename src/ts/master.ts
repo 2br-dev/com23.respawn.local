@@ -338,6 +338,16 @@ $('body').on('click', '.address-entry', (e:JQuery.ClickEvent) => {
 // #endregion
 
 // #region Обработчики событий::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// Инициализация печати модального окна
+window.addEventListener('beforeprint', () => {
+	if(document.querySelectorAll('.zoomer-wrapper').length){
+		document.body.classList.add('print-modal');
+	}
+});
+
+window.addEventListener('afterprint', () => {
+	document.body.classList.remove('print-modal');
+})
 
 // Отображение прикрепляемого файла
 $('body').on('change', 'input[type="file"]', (e:JQuery.ChangeEvent) => {

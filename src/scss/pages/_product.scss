@@ -225,3 +225,72 @@ main#product{
 		align-items: center;
 	}
 }
+
+@media print{
+
+	body.print-modal{
+
+		& header, nav{
+			display: none;
+		}
+		
+		& main{
+			display: none;
+		}
+	
+		& .mobile-repeat, & .fab{
+			display: none !important;
+		}
+		
+		& .zoomer-wrapper{
+	
+			width: unset;
+			height: unset;
+			position: relative;
+			top: unset;
+			left: unset;
+			display: block;
+			width: fit-content;
+			transform: none !important;
+			
+			&.open{
+				background: none;
+			}
+			
+			& > *:not(.zoomer-viewer){
+				display: none;
+			}
+			
+			& .zoomer-viewer{
+	
+				width: fit-content;
+				height: 100%;
+				display: block;
+				text-align: left;
+				transform: none !important;
+				
+				& .zoomer-prev, & .zoomer-next{
+					display: none;
+				}
+				
+				& .zoomer-current{
+					text-align: left;
+					width: fit-content;
+					transform: none !important;
+					
+					& img{
+						margin: 0 !important;
+						object-fit: unset;
+						max-width: 100%;
+						transform: none !important;
+					}
+				}
+			}
+		}
+		
+		& footer, & .footer-copyright{
+			display: none;
+		}
+	}
+
+}
