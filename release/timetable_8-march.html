@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/master.css">
+</head>
+
+<body>
+    <style>
+        @media(min-width: 1000px) {
+            .mobile-table {
+                display: none;
+            }
+        }
+
+        .mobile-table {
+            width: 100%;
+        }
+
+        .mobile-table td:not(:first-of-type) {
+            text-align: center;
+        }
+
+        .mobile-table th:first-of-type {
+            text-align: left;
+        }
+
+        .mobile-table th:not(:first-of-type) {
+            text-align: center;
+        }
+
+        @media(max-width: 1000px) {
+            .desktop-table {
+                display: none;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .mobile-table {
+                display: block;
+            }
+
+            .mobile-table tbody {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .mobile-table thead {
+                display: none;
+            }
+
+            .mobile-table tr {
+                display: block;
+                border-radius: 6px;
+                padding: 10px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+            }
+
+            .mobile-table td {
+                display: block;
+                text-align: left !important;
+                margin-bottom: .7em;
+                padding: 0;
+            }
+
+            .mobile-table td:first-of-type {
+                font-weight: bold;
+            }
+
+            .mobile-table td:before {
+                content: attr(data-day);
+                display: block;
+                color: #777;
+                font-size: 14px;
+            }
+        }
+
+        @media(max-width: 460px) {
+            .mobile-table tbody {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .desktop-table {
+            width: 100%;
+        }
+
+        .desktop-table th:first-of-type {
+            text-align: left;
+        }
+
+        .desktop-table th:not(:first-of-type) {
+            text-align: center;
+        }
+
+        .desktop-table td:not(:first-of-type) {
+            text-align: center;
+        }
+    </style>
+
+    <table class="desktop-table">
+        <thead>
+            <th>Адрес/день</th>
+            <th>ул. Будёного, 73</th>
+            <th>ул. Красных Партизан, 123</th>
+            <th>Ростовское шоссе, 14</th>
+            <th>ул. Тургеневское шоссе, 27 (ТЦ Мега Адыгея)</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8 марта</td>
+                <td>10:00 — 18:00</td>
+                <td>10:00 — 18:00</td>
+                <td>10:00 — 18:00</td>
+                <td>10:00 — 22:00</td>
+            </tr>
+            <tr>
+                <td>9 марта</td>
+                <td>10:00 — 18:00</td>
+                <td>10:00 — 18:00</td>
+                <td>10:00 — 18:00</td>
+                <td>10:00 — 22:00</td>
+            </tr>
+            <tr>
+                <td>10 марта</td>
+                <td>8:00 — 20:00</td>
+                <td>8:00 — 20:00</td>
+                <td>8:00 — 20:00</td>
+                <td>10:00 — 22:00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="mobile-table">
+        <thead>
+            <tr>
+                <th>Адрес/день</th>
+                <th>8 марта</th>
+                <th>9 марта</th>
+                <th>10 марта</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ул. Будёного, 73</td>
+                <td data-day="8 марта">10:00 — 18:00</td>
+                <td data-day="9 марта">10:00 — 18:00</td>
+                <td data-day="10 марта">8:00 — 20:00</td>
+            </tr>
+            <tr>
+                <td>ул. Красных Партизан, 123</td>
+                <td data-day="8 марта">10:00 — 18:00</td>
+                <td data-day="9 марта">10:00 — 18:00</td>
+                <td data-day="10 марта">8:00 — 20:00</td>
+            </tr>
+            <tr>
+                <td>Ростовское шоссе, 14</td>
+                <td data-day="8 марта">10:00 — 18:00</td>
+                <td data-day="9 марта">10:00 — 18:00</td>
+                <td data-day="10 марта">8:00 — 20:00</td>
+            </tr>
+            <tr>
+                <td>ул. Тургеневское шоссе, 27 (ТЦ Мега Адыгея)</td>
+                <td data-day="8 марта">10:00 — 22:00</td>
+                <td data-day="9 марта">10:00 — 22:00</td>
+                <td data-day="10 марта">10:00 — 22:00</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p>Перерыв на обед: с 13:00 до 14:00</p>
+    <p>Служба доставки работает без выходных с 8:00 до 20:00</p>
+
+</body>
+
+</html>

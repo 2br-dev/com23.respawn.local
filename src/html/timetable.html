@@ -1,0 +1,223 @@
+<style>
+
+	table{
+		width: 100%;
+	}
+
+	table td:not(:first-of-type), table td:not(:last-of-type), table th:not(:first-of-type), table th:not(:last-of-type){
+		text-align: center;
+	}
+
+	table td:first-of-type, table th:first-of-type{
+		text-align: left;
+	}
+
+	@media(max-width: 800px){
+		.desktop-table{
+			display: none;
+		}
+	}
+
+	@media(min-width: 800px){
+		.mobile-table{
+			display: none;
+		}
+	}
+
+	@media(max-width: 600px){
+
+		.mobile-table{
+			display: block;
+		}
+
+		.mobile-table thead{
+			display: none;
+		}
+
+		.mobile-table tbody{
+			display: block;
+		}
+
+		.mobile-table tr{
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1rem;
+			padding: clamp(5px, 2vw, 12px);
+			border-radius: 6px;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+		}
+
+		.mobile-table td:first-of-type{
+			display: block;
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+		
+		.mobile-table td:not(:first-of-type){
+			display: block;
+			text-align: left !important;
+			font-weight: bold;
+			display: flex;
+			font-size: 18px;
+		}
+		
+		.mobile-table td:not(:first-of-type):before{
+			content: attr(data-addr);
+			font-weight: normal;
+			flex-grow: 1;
+		}
+	}
+	
+	@media(max-width: 500px){
+		.mobile-table td{
+			flex-direction: column;
+			margin-bottom: .5rem;
+		}
+
+		.mobile-table td:before{
+			font-size: 14px;
+		}
+	}
+</style>
+<table class="desktop-table">
+	<thead>
+		<tr>
+			<th>Адрес/Дата</th>
+			<th>31 декабря</th>
+			<th>1 января</th>
+			<th>2 января</th>
+			<th>3 января</th>
+			<th>4 января</th>
+			<th>5 января</th>
+			<th>6 января</th>
+			<th>7 января</th>
+			<th>8 января</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>ул. Будённого, 75</td>
+			<td>с 8:00 до 15:00</td>
+			<td>выходной</td>
+			<td>выходной</td>
+			<td>с 10:00 до 18:00</td>
+			<td>с 8:00 до 20:00</td>
+			<td>с 8:00 до 20:00</td>
+			<td>с 8:00 до 16:00</td>
+			<td>с 10:00 до 16:00</td>
+			<td>с 10:00 до 18:00</td>
+		</tr>
+		<tr>
+			<td>ул. Кр. Партизан, 123</td>
+			<td>с 8:00 до 15:00</td>
+			<td>выходной</td>
+			<td>выходной</td>
+			<td>с 10:00 до 18:00</td>
+			<td>с 8:00 до 20:00</td>
+			<td>с 8:00 до 20:00</td>
+			<td>с 8:00 до 16:00</td>
+			<td>с 10:00 до 16:00</td>
+			<td>с 10:00 до 18:00</td>
+		</tr>
+		<tr>
+			<td>Ростовское шоссе, 14</td>
+			<td>с 8:00 до 15:00</td>
+			<td>выходной</td>
+			<td>выходной</td>
+			<td>с 10:00 до 18:00</td>
+			<td>с 8:00 до 20:00</td>
+			<td>с 8:00 до 20:00</td>
+			<td>с 8:00 до 16:00</td>
+			<td>с 10:00 до 16:00</td>
+			<td>с 10:00 до 18:00</td>
+		</tr>
+		<tr>
+			<td>Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»</td>
+			<td>с 10:00 до 18:00</td>
+			<td>с 14:00 до 22:00</td>
+			<td>с 10:00 до 22:00</td>
+			<td>с 10:00 до 22:00</td>
+			<td>с 10:00 до 22:00</td>
+			<td>с 10:00 до 22:00</td>
+			<td>с 10:00 до 22:00</td>
+			<td>с 10:00 до 22:00</td>
+			<td>с 10:00 до 22:00</td>
+		</tr>
+	</tbody>
+</table>
+<table class="mobile-table">
+	<thead>
+		<tr>
+			<th>Адрес/Дата</th>
+			<th>ул. Будённого, 75</th>
+			<th>ул. Кр. Партизан, 123</th>
+			<th>Ростовское шоссе, 14</th>
+			<th>Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>31 декабря</td>
+			<td data-addr="ул. Будённого, 75">с 8:00 до 15:00</td>
+			<td data-addr="ул. Кр. Партизан, 123">с 8:00 до 15:00</td>
+			<td data-addr="Ростовское шоссе, 14">с 8:00 до 15:00</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 10:00 до 18:00</td>
+		</tr>
+		<tr>
+			<td>1 января</td>
+			<td data-addr="ул. Будённого, 75">выходной</td>
+			<td data-addr="ул. Кр. Партизан, 123">выходной</td>
+			<td data-addr="Ростовское шоссе, 14">выходной</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 14:00 до 22:00</td>
+		</tr>
+		<tr>
+			<td>2 января</td>
+			<td data-addr="ул. Будённого, 75">выходной</td>
+			<td data-addr="ул. Кр. Партизан, 123">выходной</td>
+			<td data-addr="Ростовское шоссе, 14">выходной</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 10:00 до 22:00</td>
+		</tr>
+		<tr>
+			<td>3 января</td>
+			<td data-addr="ул. Будённого, 75">с 10:00 до 18:00</td>
+			<td data-addr="ул. Кр. Партизан, 123">с 10:00 до 18:00</td>
+			<td data-addr="Ростовское шоссе, 14">с 10:00 до 18:00</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 10:00 до 22:00</td>
+		</tr>
+		<tr>
+			<td>4 января</td>
+			<td data-addr="ул. Будённого, 75">с 8:00 до 20:00</td>
+			<td data-addr="ул. Кр. Партизан, 123">с 8:00 до 20:00</td>
+			<td data-addr="Ростовское шоссе, 14">с 8:00 до 20:00</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 10:00 до 22:00</td>
+		</tr>
+		<tr>
+			<td>5 января</td>
+			<td data-addr="ул. Будённого, 75">с 8:00 до 20:00</td>
+			<td data-addr="ул. Кр. Партизан, 123">с 8:00 до 20:00</td>
+			<td data-addr="Ростовское шоссе, 14">с 8:00 до 20:00</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 10:00 до 22:00</td>
+		</tr>
+		<tr>
+			<td>6 января</td>
+			<td data-addr="ул. Будённого, 75">с 8:00 до 16:00</td>
+			<td data-addr="ул. Кр. Партизан, 123">с 8:00 до 16:00</td>
+			<td data-addr="Ростовское шоссе, 14">с 8:00 до 16:00</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 10:00 до 22:00</td>
+		</tr>
+		<tr>
+			<td>7 января</td>
+			<td data-addr="ул. Будённого, 75">с 10:00 до 16:00</td>
+			<td data-addr="ул. Кр. Партизан, 123">с 10:00 до 16:00</td>
+			<td data-addr="Ростовское шоссе, 14">с 10:00 до 16:00</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 10:00 до 22:00</td>
+		</tr>
+		<tr>
+			<td>8 января</td>
+			<td data-addr="ул. Будённого, 75">с 10:00 до 18:00</td>
+			<td data-addr="ул. Кр. Партизан, 123">с 10:00 до 18:00</td>
+			<td data-addr="Ростовское шоссе, 14">с 10:00 до 18:00</td>
+			<td data-addr="Тургеневское шоссе 27, ТЦ «МЕГА АДЫГЕЯ»">c 10:00 до 22:00</td>
+		</tr>
+	</tbody>
+</table>
