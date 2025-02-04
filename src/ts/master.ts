@@ -231,6 +231,20 @@ if($('[name=address]').length){
 }
 // #endregion
 
+
+(() => {
+
+	let productCardSlider = new Swiper('.productcard-slider', {
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		loop: true
+	})
+})();
+
+
 // #region Работа с картой ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 // Инициализация

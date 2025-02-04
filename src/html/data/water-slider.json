@@ -1,7 +1,7 @@
 [
 	{
 		"header": "Домбай Ульген",
-		"image": "/img/bottles/dombay.png",
+		"image": ["/img/bottles/dombay.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "240₽",
@@ -12,7 +12,7 @@
 	{
 		"header": "Мирабель",
 		"subheader": "в одноразовой таре",
-		"image": "/img/bottles/mirabelle.png",
+		"image": ["/img/bottles/mirabelle.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "230₽",
@@ -22,7 +22,7 @@
 	},
 	{
 		"header": "Mountain Kids",
-		"image": "/img/bottles/mountain_kids.png",
+		"image": ["/img/bottles/mountain_kids.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "320₽",
@@ -43,7 +43,7 @@
 	{
 		"header": "Горячий Ключ",
 		"subheader": "минеральный",
-		"image": "/img/bottles/hot_key_mineral.png",
+		"image": ["/img/bottles/hot_key_mineral.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "260₽",
@@ -53,7 +53,7 @@
 	},
 	{
 		"header": "Горный воздух",
-		"image": "/img/bottles/mountain_air.png",
+		"image": ["/img/bottles/mountain_air.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "320₽",
@@ -63,7 +63,7 @@
 	},
 	{
 		"header": "Почемучка",
-		"image": "/img/bottles/pochemuchka.png",
+		"image": ["/img/bottles/pochemuchka.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "240₽",
@@ -83,7 +83,7 @@
 	},
 	{
 		"header": "Долина Джентау",
-		"image": "/img/bottles/jentau.png",
+		"image": ["/img/bottles/jentau.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "260₽",
@@ -99,7 +99,7 @@
 	},
 	{
 		"header": "Горячий ключ",
-		"image": "/img/bottles/hot_key.png",
+		"image": ["/img/bottles/hot_key.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "220₽",
@@ -109,7 +109,7 @@
 	},
 	{
 		"header": "Серебряная",
-		"image": "/img/bottles/silver.png",
+		"image": ["/img/bottles/silver.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "195₽",
@@ -119,7 +119,7 @@
 	},
 	{
 		"header": "Мирабель",
-		"image": "/img/bottles/mirabelle.png",
+		"image": ["/img/bottles/mirabelle.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "190₽",
@@ -135,7 +135,7 @@
 	},
 	{
 		"header": "Архыз",
-		"image": "/img/bottles/arhyz.png",
+		"image": ["/img/bottles/arhyz.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "330₽",
@@ -152,7 +152,7 @@
 	{
 		"header": "Эльбрусинка",
 		"subheader": "детская",
-		"image": "/img/bottles/elbrusinka.png",
+		"image": ["/img/bottles/elbrusinka.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "300₽",
@@ -162,7 +162,7 @@
 	},
 	{
 		"header": "Горная вершина",
-		"image": "/img/bottles/mountain_peak.png",
+		"image": ["/img/bottles/mountain_peak.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "250₽",
@@ -172,7 +172,7 @@
 	},
 	{
 		"header": "Домбай",
-		"image": "/img/bottles/dombay.png",
+		"image": ["/img/bottles/dombay.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "240₽",
@@ -182,7 +182,7 @@
 	},
 	{
 		"header": "Пилигрим",
-		"image": "/img/bottles/piligrim.png",
+		"image": ["/img/bottles/piligrim.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "290₽",
@@ -192,7 +192,7 @@
 	},
 	{
 		"header": "Кубай",
-		"image": "/img/bottles/kubai.png",
+		"image": ["/img/bottles/kubai.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "250₽",
@@ -203,7 +203,7 @@
 	{
 		"header": "Горный воздух",
 		"subheader": "в одноразовой таре",
-		"image": "/img/bottles/mountain_air_one.png",
+		"image": ["/img/bottles/mountain_air_one.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "420₽",
@@ -214,7 +214,7 @@
 	{
 		"header": "Долина Джентау",
 		"subheader": "в одноразовой таре",
-		"image": "/img/bottles/jentau_one.png",
+		"image": ["/img/bottles/jentau_one.png"],
 		"link":"/product-water.html",
 		"type": "triple-price",
 		"price1": "340₽",
@@ -235,7 +235,7 @@
 	{
 		"header": "Бутыль ПК 19 л",
 		"type": "single-price",
-		"image": "/img/bottles/empty_bottle.png",
+		"image": ["/img/bottles/empty_bottle.png"],
 		"price": "400₽",
 		"class": "swiper-slide"
 	}

@@ -106,7 +106,6 @@ body{
 		}
 
 		&.warning{
-
 			box-shadow: 0 0 0 1px $warning inset;
 			background-color: rgba($warning, .1);
 			color: darken($warning, 10);
@@ -379,6 +378,22 @@ body{
 		& .modal-close-x{
 			color: $text;
 			font-size: 28px;
+		}
+	}
+
+	& .header-line-banner{
+
+		& picture{
+
+			display: block;
+
+			& img{
+				display: block;
+				width: 100%;
+				height: auto;
+				min-height: 50px;
+				object-fit: cover;
+			}
 		}
 	}
 
@@ -830,15 +845,11 @@ body{
 			padding: 10px;
 			box-sizing: border-box;
 			transition: box-shadow .2s, background-color .2s;
+			background: $paper;
 			height: auto;
 
 			&:hover{
-				@include debugBorder(red);
 				background: #fff;
-				
-				& .product-card{
-					background: #fff;
-				}
 			}
 		}
 	}
@@ -957,7 +968,6 @@ body{
 	}
 
 	& #bottom-toolbar{
-		border: 1px solid red;
 		position: sticky;
 		width: 100%;
 		bottom: 0;

@@ -3,22 +3,26 @@
 	display: grid;
 	grid-template-columns: .8fr 1.2fr;
 	padding: 10px 2px;
-	grid-gap: 0 10px;
+	gap: 0 10px;
 	position: relative;
 	height: 100%;
 	background-color: $paper;
 	transition: background-color .2s;
+
+	& .slider-container{
+		width: 100%;
+		max-width: 150px;
+	}
+
+	@media(max-width: 360px){
+		grid-template-columns: 1fr;
+	}
 
 	& .product-image{
 
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		
-		& img{
-			width: 100%;
-			height: auto;
-		}
 	}
 
 	& .labes{
@@ -110,6 +114,13 @@
 
 				display: table-row;
 
+				@media(max-width: 340px){
+
+					&:nth-child(odd){
+						background-color: rgba(black, .05);
+					}
+				}
+
 				& .key{
 					display: table-cell;
 					font-size: 14px;
@@ -119,6 +130,10 @@
 					@extend .key;
 					font-weight: bold;
 					font-size: 1.2rem;
+
+					@media(max-width: 360px){
+						text-align: right;
+					}
 				}
 			}
 		}

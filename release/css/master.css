@@ -18273,6 +18273,26 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   100% {
     transform: rotate(360deg); } }
 
+.swiper-flip {
+  overflow: visible; }
+  .swiper-flip .swiper-slide {
+    pointer-events: none;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    z-index: 1; }
+    .swiper-flip .swiper-slide .swiper-slide {
+      pointer-events: none; }
+  .swiper-flip .swiper-slide-active,
+  .swiper-flip .swiper-slide-active .swiper-slide-active {
+    pointer-events: auto; }
+  .swiper-flip .swiper-slide-shadow-top,
+  .swiper-flip .swiper-slide-shadow-bottom,
+  .swiper-flip .swiper-slide-shadow-left,
+  .swiper-flip .swiper-slide-shadow-right {
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+
 :root {
   /*
   --swiper-pagination-color: var(--swiper-theme-color);
@@ -23154,18 +23174,21 @@ body {
   display: grid;
   grid-template-columns: .8fr 1.2fr;
   padding: 10px 2px;
-  grid-gap: 0 10px;
+  gap: 0 10px;
   position: relative;
   height: 100%;
   background-color: #FBFBFD;
   transition: background-color .2s; }
+  .product-card .slider-container {
+    width: 100%;
+    max-width: 150px; }
+  @media (max-width: 360px) {
+    .product-card {
+      grid-template-columns: 1fr; } }
   .product-card .product-image {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    .product-card .product-image img {
-      width: 100%;
-      height: auto; }
   .product-card .labes {
     display: block;
     flex-wrap: wrap;
@@ -23225,12 +23248,18 @@ body {
       margin: 20px 0; }
       .product-card .product-info .kv-table .kv-pair {
         display: table-row; }
+        @media (max-width: 340px) {
+          .product-card .product-info .kv-table .kv-pair:nth-child(odd) {
+            background-color: rgba(0, 0, 0, 0.05); } }
         .product-card .product-info .kv-table .kv-pair .key, .product-card .product-info .kv-table .kv-pair .value {
           display: table-cell;
           font-size: 14px; }
         .product-card .product-info .kv-table .kv-pair .value {
           font-weight: bold;
           font-size: 1.2rem; }
+          @media (max-width: 360px) {
+            .product-card .product-info .kv-table .kv-pair .value {
+              text-align: right; } }
     .product-card .product-info .disclamer {
       font-size: 12px;
       line-height: 1.2em;
@@ -23822,6 +23851,15 @@ body {
   body .modal .modal-close-x {
     color: #333333;
     font-size: 28px; }
+  body .header-line-banner picture {
+    display: block; }
+    body .header-line-banner picture img {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 50px;
+      -o-object-fit: cover;
+         object-fit: cover; }
   body input[type="radio"].styled, body .input-field textarea[type="radio"].styled {
     display: none; }
     body input[type="radio"].styled ~ label, body .input-field textarea[type="radio"].styled ~ label {
@@ -24184,12 +24222,10 @@ body {
     padding: 10px;
     box-sizing: border-box;
     transition: box-shadow .2s, background-color .2s;
+    background: #FBFBFD;
     height: auto; }
     body #water_block .swiper-slide:hover, body #coolers_block .swiper-slide:hover {
-      box-shadow: 0 0 0 1px red inset;
       background: #fff; }
-      body #water_block .swiper-slide:hover .product-card, body #coolers_block .swiper-slide:hover .product-card {
-        background: #fff; }
   body .pin {
     position: sticky;
     top: 60px; }
@@ -24240,7 +24276,6 @@ body {
         display: block;
         width: 30px; }
   body #bottom-toolbar {
-    border: 1px solid red;
     position: sticky;
     width: 100%;
     bottom: 0;
@@ -24826,8 +24861,6 @@ main#actions .action-card {
 main#actions #water_block, main#actions body #coolers_block, body main#actions #coolers_block {
   padding: 2vmax 0;
   background: #E7F0F5; }
-  main#actions #water_block .product-card, main#actions body #coolers_block .product-card, body main#actions #coolers_block .product-card {
-    background-color: transparent; }
 
 main#actions #coolers_block {
   padding: 2vmax 0; }

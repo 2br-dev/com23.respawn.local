@@ -4,6 +4,15 @@
 	@@include('./parts/head.html', {title: "Главная", style: "main"})
 </head>
 <body>
+	<div class="header-line-banner">
+		<a href="https://t.me/akvaRusBot" target="_blank">
+			<picture>
+				<source media="(min-width: 800px)" srcset="/img/top-banners/tg_desktop.jpg">
+				<source media="(min-width: 250px)" srcset="/img/top-banners/tg_mobile.jpg">
+				<img src="/img/top-banners/tg_desktop.jpg" alt="">
+			</picture>
+		</a>
+    </div>
 	@@include('./parts/header.html')
 	<main id="main" class="mountains">
 		<section id="hero">
@@ -56,6 +65,7 @@
 						<ul class="store-buttons">
 							<li><a href="https://apps.apple.com/app/id6446617853"><img src="/img/com23-appstore.svg" alt=""></a></li>
 							<li><a href="https://play.google.com/store/apps/details?id=com.rsm.rus.aqua"><img src="/img/com23-gplay.svg" alt=""></a></li>
+							<li><a href="https://www.rustore.ru/catalog/app/com.rsm.rus.aqua"><img src="/img/com23-rustore.svg" alt=""></a></li>
 						</ul>
 					</div>
 				</div>
